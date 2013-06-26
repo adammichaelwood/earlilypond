@@ -78,9 +78,19 @@
       %}
       \lyricmode {
       	_1 _ _
-      	O felici occhi1 miei2 felice2 _1 voi _ _ _ ii1
-      	_ _ _ _ _ _ _ _
+      	O felici occhi1 miei2 felice2 _1 voi _ _ _
+        ii1 _ _ _ _ _ _ _ _
       	\skip 2*7
+        Che sete2 _2. car'4 almio1 sel2 per che sem2 bianz' have _1
+        te2 de gl'occhi1 che2 gli fur si1. dolce1 re-1. _2 i1
+        _2 voi ben voi sete1 voi2. ii4
+        \skip 2*5
+        voi2 voi2 felici1 et2 io1. ii1 _1
+        io2 no che per que- tar1 vos tro _ _4 desio _1 _ _4
+        cor r'a mirar2 l'on4 de2 mi strugo1 poi _ _2.
+        ii4
+        \skip 2*9
+        mi1 stru2. ggo4 _1 poi
       }
     >>
     \new Voice  = "altusNotes" <<
@@ -105,7 +115,32 @@
         e4 f g e f2 e d d c2. bes4 a2 a bes2. c4 d2 e1 d2 c1 bis\breve\fermata
       }
     >>
-    %\new Lyrics = "altusLyrics"  << \global \altusLyrics  >>
+    \new Lyrics = "altusLyrics" <<
+      \set Score.skipBars = ##t
+      \revert Score.SpacingSpanner #'spacing-increment % CHECK: no effect?
+      \cadenzaOff % turn bar lines on again
+      \once \override Staff.Clef #'full-size-change = ##t
+      \set Staff.forceClef = ##t
+      \key d \minor
+      \time 2/2
+      \override Voice.NoteHead #'style = #'default
+      \override Voice.Rest #'style = #'default
+      \lyricmode {
+      	O1 felici occhi1 miei2 fe2 lici1 voi _ _ _ _1 _2
+        fe lici1 voi2 ii
+      	\skip 2*15
+        che1 sete2 _2. car'4 almio1 sol2 _ _ ii _ _ _ _ _ per che sem2 bianz' ha uete1
+        _2 de gliocchi1 che2 gli fur1 si1 dolci2 et re-1 _ i1 _ _2
+        voi ben voi sete1 voi2
+        \skip 2*5
+        felici1 _4 et4 io1 _1 et2 io1.
+        io2 non che per que- tar1 vostro _ _2 des2 io1 _1 _2 _4
+        cor r'a mirar2 l'on4 de2 mi strugo1 poi _ _2.
+        ii4
+        \skip 2*9
+        mi2 struggo1 _1 _1 poi
+      }
+    >>
     \new Voice = "tenorNotes" <<
       #(set-accidental-style 'forget)
       \set Score.skipBars = ##t
