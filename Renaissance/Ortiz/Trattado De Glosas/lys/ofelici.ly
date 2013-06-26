@@ -9,6 +9,7 @@
 		%\remove Bar_engraver
 		\override BarLine #'transparent = ##t
 		\remove "System_start_delimiter_engraver"
+                \override TimeSignature #'style = #'mensural
     }
 }
 
@@ -16,13 +17,14 @@
 \score {
   \new StaffGroup = choirStaff <<
     \new Voice  = "cantusNotes"  <<
+      #(set-accidental-style 'forget)
       \set Score.skipBars = ##t
       \revert Score.SpacingSpanner #'spacing-increment % CHECK: no effect?
       \cadenzaOff % turn bar lines on again
       \once \override Staff.Clef #'full-size-change = ##t
       \set Staff.forceClef = ##t
       \key d \minor
-      \time 4/2
+      \time 2/2
       \override Voice.NoteHead #'style = #'default
       \override Voice.Rest #'style = #'default
       \relative c'' {
@@ -34,7 +36,7 @@
         g1 r2 g2 a bes c a bes2. bes4 c2 d d c d d c a bes c a1 g2 g g1 f2 f d f f f
         e1 e d4 e f g a bes c2. bes4 bes1 a2 bes r4 d4 c a bes bes a2 g f f e1 d d2 r4 d'4 c a bes bes a2
         g2 f f e1 d2 d'2. c4 bes2. a4 g2. f4 d2 e1 d\breve\fermata
-        \bar"||"
+        \bar"|."
       }
     >>
     \new Lyrics = "cantusLyrics" <<
@@ -44,7 +46,7 @@
       \once \override Staff.Clef #'full-size-change = ##t
       \set Staff.forceClef = ##t
       \key d \minor
-      \time 4/2
+      \time 2/2
       \override Voice.NoteHead #'style = #'default
       \override Voice.Rest #'style = #'default
       %\lyricmode {
@@ -82,56 +84,59 @@
       }
     >>
     \new Voice  = "altusNotes" <<
+      #(set-accidental-style 'forget)
       \set Score.skipBars = ##t
       \revert Score.SpacingSpanner #'spacing-increment % CHECK: no effect?
       \cadenzaOff % turn bar lines on again
       \once \override Staff.Clef #'full-size-change = ##t
       \set Staff.forceClef = ##t
       \key d \minor
-      \time 4/2
+      \time 2/2
       \override Voice.NoteHead #'style = #'default
       \override Voice.Rest #'style = #'default
       \relative c' {
         \set Staff.instrumentName = #"Altus"
         \clef mezzosoprano
         d1 e2 g g fis g bes bes a bes2. a4 g2 bes2. a4 g1 f2 g1 r2 d2 e c d bes'2. a4 g1 f2 g1 g
-        g2. f4 e1 d bes2 c1 c2 d2. c4 bes2 a bes f'1 f2 g2. f4 f2 d f f f f f f
-        g2 g r2 bes bes bes a g f1 d ees2 ees ees1 d
+        g2. f4 e1 d bes2 c1 c2 d2. c4 bes2 a bes f'1 f2 g2. f4 f2 e f f f f f f
+        g2 g r2 bes bes bes a g f1 d ees2 e e1 d
         d\breve r2 d2 e f g2. f4 e2 d e1 d2 d e f2. d4 g1 f2 g d e1 d2 d f d d d
         c1 c a2 a' a a g1 f d2 r4 d4 e f g e f2 e d d c2. bes4 a1 g2 r4 d'4
-        e4 f g e f2 e d d c2. bes4 a2 a bes2. c4 d2 e1 d2 c1 b\breve\fermata
+        e4 f g e f2 e d d c2. bes4 a2 a bes2. c4 d2 e1 d2 c1 bis\breve\fermata
       }
     >>
     %\new Lyrics = "altusLyrics"  << \global \altusLyrics  >>
     \new Voice = "tenorNotes" <<
+      #(set-accidental-style 'forget)
       \set Score.skipBars = ##t
       \revert Score.SpacingSpanner #'spacing-increment % CHECK: no effect?
       \cadenzaOff % turn bar lines on again
       \once \override Staff.Clef #'full-size-change = ##t
       \set Staff.forceClef = ##t
       \key d \minor
-      \time 4/2
+      \time 2/2
       \override Voice.NoteHead #'style = #'default
       \override Voice.Rest #'style = #'default
       \relative c' {
         \set Staff.instrumentName = #"Tenor"
-        \clef tenor
+        \clef alto
         r\breve d1 e2 g g f g g, d' d g,1 r1 g1 d'2 d c c bes g bes bes a1 g d'
         ees2. d4 c2 bes a1 g2 g1 g2 a2. g4 f2 e f d'1 d2 ees2. bes4 d2 c bes bes bes bes a a
         c1 bes2 bes f' f f d d1 bes bes2 g c2. bes4 a1
-        g2 bes bes bes c bes g d' d r4 g,4 a2 bes c a bes2. bes4 c2 d d c d d r2 bes2 c1 a a bes bes
+        g2 bes bes bes c bes g d' d r4 g,4 a2 bes c a bes2. bes4 c2 d d c d d r2 bes2 c1 a2 a bes bes
         bes2 bes g1 g f f' d2 ees c1 bes r2 r4 bes4 c d bes c a2 bes2. a4 g1 f2 g g r2 r4 bes4 c d bes c
-        a2 bes2. a4 g1 f2 g2. a4 bes2 c g\breve\fermata
+        a2 bes2. a4 g1 f2 g2. a4 bes2 c g\longa\fermata
       }
     >>
     \new Voice  = "bassusNotes" <<
+      #(set-accidental-style 'forget)
       \set Score.skipBars = ##t
       \revert Score.SpacingSpanner #'spacing-increment % CHECK: no effect?
       \cadenzaOff % turn bar lines on again
       \once \override Staff.Clef #'full-size-change = ##t
       \set Staff.forceClef = ##t
       \key d \minor
-      \time 4/2
+      \time 2/2
       \override Voice.NoteHead #'style = #'default
       \override Voice.Rest #'style = #'default
       \relative c' {
