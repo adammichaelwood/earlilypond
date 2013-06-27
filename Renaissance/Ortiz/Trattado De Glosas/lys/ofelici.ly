@@ -85,7 +85,7 @@
         te2 de gl'occhi1 che2 gli fur si1. dolce1 re-1. _2 i1
         _2 voi ben voi sete1 voi2. ii4
         \skip 2*5
-        voi2 voi2 felici1 et2 io1. ii1 _1
+        voi2 voi2 fe2 lici et2 io1. ii1 _1
         io2 no che per que- tar1 vos tro _ _4 desio _1 _ _4
         cor r'a mirar2 l'on4 de2 mi strugo1 poi _ _2.
         ii4
@@ -134,7 +134,7 @@
         voi ben voi sete1 voi2
         \skip 2*5
         felici1 _4 et4 io1 _1 et2 io1.
-        io2 non che per que- tar1 vostro _ _2 des2 io1 _1 _2 _4
+        io2 non che per que- tar1 vos1 tro2 _ _2 des2 io1 _1 _2 _4
         cor r'a mirar2 l'on4 de2 mi strugo1 poi _ _2.
         ii4
         \skip 2*9
@@ -176,19 +176,20 @@
       \lyricmode {
         _1 _
       	O1 felici occhi1 miei2 fe2 lici1 voi
-        %_ _ _ _1 _2
-        %fe lici1 voi2 ii
-      	%\skip 2*15
-        %che1 sete2 _2. car'4 almio1 sol2 _ _ ii _ _ _ _ _ per che sem2 bianz' ha uete1
-        %_2 de gliocchi1 che2 gli fur1 si1 dolci2 et re-1 _ i1 _ _2
-        %voi ben voi sete1 voi2
-        %\skip 2*5
-        %felici1 _4 et4 io1 _1 et2 io1.
-        %io2 non che per que- tar1 vostro _ _2 des2 io1 _1 _2 _4
-        %cor r'a mirar2 l'on4 de2 mi strugo1 poi _ _2.
-        %ii4
-        %\skip 2*9
-        %mi2 struggo1 _1 _1 poi
+        _1 ii1
+      	\skip 2*12
+        fe-1 lici _ voi _2
+        che1 se2 te2. car'4 almio1 sol2 ii1
+        _ _ _ 
+        per2 che sem bianz' ha uete1 _2
+        de gl'occhi1 che2 gli fur1 si1 dolci,e re-1 _ i2
+        voi ben voi sete1 voi1 _2.
+        voi4 ben2 voi sete1 voi2. voi4 voi2 fe2 lici2 et2 io1
+        _2
+        et io1. io2 no che per que tar1 vos tro desio _ _ _
+        _2.
+        cor4 r'a mirar2 l'on4 de2 mi2. stru4 go1 poi2 _ _ _2.
+        ii4
       }
     >>
     \new Voice  = "bassusNotes" <<
@@ -211,6 +212,38 @@
         g1 r2 g2 f g c, d g1 r\longa r1 r2 d2 g1 c,2 c d1 bes bes2 bes c1 c d2. e4 f2 f
         g2 ees f1 bes, r2 r4 g'4 f d ees c d2 bes c c d1 g r2 r4 g4 f d ees c d2 bes
         c2 c d d r2 g1 c, bes2 c1 g'\breve\fermata
+      }
+    >>
+    \new Lyrics = "bassusLyrics" <<
+      \set Score.skipBars = ##t
+      \revert Score.SpacingSpanner #'spacing-increment % CHECK: no effect?
+      \cadenzaOff % turn bar lines on again
+      \once \override Staff.Clef #'full-size-change = ##t
+      \set Staff.forceClef = ##t
+      \key d \minor
+      \time 2/2
+      \override Voice.NoteHead #'style = #'default
+      \override Voice.Rest #'style = #'default
+      \lyricmode {
+        \skip 1*6
+      	O1 felici occhi1 miei2 fe2 lici1 voi
+        _1 ii1
+      	\skip 2*13
+        Che1 se2 te2. car'4 almio1 sol1
+        \skip 1*3
+        _2
+        per2 che sem bianz' ha ve1 te2
+        de gl'occhi1 che2 gli fur1 si1 dolce2. et4 re-1 _ i1 _2
+        voi ben voi sete1 voi1
+        \skip 1*5
+        _2
+        et io1 _2 io non1 che per2 que tar1 vos tro
+        _2 de- sio
+        \skip 2*6
+        _4 cor4 r'a mirar2 l'on4 de2 mi2 strugo1 poi1 _ _2.
+        ii4
+        \skip 1*4
+        _2 mi1 stru2 go _ poi1
       }
     >>
   >>
