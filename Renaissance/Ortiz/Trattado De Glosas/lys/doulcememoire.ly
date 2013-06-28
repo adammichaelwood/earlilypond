@@ -24,16 +24,44 @@
 	\clef soprano
 	f\breve f2 e d1 cis r2 d2 f2. g4 a2 f e a1 gis2 a1 f f2 f g g e1 f1 e1 r1 a1 a2 a a1. gis2 a c b a1 gis2 a\breve
 	f\breve f2 e d1 cis r2 d2 f2. g4 a2 f e a1 gis2 a1 f f2 f g g e1 f1 e1 r1 a1 a2 a a1. gis2 a c b a1 gis2
-	a\breve f1 g2 g f1. f2 e c d d cis1 e\breve e2 f g g g b2. a4 a1 gis2
-	a1 a a2 a a1 f2 a g e f f e1 r2 e2 f4 g a b cis2 d1 cis2 d1 r2 d,2 e2. f4 g2 g
-	f4 e a1 gis2 a c2. b4 a g f e d c b a d1 cis2 d1 r2 e2 f4 g a b cis2 d1 cis2 d1 r2 d,2
+	a\breve f1 g2 g f1. f2 e c d d cis1 e\breve e2 f g g g bis2. a4 a1 gis2
+	a1 a a2 a a1 f2 a g e f f e1 r2 e2 f4 g a b cis2 d1 c2 d1 r2 d,2 e2. f4 g2 g
+	f4 e a1 gis2 a c2. b4 a g f e d c b a d1 cis2 d1 r2 e2 f4 g a b cis2 d1 c2 d1 r2 d,2
 	e2. f4 g2 g f4 e a1 gis2 a c2. b4 a g f e d c b a d1 cis2 d\longa
 	r\breve r\longa
 	\bar"|."
 }
 }
 >>
-
+\new Lyrics = "cantusLyrics" <<
+  \set Score.skipBars = ##t
+  \revert Score.SpacingSpanner #'spacing-increment % CHECK: no effect?
+  \cadenzaOff % turn bar lines on again
+  \once \override Staff.Clef #'full-size-change = ##t
+  \set Staff.forceClef = ##t
+  \key d \minor
+  \time 2/2
+  \override Voice.NoteHead #'style = #'default
+  \override Voice.Rest #'style = #'default
+  \lyricmode {
+    Doulce1 _ _2 me moire1 _ _2
+    en plaisir1 consu mee _ _
+    ii _ _ _ _ _ _
+    O siecl'heu reulx _ qui2 cause _ tel1 sca2 voir1 _
+    la _ fermetes _ _ _2
+    de nous1 deulx tant2 aimee
+    _1 _ _ ii _ _ _ _ _
+    qui a2 nous maulx1. a2 scen si bien1 pour voir _
+    Or mainte nant _2 a perdu1 son2 pou voir1 rom _ pant2 le
+    bruict de ma seull' esperance1 _ _
+    ser vant2 d'ex emple1 _2 a tous pi teuls a voir1 _2
+    fi nir1 le2 bien2 _1 _ _2
+    le mal sou dain com mence _ _ _ _ ii
+    _1 _ _ _ _ _2
+    fi nir _ _ le1 bien _
+    le2 mal sou dain com mence _1 _ ii
+  }
+>>
 \new Staff = "tenor" <<
 \set Staff.instrumentName = #"Tenor"
 \new Voice = "tenor" {
@@ -43,15 +71,43 @@
 	\clef tenor
 	a\breve a2 g f1 e d d'1. d2 c b4 a b1 a a a2 a bes4 a g f g1 f g c c2 c c1 d c2 b a1 g2 a b1 a\breve
 	a\breve a2 g f1 e d d'1. d2 c b4 a b1 a a a2 a bes4 a g f g1 f g c c2 c c1 d c2 b a1 g2 a
-	b1 a\breve a1 bes2 bes a1 f g2 a d,d e1 c'\breve c2 a g b b b c d b1
-	a1 a cis2 d1 cis2 d c b g g f g1 c\breve f1 e d2 a a a c1. e2 d2. c4 b1 a2 a
+	b1 a\breve a1 bes2 b a1 f g2 a d,d e1 c'\breve c2 a g b b b c d b1
+	a1 a cis2 d1 c2 d c b g g f g1 c\breve f1 e d2 a a a c1. e2 d2. c4 b1 a2 a
 	c2. b4 a g a2 g2. f4 e1 d c'\breve f1 e d2 a a a c1. e2 d2. c4 b1 a2 a c2. b4 a g a2
 	g2. f4 e1 d r2 fis2 g g f f  g1. fis4 e f\longa
 	\bar"|."
 }
 }
 >>
-
+\new Lyrics = "tenorLyrics" <<
+  \set Score.skipBars = ##t
+  \revert Score.SpacingSpanner #'spacing-increment % CHECK: no effect?
+  \cadenzaOff % turn bar lines on again
+  \once \override Staff.Clef #'full-size-change = ##t
+  \set Staff.forceClef = ##t
+  \key d \minor
+  \time 2/2
+  \override Voice.NoteHead #'style = #'default
+  \override Voice.Rest #'style = #'default
+  \lyricmode {
+    %Doulce1 _ _2 me moire1 _
+    %en plaisir1 _ consu mee _ _
+    %ii _ _ _
+    %O siecl' heureulx1 _ qui2 cause _ tel1 sca2 voir1 _
+    %la _ fermetes _ _ _2
+    %de nous1 deulx tant2 aimee
+    %_1 _ _ ii _ _ _ _ _
+    %qui a2 nous maulx1. a2 scen si bien1 pour voir _
+    %Or mainte nant _2 a perdu1 son2 pou voir1 rom _ pant2 le
+    %bruict de ma seull' esperance1 _ _
+    %ser vant2 d'ex emple1 _2 a tous pi teuls a voir1 _2
+    %fi nir1 le2 bien2 _1 _ _2
+    %le mal sou dain com mence _ _ _ _ ii
+    %_1 _ _ _ _ _2
+    %fi nir _ _ le1 bien _
+    %le2 mal sou dain com mence _1 _ ii
+  }
+>>
 \new Staff = "altus" <<
 \set Staff.instrumentName = #"Altus"
 \new Voice = "altus" {
