@@ -1,13 +1,12 @@
 \version "2.12.3"
 
-#(set-global-staff-size 15)
-\paper { indent = #0 }
-\layout {
-	\context {
-		\Score
-		\override SpacingSpanner #'uniform-stretching = ##t
-	}
+\tocItem "Recercata Quarta"
+\markup \abs-fontsize #12 \center-column {
+  \vspace #2
+  \fill-line { "RECERCATA QUARTA" }
+  \vspace #1 
 }
+
 <<
 \new Staff \with {
 	%\remove "Time_signature_engraver"
@@ -54,5 +53,6 @@
         g f e d c bis c4 g\breve\fermata
 	\bar"|."
         \cadenzaOff
+        \pageBreak
 }
 >>

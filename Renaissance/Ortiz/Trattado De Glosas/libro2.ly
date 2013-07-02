@@ -4,6 +4,19 @@
 
 \version "2.16.0"
 
+\header {
+  tagline = ""
+}
+
+#(set-default-paper-size "a4")
+
+\layout {
+  \context {
+    \Score
+    \override SpacingSpanner #'uniform-stretching = ##t
+  }
+}
+
 % Titling
 \bookpart {
   \header {
@@ -14,7 +27,6 @@
     subtitle = \markup \center-column { "sobre Clausulas y otros generos depuntos" "en la Musica de Violones nuevamente puestos en luz" }
     opus = "Libro secondo"
     publisher = \markup { "Copyright : " \char ##x00A9 " 2013 Earlilypond, Benjamin Coudrin" }
-    tagline = ""
   }
   \paper {
     #(define page-breaking ly:minimal-breaking)
@@ -55,27 +67,63 @@
 }
 
 % Functions
-act =
-#(define-music-function (parser location act-title) (string?)
-  (increase-rehearsal-major-number)
-  (add-page-break parser)
-  (add-toc-item parser 'tocActMarkup act-title)
-  (add-even-page-header-text parser (string-upper-case (*opus-title*)) #f)
-  (*act-title* act-title)
-  (add-odd-page-header-text
-    parser
-    (format #f "~a" (string-upper-case (*act-title*)))
-    #f)
-  (add-toplevel-markup parser
-    (markup #:act (string-upper-case act-title)))
-  (add-no-page-break parser)
-  (make-music 'Music 'void #t))
-
 #(define-markup-list-command (paragraph layout props args) (markup-list?)
-   (let ((indent (chain-assoc-get 'par-indent props 2)))
-     (interpret-markup-list layout props
-       (make-justified-lines-markup-list (cons (make-hspace-markup indent)
-                                               args)))))
+   #:properties ((par-indent 2))
+   (interpret-markup-list layout props
+     (make-justified-lines-markup-list (cons (make-hspace-markup par-indent)
+                                             args))))
 
-% Music
-\include "page050.ly"
+% Introduction
+\bookpart {
+  \paper { #(define page-breaking ly:minimal-breaking) }
+  \include "text/intro.ly"
+}
+
+% L'Ordine
+\bookpart {
+  \paper { indent = #0 }
+  \include "text/ordine.ly"
+  \include "lys/bk2_c1_r1.ly"
+  \include "lys/bk2_c1_r2.ly"
+  \include "lys/bk2_c1_r3.ly"
+  \include "lys/bk2_c1_r4.ly"
+}
+
+% Seconda maniera
+\bookpart {
+  \paper { indent = #0 }
+  \include "text/seconda.ly"
+  \include "lys/bk2_c2_r1.ly"
+  \include "lys/bk2_c2_r2.ly"
+  \include "lys/bk2_c2_r3.ly"
+  \include "lys/bk2_c2_r4.ly"
+  \include "lys/bk2_c2_r5.ly"
+  \include "lys/bk2_c2_r6.ly"
+}
+
+% Terza maniera
+\bookpart {
+  \paper { indent = #0 }
+  %\include "text/terza.ly"
+  %\include "lys/ofelici.ly"
+  %\include "lys/ofelici_r1.ly"
+  %\include "lys/ofelici_r2.ly"
+  %\include "lys/ofelici_r3.ly"
+  %\include "lys/ofelici_r4.ly"
+  %\include "text/doulce.ly"
+  %\include "lys/doulcememoire.ly"
+  %\include "lys/doulcememoire_r1.ly"
+  %\include "lys/doulcememoire_r2.ly"
+  %\include "lys/doulcememoire_r3.ly"
+  %\include "lys/doulcememoire_r4.ly"
+  %\include "text/tenori.ly"
+  %\include "lys/bk2_c3_r1.ly"
+  %\include "lys/bk2_c3_r2.ly"
+  %\include "lys/bk2_c3_r3.ly"
+  %\include "lys/bk2_c3_r4.ly"
+  %\include "lys/bk2_c3_r5.ly"
+  %\include "lys/bk2_c3_r6.ly"
+  %\include "lys/bk2_c3_r7.ly"
+  %\include "lys/bk2_c3_r8.ly"
+  %\include "lys/bk2_c3_r9.ly"
+}
