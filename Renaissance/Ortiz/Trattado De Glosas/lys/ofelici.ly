@@ -1,19 +1,12 @@
 \version "2.12.3"
 
-#(set-global-staff-size 15)
-\paper { indent = #0 }
-\layout {
-	\context {
-		\Score
-		\override SpacingSpanner #'uniform-stretching = ##t
-		%\remove Bar_engraver
-		\override BarLine #'transparent = ##t
-		\remove "System_start_delimiter_engraver"
-                \override TimeSignature #'style = #'mensural
-    }
-}
+\tocItem "Un madrigale, o felici occhi miei"
+%\markup \abs-fontsize #12 \center-column {
+%  \vspace #2
+%  \fill-line { "RECERCATA PRIMA" }
+%  \vspace #1 
+%}
 
-%#(set-global-staff-size 16)
 \score {
   \new StaffGroup = choirStaff <<
     \new Voice  = "cantusNotes"  <<
@@ -247,38 +240,16 @@
       }
     >>
   >>
-}
-
-altusLyrics = \lyricmode {
- % incipit
- O \skip 1*6
- 
- % main
- O1 fe2 -- li2 -- cioc2 -- chi2 miei2 fe2 -- li2 -- ci2
- voi2 __ _ _ _ _ _ _ _ _ _ \skip 2*1
- fe2 -- li -- ci voi
- %fe2 -- __ _ li1 -- ci2 voi1
- %fe1 -- li2 -- __ _ _ _ ci1 voi2
- _2 ii2 _ _ _ _ _ _ _ _ _ _ _ _ _ _
- Che1 se2 -- te2. Car'4 al2 mio2 sol,2
- Che1 se2 -- te2. Car'4 al2 mio2 sol,2
- per2 -- che2 sem2 -- bianz'2 ha2 -- ve2 -- te2 \skip 2*1
- De2 glioc2 -- chi2 che2 gli2 fur1
- si1 dol2 ci2 et1 re1 i1 \skip 1*1 \skip 2*1
- Voi2 ben voi se2. -- te4 voi,2.
- %voi4 ben2 voi se -- te voi,
- %voi2
- _ _ _ _ _ 
- fe -- li -- ci,2
- ed2 i1 -- o,2
- ed2 i1 -- o,2
- Io2 non, che per que -- tar1
- vo1 -- stro4 -- __ _ _ _ _ _
- de2 -- __ _ si2 -- __ _ _ o2
- \skip 4*1
- Corr'4 a mi -- rar l'on -- de2 mi2  strug1 -- go1 po1 i,2
- \skip 4*1
- Corr'4 a mi -- rar l'on -- de2 mi2  strug2 -- go2 po1 i,2
- mi2 -- __ _
- strug2 -- __ _ _ _ go2 po1 -- i
+  
+  \layout {
+    #(layout-set-staff-size 16)
+    \context {
+      \Score
+      \override SpacingSpanner #'uniform-stretching = ##t
+      %\remove Bar_engraver
+      \override BarLine #'transparent = ##t
+      \remove "System_start_delimiter_engraver"
+      \override TimeSignature #'style = #'mensural
+    }
+  }
 }

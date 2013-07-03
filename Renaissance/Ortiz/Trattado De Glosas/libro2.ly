@@ -103,17 +103,18 @@
 
 % Terza maniera
 \bookpart {
-  \paper { indent = #0 }
-  %\include "text/terza.ly"
-  %\include "lys/ofelici.ly"
-  %\include "lys/ofelici_r1.ly"
-  %\include "lys/ofelici_r2.ly"
-  %\include "lys/ofelici_r3.ly"
-  %\include "lys/ofelici_r4.ly"
-  %\include "text/doulce.ly"
-  %\include "lys/doulcememoire.ly"
-  %\include "lys/doulcememoire_r1.ly"
-  %\include "lys/doulcememoire_r2.ly"
+  %\paper { indent = #0 }
+  \include "text/terza.ly"
+  \include "lys/ofelici.ly"
+  \include "text/felici.ly"
+  \include "lys/ofelici_r1.ly"
+  \include "lys/ofelici_r2.ly"
+  \include "lys/ofelici_r3.ly"
+  \include "lys/ofelici_r4.ly"
+  \include "text/doulce.ly"
+  \include "lys/doulcememoire.ly"
+  \include "lys/doulcememoire_r1.ly"
+  \include "lys/doulcememoire_r2.ly"
   %\include "lys/doulcememoire_r3.ly"
   %\include "lys/doulcememoire_r4.ly"
   %\include "text/tenori.ly"

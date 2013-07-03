@@ -1,19 +1,19 @@
 \version "2.12.3"
 
-#(set-global-staff-size 15)
-\paper { indent = #0 }
-\layout {
-	\context {
-		\Score
-		\override SpacingSpanner #'uniform-stretching = ##t
-	}
+\tocItem "Recercata quarta che e une quinta voce sopra il detto madrigal"
+\markup \abs-fontsize #12 \center-column {
+  \vspace #2
+  \fill-line { "Recercata quarta che e quinta voce sopra il medesimo Madrigale" }
+  \vspace #1 
 }
-<<
-\new Staff \with {
-	%\remove "Time_signature_engraver"
-        \override TimeSignature #'style = #'mensural
-}
-\relative c' {
+
+\score {
+  <<
+    \new Staff \with {
+      %\remove "Time_signature_engraver"
+      \override TimeSignature #'style = #'mensural
+    }
+    \relative c' {
 	#(set-accidental-style 'forget)
         \cadenzaOn
         \autoBeamOff
@@ -29,5 +29,7 @@
 	a4 f g e f2 d e4. d8 e f g e \bar "|" f e d c d bis c d \bar "|" g,1. c4 d ees f g f e d c4. bes8 g\breve
 	\bar"|."
         \cadenzaOff
+    }
+  >>
+  \layout { indent = #0 }
 }
->>
