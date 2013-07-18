@@ -583,3 +583,307 @@
     }
   }
 }
+
+\bookpart {
+  \header {
+    title = \markup { \center-column {"VI. Psalmus 121 : Laetatus sum"}}
+  }
+  
+  \score {
+    <<
+      \new Voice = "VioleUn" {
+        \set Staff.instrumentName = "Viole 1"
+        \transpose d e {\relative c' {
+          \clef alto
+          \key d \minor
+          \time 4/2
+          \set Score.skipBars = ##t
+          R2*4*94
+          \key c \major
+          r1 r4 g4.^\markup{TUTTI} a8 b4~
+          b8 [c] d4. c8 b4. a8 g2 g4
+          g4 c4. d8 e4. f8 g4. f8 e4~\noBreak
+          e8 [d] c2 g4 b2 b~\break
+          b4 b a2 b e,
+          \key d \minor
+          a1 r
+          d2 a bes a~
+          a1 e4. f8 g2
+          d1 d2 r\break
+          r2 bes' c d
+          g, g a d,
+          d1 ~ d
+          \override NoteHead #'style = #'neomensural
+          \autoBeamOff
+          r4 bes'8 bes bes bes bes bes bes4. bes8 bes4 bes\break
+          \autoBeamOn
+          \override NoteHead #'style = #'default
+          ees1. d2
+          c1 d
+          d4 a bes f8 [f] d'4 a bes f8 [f]
+          f4 fis g gis a1
+          d, r2 g4 d
+          ees bes'8 [bes] bes4 bes d2 a
+          a d, d1
+          r1 g~
+          g g\bar "|."
+        }}
+      }
+      \new Lyrics \lyricsto "VioleUn" {
+        Glo- __ _ _ _ _ _ _ _ _ ri- a,
+        glo- __ _ _ _ _ _ _ _ _ ri- a
+        Pa- tri, et Fi- li- o,
+        et Spi- ri- tu- i __ _ _ Sanc- to,
+        et Spi- ri- tu- i Sanc- __ _ to.
+        Si- cut e- rat in prin- ci- pi- o, et
+        nunc, et sem- per
+        et in sae- cu- la,
+        et in sae- cu- la sae- cu- lo- rum,
+        A- men
+        et in- sae- cu- la, sae- cu- lo- rum,
+        A- __ _ men.
+        A- men.
+      }
+      
+      \new Voice = "VioleDeux" {
+        \set Staff.instrumentName = "Viole 2"
+        \transpose d e {\relative c' {
+          \clef alto
+          \key d \minor
+          \time 4/2
+          \set Score.skipBars = ##t
+          R2*4*94
+          \key c \major
+          r1 r4 b4. c8 d4~
+          d8 [c] b4. a8 g4. a8 b2 b4
+          e e4. f8 g4. f8 e4. d8 c4~
+          c8 [d] e2 c4 d2 d~
+          d4 d d2 g, g
+          \key d \minor
+          d'1 r
+          bes2 c d c~
+          c1 g4. a8 bes [a bes g]
+          a1 b2 r
+          r d a8 [bes c a] d4 d,
+          e2 c1 g'2
+          a1 g
+          \override NoteHead #'style = #'neomensural
+          \autoBeamOff
+          r4 d'8 d d d d d d4. d8 d4 d
+          \autoBeamOn
+          \override NoteHead #'style = #'default
+          g,2. a4 bes2. f4
+          g1 g
+          r2 d'4 a bes f8 [f] r2
+          R2*4
+          r2 d'4 a bes f8 [f] g4 bes
+          g d'8 [d] bes4 d d,2 e
+          a1 g
+          r1 r2 ees'2~
+          ees4 d c2 d1
+        }}
+      }
+      \new Lyrics \lyricsto "VioleDeux" {
+        Glo- __ _ _ _ _ _ _ _ _ ri- a,
+        glo- __ _ _ _ _ _ _ _ _ ri- a
+        Pa- tri, et Fi- li- o,
+        et Spi- ri- tu- i __ _ _ _ _ _ Sanc- to,
+        et Spi- __ _ _ _ _  ri- tu- i Sanc- __ _ to.
+        Si- cut e- rat in prin- ci- pi- o, et
+        nunc, __ _ _ et sem- per
+        et in sae- cu- la,
+        et in sae- cu- la,
+        et in- sae- cu- la, sae- cu- lo- rum,
+        A- men.
+        A- __ _ _ men.
+      }
+      
+      \new Voice = "Violoncelle" {
+        \set Staff.instrumentName = "Violoncelle"
+        \transpose d e {\relative c' {
+          \clef bass
+          \key d \minor
+          \time 4/2
+          \set Score.skipBars = ##t
+          R2*4*94
+          \key c \major
+          r1 g~
+          g2 g g1
+          c,1. c2 c1 g'
+          g2 f e2. e4
+          \key d \minor
+          d1 r
+          bes'2 f bes, f
+          g4 a2 bes4 c2 g
+          d'1 g,2 r
+          r bes' f d
+          c2. bes4 a2 g
+          d'1 g,
+          \override NoteHead #'style = #'neomensural
+          \autoBeamOff
+          r4 g'8 g g g g g g4. g8 g4 g
+          \autoBeamOn
+          \override NoteHead #'style = #'default
+          ees1. bes2
+          f1 bes
+          R2*4
+          R2*4
+          r1 g'4 d ees bes8 [bes]
+          g'4 d ees bes8 [bes] bes4 b c cis
+          d1 g,
+          r1 c~
+          c g
+        }}
+      }
+      \new Lyrics \lyricsto "Violoncelle" {
+        Glo- ri- a, glo- ri- a
+        Pa- tri, et Fi- li- o,
+        et Spi- ri- tu- __ _ _ _ _ i Sanc- to,
+        et Spi- ri- tu- __ _ _ i Sanc- to.
+        Si- cut e- rat in prin- ci- pi- o, et
+        nunc, et sem- per
+        et in sae- cu- la,
+        et in- sae- cu- la, sae- cu- lo- rum,
+        A- men.
+        A- men.
+      }
+    >>
+    
+    \layout{
+      #(layout-set-staff-size 14)
+    }
+  }
+}
+
+\bookpart {
+  \header {
+    title = \markup { \center-column {"VIII. Nisi Dominus à 10"}}
+  }
+  
+  \score {
+    <<
+      \new Voice = "NisiUn" {
+        \transpose f f {
+          \relative c' {
+            \clef alto
+            \key f \major
+            \time 4/2
+            a2 f4 c'2 a c4~
+            c8 [bes] a4. g8 f4. g8 a2 f4
+            d2 d'2. bes2 d4~
+            d8 [c] bes4. c8 d2 d4 d2~
+            d d d a
+            cis2. cis4 cis1
+            r2 a fis2. fis4~
+            fis d2 d4 d1\break
+            d1 d~
+            d r4 a'2 c4~
+            c f,4. g8 a4. bes8 c2 f,4~
+            f8 [g] a4. bes8 c2 a f4~\break
+            f c'4. bes8 a4. g8 f2 f4~
+            f a2 f bes4. c8 d4~
+            d8 [e] f4. e8 d4. c8 bes2 bes4
+            c2 c,2. d4 e f\break
+            g2 c, c1~
+            c r
+            \set Score.skipBars = ##t
+            R2*4*43
+            \time 6/4
+            R4*6*4
+            \time 9/4
+            R4*9
+            \time 2/2
+            R1
+            \time 4/2
+            R2*4
+            \time 6/4
+            R4*6*12\break
+            \time 4/2
+            R2*4
+            \tempo "Ample et détendu"
+            g'4. a8 bes4. c8 d2 d
+            g, ees8 [d ees c] d1
+            ees2 f ees2. ees4 \pageBreak
+            
+          }
+        }
+      }
+      \new Lyrics \lyricsto "NisiUn" {
+        Ni- si, ni- si Do- __ _ _ _ _ _ _ mi- nus,
+        ni- si Do- __ _ _ _ _ mi- nus
+        ae- di- fi- ca- ve- rit,
+        ae- di- fi- ca- ve- rit,
+        do- mum,
+        in va- num __ _ _ _ _
+        la- __ _ _ _ _ bo- ra- ve- __ _ _ _ _ runt
+        qui ae- di- __ _ _ _ _ _ _ _ _ fi- cant
+        e- __ _ _ _ _ _ am.
+        Glo- __ _ _ _ _ ri- a
+        Pa- __ _ _ _ _ tri, et Fi- li- 
+      }
+      
+      \new Voice = "NisiDeux" {
+        \transpose f f {
+          \relative c' {
+            \clef alto
+            \key f \major
+            \time 4/2
+            r4 c2 a c4. bes8 a4~
+            a8 [g] f4. g8 a4. bes8 c2 a4
+            bes4 d2 bes d4. c8 bes4~
+            bes d2 g,4. a8 bes4. c8 d4
+            r2 f d f4. f8
+            e4 e2 cis a cis4~
+            cis8 [d] e2 a,4 a2. d4~
+            d a2 a4 bes2 bes4 a
+            g2 d4. e8 fis1~
+            fis r2 r4 a4~
+            a c2 f,4. g8 a4. bes8 c4~
+            c f,4. g8 a4. bes8 c2 a4~
+            a f2 c' a4. bes8 c4~
+            c c2 c4 bes2. bes4
+            bes1 bes2. g4
+            c1 c2 c
+            g1 a~
+            a r
+            \set Score.skipBars = ##t
+            R2*4*43
+            \time 6/4
+            R4*6*4
+            \time 9/4
+            R4*9
+            \time 2/2
+            R1
+            \time 4/2
+            R2*4
+            \time 6/4
+            R4*6*12\break
+            \time 4/2
+            R2*4
+            g4. a8 bes4. c8 d2 d
+            g, ees8 [d ees c] d1
+            ees2 f ees2. ees4
+          }
+        }
+      }
+      \new Lyrics \lyricsto "NisiDeux" {
+        Ni- si, Do- __ _ _ _ _ _ _ _ _ mi- nus,
+        ni- si Do- __ _ _ mi- nus __ _ _ _ _
+        ni- si Do- mi- nus
+        ae- di- fi- ca- __ _ _ ve- rit,
+        ae- di- fi- ca- ve- rit,
+        do- mum, __ _ _
+        in va- num __ _ _ _ _
+        la- __ _ _ _ _ bo- ra- ve- runt __ _ _
+        qui ae- di- fi- cant
+        qui ae- di- fi- cant
+        e- am.
+        Glo- __ _ _ _ _ ri- a
+        Pa- __ _ _ _ _ tri, et Fi- li- 
+      }
+    >>
+    \header {
+      piece = "Violes"
+    }
+  }
+}
