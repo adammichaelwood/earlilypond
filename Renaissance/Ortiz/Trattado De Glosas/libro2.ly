@@ -115,7 +115,7 @@
   \include "lys/doulcememoire.ly"
   \include "lys/doulcememoire_r1.ly"
   \include "lys/doulcememoire_r2.ly"
-  %\include "lys/doulcememoire_r3.ly"
+  \include "lys/doulcememoire_r3.ly"
   %\include "lys/doulcememoire_r4.ly"
   %\include "text/tenori.ly"
   %\include "lys/bk2_c3_r1.ly"
