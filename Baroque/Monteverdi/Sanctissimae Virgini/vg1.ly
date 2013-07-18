@@ -464,3 +464,122 @@
     >>
   }
 }
+
+\bookpart {
+  \header {
+    title = \markup { \center-column {"IV. Psalmus 112: Laudate pueri" \small "octo vocibus"}}
+  }
+  
+  \score {
+    <<
+      \new Voice = "LaudateUn" {
+        \transpose c d {\relative c' {
+          \clef alto
+          \key c \major
+          \time 4/4
+          \set Score.skipBars = ##t
+          R4*4*5
+          \override Staff.TimeSignature #'stencil = ##f
+          \time 4/2
+          r1 r4 d a2
+          e'4 c4. c8 c4 r2 d4 g,
+          g1 r\break
+          R2*4*3
+          r1 r4 g g g
+          g2 g r4 d2 d4
+          d1 r\break
+          R2*4*29
+          \override Staff.TimeSignature #'stencil = ##t
+          \time 2/2
+          R1
+          \time 9/4
+          R4*9
+          \time 6/4
+          R4*6\break
+          \time 4/4
+          R4*4*2
+          \time 2/2
+          R1
+          \time 6/4
+          R4*6*2
+          \time 2/2
+          R1 \break
+          \time 4/4
+          R4*4*14
+          \time 9/4
+          R4*9
+          \time 6/4
+          R4*6*10
+          \time 4/4
+          R4*4*4\break
+          \time 6/4
+          R4*6*14
+          \time 4/4
+          R4*4*18\bar "|."
+        }}
+      }
+      \new Lyrics \lyricsto "LaudateUn" {
+        lau- da- te pu- e- ri
+        Do- mi- num:
+        lau- da- te no- men
+        Do- mi- ni.
+      }
+      
+      \new Voice = "LaudateDeux" {
+        \transpose c d {\relative c {
+          \clef bass
+          \key c \major
+          \time 4/4
+          \set Score.skipBars = ##t
+          R4*4*5
+          \override Staff.TimeSignature #'stencil = ##f
+          \time 4/2
+          R2*4
+          r4 c4. c8 c4 g'2. g4
+          c,1 r
+          R2*4*3
+          r1 r4 c' c c
+          g2. e4 a2 d,
+          g1 r\break
+          R2*4*29          
+          \override Staff.TimeSignature #'stencil = ##t
+          \time 2/2
+          R1
+          \time 9/4
+          R4*9
+          \time 6/4
+          R4*6\break
+          \time 4/4
+          R4*4*2
+          \time 2/2
+          R1
+          \time 6/4
+          R4*6*2
+          \time 2/2
+          R1 \break
+          \time 4/4
+          R4*4*14
+          \time 9/4
+          R4*9
+          \time 6/4
+          R4*6*10
+          \time 4/4
+          R4*4*4\break
+          \time 6/4
+          R4*6*14
+          \time 4/4
+          R4*4*18\bar "|."
+        }}
+      }
+      \new Lyrics \lyricsto "LaudateDeux" {
+        pu- e- ri
+        Do- mi- num:
+        lau- da- te no- men
+        Do- mi- ni.
+      }
+    >>
+    \header {
+      piece = "Violes"
+    }
+  }
+}
