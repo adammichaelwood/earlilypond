@@ -1409,3 +1409,168 @@
     >>
   }
 }
+
+\bookpart {
+  \header {
+    title = \markup { \center-column {"Magnificat - 12 - Sicut erat"}}
+  }
+  
+  \score {
+    <<
+      \new Staff {
+        \transpose c d {
+          \relative c' {
+            \clef alto
+            \key c \major
+            \time 4/4
+            \set Staff.instrumentName = "Viole"
+            r1
+            a~
+            a2 a
+            a1~
+            a
+            a~
+            a
+            r1
+            a2. b4 \break
+            c2 a
+            e'4 d c b
+            a2. b4
+            cis2 d
+            d1
+            r1
+            r
+            r
+            g,2 d'~\break
+            d d,
+            a'2. e4
+            f1
+            e2 a~
+            a a
+            a2. a4
+            a1~
+            a2 b~
+            b c
+            a1\break
+            b2 c~
+            c4 a d2
+            a1
+            a
+            r
+            r
+            r
+            r
+            r\break
+            r
+            r
+            r
+            r
+            c~
+            c2 c
+            c1~
+            c2 c
+            c1~\break
+            c2 bes4 a
+            d c bes a8 [g]
+            c4. bes8 a4. g8
+            f4. e8 d2
+            a'4. g8 f4 e8 [d]
+            e1
+            fis \bar "||"
+            r1\break
+            r2 d'4. c8
+            bes [a] bes4 bes4. a8
+            g [f] g4 g2~
+            g1
+            c,4. d8 e2
+            a4. b8 c2\break
+            f,4. g8 a2
+            d,4. e8 f2
+            bes4. c8 d2
+            d1
+            d,2. e4
+            fis1
+            \bar "|."
+          }
+        }
+      }
+      
+      \new Staff {
+        \transpose c d {
+          \relative c' {
+            \clef alto
+            \key c \major
+            \time 4/4
+            \set Staff.instrumentName = "Viole"
+            r1
+            r
+            d1~
+            d2 d
+            d1~
+            d
+            d~
+            d
+            r2 a~
+            a4 b c2
+            a a4 g
+            f g a2~
+            a a
+            g1
+            r1
+            g2 d'~
+            d a
+            bes1
+            a~
+            a~
+            a
+            r
+            r
+            r
+            r
+            r
+            r
+            r
+            r
+            r
+            r2 a~
+            a a
+            a2. a4
+            a1~
+            a2 b~
+            b c
+            a1
+            b2 c~
+            c d
+            a1
+            a~
+            a
+            a~
+            a2 a
+            a2. a4
+            a1~
+            a
+            bes
+            c
+            a~
+            a~
+            a
+            a
+            r2 d4. c8
+            bes [a] bes4 bes4. a8
+            g [f] g4 g4. a8
+            b2 e,4. f8
+            g2 c,4. d8
+            e2 a4. b8
+            c2 f,4. g8
+            a2 d,4. e8
+            f2 bes4. c8
+            d2 g,4. a8
+            bes1
+            bes4. a8 g [f] g4
+            a1
+          }
+        }
+      }
+    >>
+  }
+}
