@@ -4,7 +4,7 @@
 #(set-global-staff-size 18)
 
 \paper {
-  line-width    = 190\mm
+  line-width    = 188\mm
   left-margin   = 10\mm
   top-margin    = 10\mm
   bottom-margin = 20\mm
