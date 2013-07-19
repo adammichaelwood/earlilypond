@@ -12,6 +12,8 @@
   ragged-bottom = ##f
   annotate-spacing = ##f
   #(define page-breaking ly:page-turn-breaking)
+  first-page-number = #3
+  print-first-page-number = ##t
 }
 
 %\include "gregorian.ly"
@@ -140,6 +142,13 @@
       Al- le- lu- ja, Al- le- lu- ja.
     }
     >>
+  }
+}
+
+\bookpart {
+  \markup{""}
+  \paper {
+    print-page-number = ##f
   }
 }
 
@@ -763,7 +772,7 @@
   \score {
     <<
       \new Voice = "NisiUn" {
-        \transpose f f {
+        \transpose f g {
           \relative c' {
             \clef alto
             \key f \major
@@ -804,7 +813,30 @@
             g'4. a8 bes4. c8 d2 d
             g, ees8 [d ees c] d1
             ees2 f ees2. ees4 \pageBreak
-            
+            g1 r2 g
+            bes c f, bes
+            bes1~bes
+            bes a2^\markup{T° Primo} f4 c'~\break
+            c a2 c4. bes8 a4. g8 f4~
+            f8 [g] a2 f4 r2 d'2~
+            d4 bes2 d4. c8 bes4. c8 d4~
+            d d d1 d2\break
+            d a cis1~
+            cis r2 a
+            fis2. fis2 d d4
+            d1~d\break
+            d~d
+            r4 a'2 c f,4. g8 a4~
+            a8 [bes] c4. c8 f,4. g8 a4. bes8 c4~
+            c a2 f c'4. bes8 a4~\break
+            a8 [g] f2 f4 f a2 f4~
+            f bes4. c8 d4. e8 f4. e8 d4~
+            d bes bes2 c c,
+            c4 d e f g2 c,\break
+            c1 c'2. bes4
+            a2. g4 f2. e4
+            d2. e4 f1
+            f1~f\bar "|."
           }
         }
       }
@@ -819,11 +851,20 @@
         qui ae- di- __ _ _ _ _ _ _ _ _ fi- cant
         e- __ _ _ _ _ _ am.
         Glo- __ _ _ _ _ ri- a
-        Pa- __ _ _ _ _ tri, et Fi- li- 
+        Pa- __ _ _ _ _ tri, et Fi- li- o,
+        et Spi- ri- tu- i Sanc- to.
+        Sic- ut, sic- ut e- __ _ _ _ _ _ _ rat,
+        sic- ut e- __ _ _ _ _ rat in prin- ci- pi- o,
+        et nunc, et nunc, et sem- per,
+        et in sae- __ _ _ _ _ cu- la, __ _ _ _ _
+        et in sae- __ _ _ _ _ cu- la
+        sae- cu- lo- __ _ _ _ _ _ _ _ rum,
+        sae- cu- lo- __ _ _ _ _ _ rum.
+        A- __ _ _ _ _ _ _ _ _ men.
       }
       
       \new Voice = "NisiDeux" {
-        \transpose f f {
+        \transpose f g {
           \relative c' {
             \clef alto
             \key f \major
@@ -863,6 +904,30 @@
             g4. a8 bes4. c8 d2 d
             g, ees8 [d ees c] d1
             ees2 f ees2. ees4
+            ees1 r2 g
+            bes c f, bes
+            bes1~bes
+            bes r4 c2 a4~
+            a c4. bes8 a4. g8 f4. g8 a4~
+            a8 [bes] c2 a4 r d2 bes4~
+            bes d4. c8 bes4. c8 d2 g,4~
+            g8 [a] bes4. c8 d4 r2 f2
+            d f e4 e2 cis4~
+            cis a4. b8 cis4. d8 e2 a,4
+            a2. d2 a a4
+            bes2. a4 g2 d4. e8
+            fis1~fis
+            r2 r4 a2 c f,4~
+            f8 [g] a4. bes8 c4. c8 f,4. g8 a4~
+            a8 [bes] c2 a f c'4~
+            c8 [bes] a4. bes8 c2 c4 c2
+            bes1. bes2
+            bes2. g4 c2 c~
+            c c g1
+            a r2 c2~
+            c4 bes a2. g4 f2~
+            f4 e d2. e4 f2
+            a1~a
           }
         }
       }
@@ -879,11 +944,468 @@
         qui ae- di- fi- cant
         e- am.
         Glo- __ _ _ _ _ ri- a
-        Pa- __ _ _ _ _ tri, et Fi- li- 
+        Pa- __ _ _ _ _ tri, et Fi- li- o,
+        et Spi- ri- tu- i Sanc- to.
+        Sic- ut, e- __ _ _ _ _ _ _ _ _ rat,
+        sic- ut e- __ _ _ _ _ rat __ _ _ _ _
+        sic- ut e- rat in prin- ci- __ _ _ _ _  pi- o,
+        et nunc, et sem- __ _ _ per, __ _ _
+        et in sae- __ _ _ _ _ cu- la, __ _ _ _ _
+        et in sae- __ _ _ _ _ cu- la
+        et in sae- cu- la sae- cu- lo- rum,
+        A- __ _ _ _ _ _ _ _ _ men.
       }
     >>
     \header {
       piece = "Violes"
     }
+  }
+}
+
+\bookpart {
+  \header {
+    title = \markup { \center-column {"X. Lauda Jerusalem, Dominum (Ps.147)"}}
+  }
+  
+  \score {
+    <<
+      \new Voice = "JerusalemTenor" {
+        \set Voice.fontSize = #-2
+        \override Staff.StaffSymbol #'staff-space = #(magstep -2)
+        \set Staff.instrumentName = "Ténor"
+        \transpose g a {
+          \relative c' {
+            \clef "G_8"
+            \key g \minor
+            \time 4/2
+            d2. bes4 r1
+            f2 g bes4 c2 bes4
+            bes2 a4. g8 bes2 r
+            R2*4
+            r1 d2. bes4\break
+            r1 bes2 bes4 bes~
+            bes bes bes g bes2 a
+            g r r1
+            R2*4
+            R2*4\break
+            \set Score.skipBars = ##t
+            R2*4*43
+            g1^\markup{TUTTI} c2 g~
+            g4 a bes2 aes1
+            g2 c f,1~
+            f2 f g g\break
+            d'\breve
+            bes1 bes
+            ees2. ees4 ees1
+            ees2 c g4 a bes c
+            d1 g,\pageBreak
+            g2. g4 g1~
+            g2 a c g4 a
+            bes c d g, g1
+            bes2.^\markup{TUTTI} bes4 d4. d8 d4 d
+            d4. d8 d2 bes g~\break
+            g g d'4. ees8 f2~
+            f4 ees8 [d] c2 bes d~
+            \autoBeamOff
+            d4 d d d8 d d4 d d2~
+            d d bes1
+            c d\break
+            bes2. g4 g g8 g g4 g
+            g1 g
+            r2 d'2. c8 [bes] a2
+            b1 r
+            ees2 d ees r\break
+            c4. bes16 [a] g2 a r
+            f1 f
+            r2 d'4. c8 bes4. a8 g2
+            d'2. c8 [bes] a1
+            d\breve \bar "|."
+          }
+        }
+      }
+      \new Lyrics \lyricsto "JerusalemTenor" {
+        \override LyricText #'font-size = #-1
+        Lau- da, lau- da Je- ru- sa- lem, Do- mi- num.
+        Lau- da, lau- da De- um tu- um Si- __ _ on.
+        Glo- ri- a __ _ _
+        Pa- tri et Fi- li- o, et Fi- li- o,
+        et Spi- ri- tu- i Sanc- __ _ _ _ _ to,
+        et Spi- ri- tu- i Sanc- __ _ _ _ _ _ to.
+        Sic- ut e- rat in prin- ci- pi- o et nunc
+        et sem- __ _ _ _ _ _ per,
+        et in sae- cu- la sae- cu- lo- rum.
+        A- __ _ men.
+        Et in sae- cu- la sae- cu- lo- rum,
+        A- __ _ _ men,
+        A- __ _ men,
+        A- __ _ _ men,
+        A- men,
+        A- __ _ _ _ _ _ _ _ men.
+      }
+      
+      \new Voice = "JerusalemVioleUn" {
+        \set Staff.instrumentName = "Viole 1"
+        \transpose g a {
+          \relative c' {
+            \clef "alto"
+            \key g \minor
+            \time 4/2
+            r1 d2 d
+            R2*4
+            r1 r2 c
+            g ees'4 ees2 g4 g2
+            c,4. c8 d2 r1
+            d2 d r1
+            R2*4
+            r2 d d4 d2 d4
+            bes2 bes4 d2 c8 [bes] a2
+            b1 r
+            \set Score.skipBars = ##t
+            R2*4*43
+            ees2. f4 g2. f4
+            ees2. d4 c1
+            c2 c f2. ees4
+            d ees f d ees1
+            ees2 bes ees4 d8 c] bes4 c
+            d ees f4. f8 ees2 r2
+            R2*4
+            R2*4
+            R2*4
+            R2*4
+            R2*4
+            R2*4
+            d2. d4 bes4. bes8 bes4 bes
+            bes4. bes8 bes1 bes2
+            ees1 f
+            f d
+            r bes'2. bes4
+            \autoBeamOff
+            bes bes8 bes bes4 bes bes bes f4. g8
+            a1 d,
+            ees2. ees4 ees ees8 ees ees4 ees
+            ees1 bes
+            ees\breve
+            d1 ees2 d
+            ees r ees d
+            c1 c
+            d2 c d c
+            d2. a'2 g4 g2~
+            g fis4 e fis1
+            a\breve
+          }
+        }
+      }
+      \new Lyrics \lyricsto "JerusalemVioleUn" {
+        Lau- da, lau- da- Je- ru- sa- lem, Do- mi- num.
+        La- da, lau- da De- um tu- um Si- __ _ _ _ on.
+        Glo- __ _ _ _ _ _ _ ri- a
+        Pa- __ _ _ _ _ _ _ tri
+        et Fi- __ _ _ _ _ _ _ _ li- o
+        Si- cut e- rat in prin- ci- pi- o
+        et nunc et sem- per,
+        et in sae- cu- la sae- cu- lo- rum.
+        A- __ _ _ men.
+        Et in sae- cu- la sae- cu- lo- rum.
+        A- men
+        A- __ _ men.
+        A- __ _ _ men,
+        A- __ _ _ _ men,
+        A- __ _ _ _ _ _ men.
+      }
+      
+      \new Voice = "JerusalemVioleDeux" {
+        \set Staff.instrumentName = "Viole 2"
+        \transpose g a {
+          \relative c' {
+            \clef "bass"
+            \key g \minor
+            \time 4/2
+            r1 bes2 bes,
+            R2*4
+            r1 r2 f'
+            ees ees4 c2 g'4 g2
+            f4. f8 bes,2 r1
+            bes'2 bes, r1
+            R2*4
+            r2 bes'2 bes4 bes2 bes4
+            bes ees, bes4. c8 d1
+            g, r
+            \set Score.skipBars = ##t
+            R2*4*43
+            c1. c2
+            ees1 aes,2. bes4
+            c1 bes
+            r2 bes' ees,2. f4
+            g2. a4 bes2. bes4
+            bes,1 r
+            R2*4
+            R2*4
+            R2*4
+            R2*4
+            R2*4
+            R2*4
+            g'2. g4 g4. g8 g4 g
+            g4. g8 g1 ees2
+            c1 d
+            f bes,
+            \autoBeamOff
+            bes'2. bes4 bes4 bes8 bes bes4 bes
+            bes2. g4 bes1
+            a g
+            ees2. ees4 ees ees8 ees ees4 ees
+            ees1. ees2
+            bes2. c4 d1
+            g, r
+            ees'4. f8 g2 c, r
+            a4. bes8 c2 f r
+            d4. ees8 f2 bes, r
+            bes4. c8 d2 g, g'
+            f\breve
+            a\breve
+          }
+        }
+      }
+      \new Lyrics \lyricsto "JerusalemVioleDeux" {
+        Lau- da, lau- da- Je- ru- sa- lem, Do- mi- num.
+        La- da, lau- da De- um tu- um Si- __ _ _ on.
+        Glo- ri- a
+        Pa- __ _ _ tri
+        et Fi- __ _ _ _ _ li- o
+        Si- cut e- rat in prin- ci- pi- o
+        et nunc et sem- per,
+        et in sae- cu- la sae- cu- lo- rum.
+        A- __ _ men.
+        Et in sae- cu- la sae- cu- lo- rum.
+        A- __ _ _ men
+        A- __ _ _ men.
+        A- __ _ _ men,
+        A- __ _ _ men,
+        A- __ _ _ men,
+        A- __ _ men.
+      }
+    >>
+  }
+}
+
+\bookpart {
+  \header {
+    title = \markup { \center-column {"XII. Hymnus: Ave maris stella"}}
+  }
+  
+  \score {
+    <<
+      \new Voice = "HymnusUn" {
+        \transpose c d {
+          \relative c' {
+            \clef alto
+            \key c \major
+            \time 4/2
+            \set Staff.instrumentName = "Viole 1"
+            \set Score.skipBars = ##t
+            <<{s4^\markup{Versus 1}}{R2*4*8}>>
+            \time 3/1
+            R1*3
+            \time 4/2
+            R2*4*3
+            \time 3/1
+            R1*3
+            \time 4/2
+            R2*4*2
+            \time 3/1
+            R1*3
+            \bar "||"
+            \time 6/4
+            <<{s4^\markup{Versus 2}}{R4*6*10}>>
+            <<{s4^\markup{Ritornello}}{R4*6*10}>>
+            <<{s4^\markup{Versus 3}}{R4*6*10}>>
+            \bar "||"\break
+            d4^\markup{Ritornello} e f e2 g4
+            e2 d4 e2 f4
+            e2. e4 a, e'
+            c2 c4 d2 a4
+            d2 d4 e2. \break
+            e2 f4 e a, a
+            c2 c4 a d2
+            e2. e4 b c
+            g2 a4 e f d
+            g e a a2.\bar "||" \break
+            <<{s4^\markup{Versus 4}}{R4*6}>>
+            R4*6
+            R4*6
+            R4*6
+            R4*6 \break
+            R4*6
+            R4*6
+            R4*6
+            R4*6
+            R4*6
+            \bar "||" \break
+            <<{s4^\markup{Ritornello}}{R4*6*10}>>
+            \set Score.skipBars = ##f
+            <<{s4^\markup{Versus 5}}{\set Score.skipBars = ##t R4*6*10}>>
+            \bar "||" \pageBreak
+            <<{s4^\markup{Ritornello}}{R4*6}>>
+            R4*6
+            R4*6
+            R4*6
+            R4*6 \break
+            R4*6
+            R4*6
+            R4*6
+            R4*6
+            R4*6
+            \bar "||" \break
+            <<{s4^\markup{Versus 6}}{R4*6*10}>>
+            \time 4/2
+            a2^\markup{Versus 7 - TUTTI} ~ a4 d2 d4 d2
+            b1 b~
+            b2 b e a,
+            e'4 b c8 [a] e'2 d8 [c] b2 \break
+            cis1~cis
+            a e2 d4. e8
+            f2 e r1
+            r4 a2 d,4 a'4. g8 f [g] a4~
+            \time 3/1
+            a e a2 a1~a \break
+            \time 4/2
+            a2. g4 f2 c'
+            c1. b4 a
+            b2 a4 g a2 c
+            \time 3/1
+            g1 g~g
+            \time 4/2
+            g2 c, g'2. e4 \break
+            e2 e~e4 a2 d,4
+            \time 3/1
+            e1 fis2. g4 a1
+            \time 4/2
+            a~a
+            g~g
+            a~a\bar "|."
+          }
+        }
+      }
+      \new Lyrics \lyricsto "HymnusUn" {
+        _ _ _ _ _ _ _ _ _ _ _ _ _ _
+        _ _ _ _ _ _ _ _ _ _ _ _ _ _
+        _ _ _ _ _ _ _ _ _ _ _ _ _ _
+        Sit __ _ laus De- o
+        Pa- tri,
+        Sit laus De- o Pa- __ _ _ _ _ _ tri,
+        Sum- mo Chri- __ _ _ sto
+        Sum- mo Chri- __ _ _ _ _ sto de- cus,
+        Spi- __ _ _ ri- tu- __ _ _ _ _ _ _ i
+        San- cto,
+        Tri- bus ho- nor u- nus
+        ho- nor u- nus. __ _ _
+        A- __ _ men.
+      }
+      
+      \new Voice = "HymnusDeux" {
+        \transpose c d {
+          \relative c {
+            \clef bass
+            \key c \major
+            \time 4/2
+            \set Staff.instrumentName = "Viole 2"
+            \set Score.skipBars = ##t
+            R2*4*8
+            \time 3/1
+            R1*3
+            \time 4/2
+            R2*4*3
+            \time 3/1
+            R1*3
+            \time 4/2
+            R2*4*2
+            \time 3/1
+            R1*3
+            \bar "||"
+            \time 6/4
+            R4*6*10
+            R4*6*10
+            R4*6*10
+            d4 a' d, a'2 bes4
+            a2 d,4 a'2 d,4
+            cis2. cis4 d e
+            f2 e4 f g a
+            bes2 bes4 a2.
+            a2 d,4 a'2 d,4
+            c4. b8 a8 [g] f4 g2
+            c2. c'4 g a
+            e2 f4 c d4. c8
+            bes4 a2 d2.
+            d2. g,4. a8 b!4
+            c4. d8 e4 a, e'2
+            a,2. a4 b cis
+            d2 c!4 bes2.
+            bes4 a2 d2.
+            d2 c4 c4. b!8 a4
+            g2 f g
+            c2. c4. b8 a4
+            g4. f8 e4 a4. b8 cis [a]
+            d4 a2 d2.
+            R4*6*10
+            R4*6*10
+            d4 a' d, a'2 bes4
+            a2 d,4 a'2 d,4
+            cis2. cis4 d e
+            f2 e4 f g a
+            bes2 bes4 a2.
+            a2 d,4 a'2 d,4
+            c4. b!8 a [g] f4 g2
+            c2. c'4 g a
+            e2 f4 c d4. c8
+            bes4 a2 d2.
+            R4*6*10
+            \time 4/2
+            d2 a'1 fis2
+            d1 d2 d~
+            d g1 e2~
+            e e e1
+            e~e
+            e1. f2
+            a1 g
+            e2 d cis f
+            \time 3/1
+            e1 fis2. g4 a1
+            \time 4/2
+            f!2. e4 d2 g
+            e1 a
+            r a2 a
+            \time 3/1
+            d,4 d g2 e1~e
+            \time 4/2
+            e b'4. a8 g2
+            c4. b8 a1 a2
+            \time 3/1
+            a1 a~a
+            \time 4/2
+            a4 g fis e d2 d'~
+            d4 c bes2. a4 g d
+            d1~d
+          }
+        }
+      }
+      \new Lyrics \lyricsto "HymnusDeux" {
+        _ _ _ _ _ _ _ _ _ _ _ _ _ _
+        _ _ _ _ _ _ _ _ _ _ _ _ _ _
+        _ _ _ _ _ _ _ _ _ _ _ _ _ _
+        _ _ _ _ _ _ _ _ _ _ _ _ _ _
+        _ _ _ _ _ _ _ _ _ _ _ _ _ _
+        _ _ _ _ _ _ _ _ _ _ _ _ _ _
+        _ _ _ _ _ _ _ _ _ _ _ _ _ _
+        _ _ _ _ _ _ _ _ _ _ _ _ _ _
+        _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+        Sit __ _ laus De- o
+        Sit laus De- o Pa- tri,
+        Sum- mo Chri- sto
+        de- __ _ _ _ _ cus, __ _ _
+        Spi- ri- tu- i San- cto,
+        Spi- ri- tu- i San- cto,
+        Tri- bus __ _ _ ho- __ _ _ nor u- nus
+        A- __ _ _ _ _ _ _ _ _ _ _ men.
+      }
+    >>
   }
 }
