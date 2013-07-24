@@ -121,10 +121,15 @@
   \include "lys/bk2_c3_r1.ly"
   \include "lys/bk2_c3_r2.ly"
   \include "lys/bk2_c3_r3.ly"
-  %\include "lys/bk2_c3_r4.ly"
-  %\include "lys/bk2_c3_r5.ly"
-  %\include "lys/bk2_c3_r6.ly"
-  %\include "lys/bk2_c3_r7.ly"
-  %\include "lys/bk2_c3_r8.ly"
-  %\include "lys/bk2_c3_r9.ly"
+  \include "lys/bk2_c3_r4.ly"
+  \include "lys/bk2_c3_r5.ly"
+  \include "lys/bk2_c3_r6.ly"
+  \include "lys/bk2_c3_r7.ly"
+  \include "lys/bk2_c3_r8.ly"
+  \include "lys/bk2_c3_r9.ly"
+  
+  \markup \abs-fontsize #10 \column {
+    \vspace #10
+    \fill-line { \epsfile #X #40 #"trattado_end.eps" }
+  }
 }
