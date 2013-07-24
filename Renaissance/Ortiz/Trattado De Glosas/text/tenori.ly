@@ -1,7 +1,7 @@
 %page 92 du PDF original
 
 
-\tocItem "Una Canzon Francese doulce memoire"
+\tocItem "Dichiaratione per sonare sopre tenori"
 \markuplist {
   \paragraph {
     \abs-fontsize #12 {
