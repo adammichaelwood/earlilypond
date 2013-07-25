@@ -1,6 +1,6 @@
 \version "2.12.3"
 
-\tocItem "Un madrigale, o felici occhi miei"
+\tocItem \markup\fontsize #1 {"      Un madrigale, o felici occhi miei"}
 %\markup \abs-fontsize #12 \center-column {
 %  \vspace #2
 %  \fill-line { "RECERCATA PRIMA" }

@@ -1,6 +1,6 @@
 \version "2.12.3"
 
-\tocItem "Recercata quarta che e une quinta voce sopra il detto madrigal"
+\tocItem \markup\italic{"            Recercata quarta che e une quinta voce sopra il detto madrigal"}
 \markup \abs-fontsize #12 \center-column {
   \vspace #2
   \fill-line { "Recercata quarta che e quinta voce sopra il medesimo Madrigale" }

@@ -3,7 +3,7 @@
 % lettrine sur le S
 % V odo = peut-être "à la quinte"
 
-\tocItem "Ordine per accordare il violon col cimbalo"
+\tocItem \markup\bold\fontsize #1 {"Ordine per accordare il violon col cimbalo"}
 \markup \abs-fontsize #16 \center-column {
   \vspace #2
   \fill-line { "L'ORDINE CHE SE HA DA TENER' IN ACCODAR' " }

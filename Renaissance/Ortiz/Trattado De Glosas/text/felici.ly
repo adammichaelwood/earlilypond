@@ -2,7 +2,7 @@
 %juste avant recercata prima sopra o felici occhi miei.
 
 
-\tocItem "Dichiaratione per sonare sopra cose composte"
+\tocItem \markup\italic {"            Dichiaratione per sonare sopra cose composte"}
 \markuplist {
   \paragraph {
     \abs-fontsize #12 {

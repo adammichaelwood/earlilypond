@@ -1,6 +1,6 @@
 %page 80 du PDF original
 
-\tocItem "Una Canzon Francese doulce memoire"
+\tocItem \markup\fontsize #1 {"      Una Canzon Francese doulce memoire"}
 \markuplist {
   \paragraph {
     \abs-fontsize #12 {

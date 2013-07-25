@@ -1,6 +1,6 @@
 \version "2.12.3"
 
-\tocItem "Recercata prima sopra doulce memoire"
+\tocItem \markup\italic{"            Recercata prima sopra doulce memoire"}
 \markup \abs-fontsize #12 \center-column {
   \vspace #2
   \fill-line { "RECERCATA PRIMA SOPRA DOULCE MEMOIRE" }

@@ -1,6 +1,6 @@
 \version "2.12.3"
 
-\tocItem "Recercata Seconda"
+\tocItem \markup\italic {"            Recercata Seconda"}
 \markup \abs-fontsize #12 \center-column {
   \vspace #2
   \fill-line { "RECERCATA SECONDA" }

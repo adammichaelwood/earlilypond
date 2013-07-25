@@ -1,6 +1,6 @@
 \version "2.12.3"
 
-\tocItem "Recercata ottava sopra li detti tenori"
+\tocItem \markup\italic{"            Recercata ottava sopra li detti tenori"}
 
 \score {
   <<

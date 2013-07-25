@@ -1,6 +1,6 @@
 \version "2.12.3"
 
-\tocItem "Recercata prima sopra o felici occhi miei"
+\tocItem \markup\italic{"            Recercata prima sopra o felici occhi miei"}
 \markup \abs-fontsize #12 \center-column {
   \vspace #2
   \fill-line { "RECERCATA PRIMA SOPRA O FELICI OCCHI MIEI" }

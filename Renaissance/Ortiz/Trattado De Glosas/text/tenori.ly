@@ -1,7 +1,7 @@
 %page 92 du PDF original
 
 
-\tocItem "Dichiaratione per sonare sopre tenori"
+\tocItem \markup\fontsize #1 {"      Dichiaratione per sonare sopre tenori"}
 \markuplist {
   \paragraph {
     \abs-fontsize #12 {

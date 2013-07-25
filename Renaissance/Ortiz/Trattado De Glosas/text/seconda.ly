@@ -2,7 +2,7 @@
 % sur Cato, abréviation possible, tilde sur le a
 % idem sur troueràno
 
-\tocItem "La seconda maniera de sonare il violon col cimbalo sopra canto piano"
+\tocItem \markup\bold\fontsize #1 {"La seconda maniera de sonare il violon col cimbalo sopra canto piano"}
 \markup \abs-fontsize #16 \center-column {
   \vspace #2
   \fill-line { "DE LA SECONDA MANIERA DI SONARE" }

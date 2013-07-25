@@ -4,7 +4,7 @@
 % Original
 %%%%%%%%%%%%%%%%%%%%%%%
 
-\tocItem "Dichiaratione dela maniera che se ha da sonare il violon col cimbalo"
+\tocItem \markup\bold\fontsize #1 {"Dichiaratione dela maniera che se ha da sonare il violon col cimbalo"}
 \markup \abs-fontsize #16 \center-column {
   \vspace #2
   \fill-line { "DECHIARATIONE DELLE MANIERE CHE S'HAN" }

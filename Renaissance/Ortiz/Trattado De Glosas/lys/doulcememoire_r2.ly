@@ -1,6 +1,6 @@
 \version "2.12.3"
 
-\tocItem "Recercata seconda sopra la detta Canzone"
+\tocItem \markup\italic{"            Recercata seconda sopra la detta Canzone"}
 \markup \abs-fontsize #12 \center-column {
   \vspace #2
   \fill-line { "RECERCATA SECONDA SOPRA LA MIDESMA CANCIONE" }

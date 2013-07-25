@@ -1,6 +1,6 @@
 %page 68 du PDF original
 
-\tocItem "La terza maniera di sonare il Violon col Cimbalo sopra le compositioni a piu voci"
+\tocItem \markup\bold\fontsize #1 {"La terza maniera di sonare il Violon col Cimbalo sopra le compositioni a piu voci"}
 \markup \abs-fontsize #16 \center-column {
   \vspace #2
   \fill-line { "La terza maniera di sonar il Violone col Cimbalo, che sara sopra" }

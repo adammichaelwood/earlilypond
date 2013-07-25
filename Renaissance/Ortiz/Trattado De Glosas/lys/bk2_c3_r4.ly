@@ -1,6 +1,6 @@
 \version "2.12.3"
 
-\tocItem "Recercata quarta sopra li detti tenori"
+\tocItem \markup\italic{"            Recercata quarta sopra li detti tenori"}
 
 \score {
   <<
@@ -17,8 +17,8 @@
             \time 4/4
             \key f \major
             \clef soprano
-            \repeat volta 2 {r2 fis2 fis fis fis1 fis2 g1 g2 a1 a2 bes1 bes2 a1 a2 g1 g2 fis1
-                             r2 fis2 g a bes1 a g fis r2 fis g a bes a2. g4 g2. fis4 fis2 g1}
+            \repeat volta 2 {r2 fis2 f f f1 f2 g1 g2 a1 a2 bes1 bes2 a1 a2 g1 g2 fis1
+                             r2 f2 g a bes1 a g fis r2 f g a bes a2. g4 g2. fis4 f2 g1}
           }
         }
       >>

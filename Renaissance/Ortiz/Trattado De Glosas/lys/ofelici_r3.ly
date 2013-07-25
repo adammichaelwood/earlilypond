@@ -1,6 +1,6 @@
 \version "2.12.3"
 
-\tocItem "Recercata terza sopra il detto madrigal"
+\tocItem \markup\italic{"            Recercata terza sopra il detto madrigal"}
 \markup \abs-fontsize #12 \center-column {
   \vspace #2
   \fill-line { "RECERCATA TERZA SOPRA IL MEDESIMO MADRIGALE" }
