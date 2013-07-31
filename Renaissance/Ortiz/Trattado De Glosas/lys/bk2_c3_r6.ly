@@ -11,7 +11,7 @@
       \new Staff = "cantus" <<
         \set Staff.instrumentName = #"Cantus"
         \new Voice = "cantus" {
-          \relative c' {
+          \relative c'' {
             #(set-accidental-style 'forget)
             \cadenzaOn
             \time 4/4
@@ -89,7 +89,7 @@
       f4 c'2 a4. g8 a bes c4 a bes2. a4 g f e2 d4 d'2 c4 bis a g \clef varbaritone d2 c4 bis a g2 d''2. c4 bes a8 g f4 e d c \bar ""
       \clef tenor bes2 f''2. e4 d c bes2 d2. c4 bes a g f ees f g a bes g a8 bes c bes a g f e d4 d'2 bes4. a8 bes c d4 bes f'4. e8 d c \bar ""
       bes4 r d,2 bes4. a8 bes c d4 bes f'4. e8 d c bes4 r c'2 a4. g8 a bes c4 a c4. bes8 a g a4 d bes4. a8 bes c d4 bes c4. bes8 a g a4 \bar ""
-      \clef varbaritone r4 d,2 bis4. a8 b c d4 bis d4. c8 bes a g4 d'' bis4. a8 bes c d4 bis d4. c8 bes a g2 f8 e d c bis a g\longa
+      \clef varbaritone r4 d,2 bis4. a8 bes c d4 bis d4. c8 bes a g4 d'' bis4. a8 bes c d4 bis d4. c8 bes a g2 f8 e d c bis a g\longa
       \bar"|."
       \cadenzaOff
     }
