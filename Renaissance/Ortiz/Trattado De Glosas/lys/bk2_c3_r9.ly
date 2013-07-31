@@ -30,7 +30,7 @@
             \key f \major
             \time 4/4
             \clef alto
-            \repeat volta 2 {f1 f2 f f f f1. f2 d c c bes b1. c2 c c a2. bes4 c1 c bes2 a c1 c} c\longa
+            \repeat volta 2 {f1 f2 f f f f1. f2 d c c bes c1. c2 c c a2. bes4 c1 c bes2 a c1 c} c\longa
           }
         }
       >>
@@ -84,11 +84,11 @@
       \clef bass
       \key f \major
       f2. g4 a g f e d2 f2. e8 d c1 f2. g4 a f g2 d e e2. f4 g f e d e2 d4 e f d e d c bes a2 c d4 e \bar ""
-      f4 d e d c bes a g f2 c' a c bes4 c d bes c2 c a c \times 2/3 {d4. e8 f4} g2 d e g e g2. f4 e2 d4 e f d e2 c a c \bar ""
-      \clef varbaritone \times 2/3 {d4. e8 f4} c2 c' a c2. bes4 a g a g f e d c d bes c2 c'1 a2 bes c1 f,2 r1 g e2. f4 g e a2 d, \times 2/3 {e4. f8 g4} f2 c d1 r g2 \bar ""
-      a1. bes2 c a f f a2. bes4 c2 a \clef alto bes c r1 d2 e2. f4 g2 e c e d4 e f d e d c bes a g f e d e f d \bar ""
-      \clef bass e d c bes c bes a g f2 c'' a f2. e4 f g a bes c bes a g f e f g a f g2 d r1 g2 e c g' e d4 e f d \bar ""
-      e2 c' a f d4 e f d e2 c a f c'1 r f2 d bes c c' a f2. g4 a f g a bes2 g g1 e2 c e d r4 d e2 g f c \bar ""
+      f4 d e d c bes a g f2 r c' a c bes4 c d bes c2 c a c \times 2/3 {d4. e8 f4} g2 d e g e g2. f4 e2 d4 e f d e2 c a c \bar ""
+      \clef varbaritone \times 2/3 {d4. e8 f4} c2 c' a c2. bes4 a g a g f e d c d bes c2 c'1 a2 bes c1 f,2 r2 g e2. f4 g e a2 d, \times 2/3 {e4. f8 g4} f2 c d1 r2 g2 \bar ""
+      a1. bes2 c a f f a2. bes4 c2 a \clef alto bes c r2 d2 e2. f4 g2 e c e d4 e f d e d c bes a g f e d e f d \bar ""
+      \clef bass e d c bes c bes a g f2 c'' a f2. e4 f g a bes c bes a g f e f g a f g2 d r2 g2 e c g' e d4 e f d \bar ""
+      e2 c' a f d4 e f d e2 c a f c'1 r2 f2 d bes c c' a f2. g4 a f g a bes2 g g1 e2 c e d r4 d e2 g f c \bar ""
       d4 e f d e2 r4 g a bes c bes a g f g a g f e d c bes bes' c bes a g a g f e f g a f g e d d \bar ""
       e4 f g f e d e f g f g e d e f d e d c bes a bes c a d e f d e d c bes c a bes c f,\breve \bar ""
       \bar"|."
