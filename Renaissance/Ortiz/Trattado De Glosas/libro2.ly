@@ -4,6 +4,9 @@
 
 \version "2.16.0"
 
+% Options
+#(ly:add-option 'urtext #t "Produce an Urtext version")
+
 \header {
   tagline = ""
 }
@@ -72,6 +75,29 @@
    (interpret-markup-list layout props
      (make-justified-lines-markup-list (cons (make-hspace-markup par-indent)
                                              args))))
+modernSwitch =
+#(define-music-function (parser location modClef) (string?)
+   (if (eq? #f (ly:get-option 'urtext))
+       #{ \clef $modClef #}
+       (make-music 'Music 'void #t)))
+
+urtextBreak =
+#(define-void-function (parser location) ()
+   (if (eq? #f (ly:get-option 'urtext))
+       #{\break#}
+       #{#}))
+
+urtextNoBreak =
+#(define-void-function (parser location) ()
+   (if (eq? #f (ly:get-option 'urtext))
+       #{\noBreak#}
+       #{#}))
+
+% Urtext version has no beams
+#(if (eqv? (ly:get-option 'urtext) #t)
+     (define bracketOpenSymbol (make-music 'BeamEvent STOP))
+     #{#})
+
 
 % Introduction
 \bookpart {
@@ -84,52 +110,51 @@
   \paper { indent = #0 }
   \include "text/ordine.ly"
   \include "lys/bk2_c1_r1.ly"
-  \include "lys/bk2_c1_r2.ly"
-  \include "lys/bk2_c1_r3.ly"
-  \include "lys/bk2_c1_r4.ly"
+  %\include "lys/bk2_c1_r2.ly"
+  %\include "lys/bk2_c1_r3.ly"
+  %\include "lys/bk2_c1_r4.ly"
 }
 
 % Seconda maniera
-\bookpart {
-  \paper { indent = #0 }
-  \include "text/seconda.ly"
-  \include "lys/bk2_c2_r1.ly"
-  \include "lys/bk2_c2_r2.ly"
-  \include "lys/bk2_c2_r3.ly"
-  \include "lys/bk2_c2_r4.ly"
-  \include "lys/bk2_c2_r5.ly"
-  \include "lys/bk2_c2_r6.ly"
-}
+%\bookpart {
+%  \paper { indent = #0 }
+%  \include "text/seconda.ly"
+%  \include "lys/bk2_c2_r1.ly"
+%  \include "lys/bk2_c2_r2.ly"
+%  \include "lys/bk2_c2_r3.ly"
+%  \include "lys/bk2_c2_r4.ly"
+%  \include "lys/bk2_c2_r5.ly"
+%  \include "lys/bk2_c2_r6.ly"
+%}
 
 % Terza maniera
-\bookpart {
-  %\paper { indent = #0 }
-  \include "text/terza.ly"
-  \include "lys/ofelici.ly"
-  \include "text/felici.ly"
-  \include "lys/ofelici_r1.ly"
-  \include "lys/ofelici_r2.ly"
-  \include "lys/ofelici_r3.ly"
-  \include "lys/ofelici_r4.ly"
-  \include "text/doulce.ly"
-  \include "lys/doulcememoire.ly"
-  \include "lys/doulcememoire_r1.ly"
-  \include "lys/doulcememoire_r2.ly"
-  \include "lys/doulcememoire_r3.ly"
-  \include "lys/doulcememoire_r4.ly"
-  \include "text/tenori.ly"
-  \include "lys/bk2_c3_r1.ly"
-  \include "lys/bk2_c3_r2.ly"
-  \include "lys/bk2_c3_r3.ly"
-  \include "lys/bk2_c3_r4.ly"
-  \include "lys/bk2_c3_r5.ly"
-  \include "lys/bk2_c3_r6.ly"
-  \include "lys/bk2_c3_r7.ly"
-  \include "lys/bk2_c3_r8.ly"
-  \include "lys/bk2_c3_r9.ly"
+%\bookpart {
+%  \include "text/terza.ly"
+%  \include "lys/ofelici.ly"
+%  \include "text/felici.ly"
+%  \include "lys/ofelici_r1.ly"
+%  \include "lys/ofelici_r2.ly"
+%  \include "lys/ofelici_r3.ly"
+%  \include "lys/ofelici_r4.ly"
+%  \include "text/doulce.ly"
+%  \include "lys/doulcememoire.ly"
+%  \include "lys/doulcememoire_r1.ly"
+%  \include "lys/doulcememoire_r2.ly"
+%  \include "lys/doulcememoire_r3.ly"
+%  \include "lys/doulcememoire_r4.ly"
+%  \include "text/tenori.ly"
+%  \include "lys/bk2_c3_r1.ly"
+%  \include "lys/bk2_c3_r2.ly"
+%  \include "lys/bk2_c3_r3.ly"
+%  \include "lys/bk2_c3_r4.ly"
+%  \include "lys/bk2_c3_r5.ly"
+%  \include "lys/bk2_c3_r6.ly"
+%  \include "lys/bk2_c3_r7.ly"
+%  \include "lys/bk2_c3_r8.ly"
+%  \include "lys/bk2_c3_r9.ly"
   
-  \markup \abs-fontsize #10 \column {
-    \vspace #10
-    \fill-line { \epsfile #X #40 #"trattado_end.eps" }
-  }
-}
+%  \markup \abs-fontsize #10 \column {
+%    \vspace #10
+%    \fill-line { \epsfile #X #40 #"trattado_end.eps" }
+%  }
+%}

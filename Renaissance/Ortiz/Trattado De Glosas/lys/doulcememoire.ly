@@ -31,7 +31,7 @@
       \override Voice.NoteHead #'style = #'default
       \override Voice.Rest #'style = #'default
       \lyricmode {
-        Doulce1 _ _2 me moire1 _ _2
+        Doulce1 _ _  2 me moire1 _ _2
         en plaisir1 consu mee _ _
         ii _ _ _ _ _ _
         O siecl'heu reulx _ qui2 cause _ tel1 sca2 voir1 _
