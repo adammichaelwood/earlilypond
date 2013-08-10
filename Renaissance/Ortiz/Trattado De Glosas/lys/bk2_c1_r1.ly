@@ -29,51 +29,51 @@
     d4 c2 bis4 c ees4. d8 c [bes16 a] \bar "|"
     \cadenzaOff
     g4 g'2 f8 [e] \bar "|"
-    f8 g a f g f e d \bar "|"
-    c4 bes8 a bes c d bes \bar "|" \noBreak
+    f8 [g a f] g [f e d] \bar "|"
+    c4 bes8 [a] bes [c d bes] \bar "|"
     \cadenzaOn
-    c8 bes a g f4 \bar "|" \urtextBreak
-    c''2 bes8 a bes c d bes \bar "|"
+    c8 [bes a g] f4 \bar "|" \urtextBreak
+    c''2 bes8 [a] bes [c d bes] \bar "|"
     \cadenzaOff
-    c8 bes a g f e d c \bar "|"
-    bes4 bes'8 c d c bes a \bar "|"
-    g8 f e d c bes a g \bar "|"
+    c8 [bes a g] f [e d c] \bar "|"
+    bes4 bes'8 [c] d [c bes a] \bar "|"
+    g8 [f e d] c [bes a g] \bar "|" \urtextBreak
     \cadenzaOn
-    f4 f'8 e d c bes a g4 g'4. f8 e d \bar "|"
+    f4 f'8 [e] d [c bes a] g4 g'4. f8 e [d] \bar "|" \urtextNoBreak
     \cadenzaOff
-    c4 f4. e8 d c \bar "|"
+    c4 f4. e8 d [c] \bar "|"
     \cadenzaOn
-    bes4 \modernSwitch alto d'4. c8 bes a g4 g'4. f8 e d c bes a g f e d c \bar "|"
-    \modernSwitch bass bes8 a g a bes c d bes c bes a g f4 c'' \bar "|"
+    bes4 \modernSwitch alto d'4. c8 bes [a] g4 g'4. f8 e [d] c [bes a g] f [e d c] \urtextMeasBreak
+    \modernSwitch bass bes8 [a g a] bes [c d bes] c [bes a g] f4 c'' \bar "|"
     \cadenzaOff
-    a4 c4. bes8 a g \bar "|"
+    a4 c4. bes8 a [g] \bar "|"
     \cadenzaOn
-    f4 g e g4. f8 e d c4 f d f4. e8 d c bes4 d'4 \bar "|"
-    bes4 d4. c8 bes a g a bes g a g f e d c bes a g4 g'4. fis8 g16 f e f \bar "|"
-    g4 f8 e d c bes a g4 d''4. cis8 d16 c bes c \bar "|"
-    d4 c8 bes a g f e d4 g2 fis4 \bar "|"
+    f4 g e g4. f8 e [d] c4 f d f4. e8 d [c] \bar "|" \urtextNoBreak bes4 d'4 \urtextMeasBreak
+    bes4 d4. c8 bes [a] g [a bes g] a [g f e] d [c bes a] g4 g'4. fis8 g16 [f e f] \bar "|"
+    g4 f8 [e] d [c bes a] g4 d''4. cis8 d16 [c bes c] \urtextMeasBreak
+    d4 c8 [bes] a [g f e] d4 g2 fis4 \bar "|"
     \cadenzaOff
     g4 d f g \bar "|"
     \cadenzaOn
     e2 d4 d'2 cis4 d a \bar "|"
     \cadenzaOff
     c4 d bes2 \bar "|"
-    a8 bes c bes a g f4 \bar "|"
-    bes4. a8 g f e d \bar "|"
-    c8 d ees c d bes c d \bar "|"
-    g,4 bes4. a8 bes c \bar "|"
+    a8 [bes c bes] a [g] f4 \bar "|"
+    bes4. a8 g [f e d] \bar "|"
+    c8 [d ees c] d [bes c d] \bar "|"
+    g,4 bes4. a8 bes [c] \bar "|"
     \cadenzaOn
-    d4 g, g' bes4. a8 bes c d4 g, \bar "|"
+    d4 g, g' bes4. a8 bes [c] d4 g, \bar "|" \urtextBreak
     \cadenzaOff
-    d4 f4. e8 f g \bar "|"
+    d4 f4. e8 f [g] \bar "|"
     \cadenzaOn
-    a4 d, g, bes4. a8 bes c d4 g, \bar "|"
+    a4 d, g, bes4. a8 bes [c] d4 g, \bar "|"
     \cadenzaOff
-    c4 ees4. d8 e f \bar "|"
-    g4 c,4. bis8 bes4 \bar "|"
+    c4 ees4. d8 e [f] \bar "|" \urtextNoBreak
+    g4 c,4. bis8 bes4 \bar "|" \urtextBreak
     c4 g'4. f8 fis4 \bar "|"
     \cadenzaOn
-    g4 f8 e d c bes a g\breve\fermata \bar"|."
+    g4 f8 [e] d [c bes a] g\breve\fermata \bar"|."
     \cadenzaOff
     \pageBreak
   }

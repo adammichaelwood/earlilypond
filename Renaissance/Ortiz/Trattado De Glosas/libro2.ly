@@ -5,7 +5,7 @@
 \version "2.16.0"
 
 % Options
-#(ly:add-option 'urtext #t "Produce an Urtext version")
+#(ly:add-option 'urtext #f "Produce an Urtext version")
 
 \header {
   tagline = ""
@@ -17,6 +17,8 @@
   \context {
     \Score
     \override SpacingSpanner #'uniform-stretching = ##t
+    \override Stem #'neutral-direction = #1
+    \override BarNumber #'stencil = #(eqv? #f (ly:get-option 'urtext))
   }
 }
 
@@ -82,15 +84,21 @@ modernSwitch =
        (make-music 'Music 'void #t)))
 
 urtextBreak =
-#(define-void-function (parser location) ()
-   (if (eq? #f (ly:get-option 'urtext))
-       #{\break#}
+#(define-music-function (parser location) ()
+   (if (eq? #t (ly:get-option 'urtext))
+       #{\break #}
        #{#}))
 
 urtextNoBreak =
-#(define-void-function (parser location) ()
-   (if (eq? #f (ly:get-option 'urtext))
-       #{\noBreak#}
+#(define-music-function (parser location) ()
+   (if (eq? #t (ly:get-option 'urtext))
+       #{\noBreak #}
+       #{#}))
+
+urtextMeasBreak =
+#(define-music-function (parser location) ()
+   (if (eq? #t (ly:get-option 'urtext))
+       #{\bar "" #}
        #{#}))
 
 % Urtext version has no beams
@@ -107,17 +115,23 @@ urtextNoBreak =
 
 % L'Ordine
 \bookpart {
-  \paper { indent = #0 }
+  \paper {
+    indent = #0
+    ragged-last = #(eqv? #t (ly:get-option 'urtext))
+  }
   \include "text/ordine.ly"
   \include "lys/bk2_c1_r1.ly"
-  %\include "lys/bk2_c1_r2.ly"
-  %\include "lys/bk2_c1_r3.ly"
+  \include "lys/bk2_c1_r2.ly"
+  \include "lys/bk2_c1_r3.ly"
   %\include "lys/bk2_c1_r4.ly"
 }
 
 % Seconda maniera
 %\bookpart {
-%  \paper { indent = #0 }
+  %\paper {
+    %indent = #0
+    %ragged-last = #(eqv? #t (ly:get-option 'urtext))
+  %}
 %  \include "text/seconda.ly"
 %  \include "lys/bk2_c2_r1.ly"
 %  \include "lys/bk2_c2_r2.ly"
