@@ -123,7 +123,7 @@ urtextMeasBreak =
   \include "lys/bk2_c1_r1.ly"
   \include "lys/bk2_c1_r2.ly"
   \include "lys/bk2_c1_r3.ly"
-  %\include "lys/bk2_c1_r4.ly"
+  \include "lys/bk2_c1_r4.ly"
 }
 
 % Seconda maniera
