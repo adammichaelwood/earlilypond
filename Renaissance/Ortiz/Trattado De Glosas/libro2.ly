@@ -5,7 +5,7 @@
 \version "2.16.0"
 
 % Options
-#(ly:add-option 'urtext #f "Produce an Urtext version")
+#(ly:add-option 'urtext #t "Produce an Urtext version")
 
 \header {
   tagline = ""
@@ -101,6 +101,12 @@ urtextMeasBreak =
        #{\bar "" #}
        #{#}))
 
+modernMeasBreak =
+#(define-music-function (parser location) ()
+   (if (eq? #t (ly:get-option 'urtext))
+       #{#}
+       #{\bar "" #}))
+
 % Urtext version has no beams
 #(if (eqv? (ly:get-option 'urtext) #t)
      (define bracketOpenSymbol (make-music 'BeamEvent STOP))
@@ -127,13 +133,14 @@ urtextMeasBreak =
 }
 
 % Seconda maniera
+\include "lys/bk2_c2_r1.ly"
 \bookpart {
   \paper {
     indent = #0
     ragged-last = #(eqv? #t (ly:get-option 'urtext))
   }
   \include "text/seconda.ly"
-  \include "lys/bk2_c2_r1.ly"
+  \AAtoc \AAtitle \AA
 %  \include "lys/bk2_c2_r2.ly"
 %  \include "lys/bk2_c2_r3.ly"
 %  \include "lys/bk2_c2_r4.ly"
