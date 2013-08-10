@@ -127,19 +127,19 @@ urtextMeasBreak =
 }
 
 % Seconda maniera
-%\bookpart {
-  %\paper {
-    %indent = #0
-    %ragged-last = #(eqv? #t (ly:get-option 'urtext))
-  %}
-%  \include "text/seconda.ly"
-%  \include "lys/bk2_c2_r1.ly"
+\bookpart {
+  \paper {
+    indent = #0
+    ragged-last = #(eqv? #t (ly:get-option 'urtext))
+  }
+  \include "text/seconda.ly"
+  \include "lys/bk2_c2_r1.ly"
 %  \include "lys/bk2_c2_r2.ly"
 %  \include "lys/bk2_c2_r3.ly"
 %  \include "lys/bk2_c2_r4.ly"
 %  \include "lys/bk2_c2_r5.ly"
 %  \include "lys/bk2_c2_r6.ly"
-%}
+}
 
 % Terza maniera
 %\bookpart {
