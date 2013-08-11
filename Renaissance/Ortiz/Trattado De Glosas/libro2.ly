@@ -5,7 +5,7 @@
 \version "2.16.0"
 
 % Options
-#(ly:add-option 'urtext #t "Produce an Urtext version")
+#(ly:add-option 'urtext #f "Produce an Urtext version")
 
 \header {
   tagline = ""
@@ -83,6 +83,12 @@ modernSwitch =
        #{ \clef $modClef #}
        (make-music 'Music 'void #t)))
 
+urtextPageBreak =
+#(define-music-function (parser location) ()
+   (if (eq? #t (ly:get-option 'urtext))
+       #{\pageBreak #}
+       #{#}))
+
 urtextBreak =
 #(define-music-function (parser location) ()
    (if (eq? #t (ly:get-option 'urtext))
@@ -106,6 +112,12 @@ modernMeasBreak =
    (if (eq? #t (ly:get-option 'urtext))
        #{#}
        #{\bar "" #}))
+
+modernMeasBreakTurn =
+#(define-music-function (parser location) ()
+   (if (eq? #t (ly:get-option 'urtext))
+       #{#}
+       #{\modernMeasBreak \allowPageTurn #}))
 
 % Urtext version has no beams
 #(if (eqv? (ly:get-option 'urtext) #t)
@@ -133,18 +145,66 @@ modernMeasBreak =
 }
 
 % Seconda maniera
+secondaLayout = \layout {
+  \context {
+    \Staff
+    \consists "Custos_engraver" 
+    \override Custos #'style = #'mensural 
+  }
+}
 \include "lys/bk2_c2_r1.ly"
+\include "lys/bk2_c2_r2.ly"
+\include "lys/bk2_c2_r3.ly"
+\include "lys/bk2_c2_r4.ly"
+\include "lys/bk2_c2_r5.ly"
 \bookpart {
   \paper {
     indent = #0
     ragged-last = #(eqv? #t (ly:get-option 'urtext))
   }
   \include "text/seconda.ly"
-  \AAtoc \AAtitle \AA
-%  \include "lys/bk2_c2_r2.ly"
-%  \include "lys/bk2_c2_r3.ly"
-%  \include "lys/bk2_c2_r4.ly"
-%  \include "lys/bk2_c2_r5.ly"
+  % Recercata prima
+  \tocItem \markup\italic {"            Recercata prima sopra canto piano"}
+  \AAtitle
+  \score {
+    \AAmusic
+    \layout {\secondaLayout}
+  }
+  
+  % Rececata seconda
+  \tocItem \markup\italic {"            Recercata seconda sopra il medemo canto piano"}
+  \ABtitle
+  \score {
+    \ABmusic
+    \layout {\secondaLayout}
+  }
+  
+  % Recercata terza
+  \tocItem \markup\italic {"            Recercata terza sopra il detto canto"}
+  \ACtitle
+  \score {
+    \ACmusic
+    \layout {\secondaLayout}
+  }
+  
+  % Recercata quarta
+  \tocItem \markup\italic {"            Recercata quarta sopra il detto"}
+  \ADtitle
+  \score {
+    \ADmusic
+    \layout {\secondaLayout}
+  }
+  
+  % Recercata quinta
+  \tocItem \markup\italic {"            Recercata quinta sopra il detto"}
+  \AEtitle
+  \score {
+    \AEmusic
+    \layout {\secondaLayout}
+  }
+  
+  % Recercata sesta
+  
 %  \include "lys/bk2_c2_r6.ly"
 }
 

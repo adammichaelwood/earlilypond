@@ -1,6 +1,5 @@
 \version "2.16.0"
 
-AAtoc = \tocItem \markup\italic {"            Recercata prima sopra canto piano"}
 AAtitle = \markup \abs-fontsize #12 \center-column {
   \vspace #2
   \fill-line { "RECERCATA PRIMA" }
@@ -36,6 +35,7 @@ AArecercataPrima = \relative c' {
   d2 a2. g4 a bes c2 g2. f4 g a bes2. c4 d e f d e d c bes a bes c a bes c bes a g f g1 fis4 e f g2 f4 g\longa
   \bar"|."
   \cadenzaOff
+  \pageBreak
 }
 
 AAurtextVersion = {
@@ -71,19 +71,6 @@ AAmodernVersion = \new StaffGroup <<
 AAmusic = #(if (eqv? (ly:get-option 'urtext) #t)
                #{ \AAurtextVersion #}
                #{ \AAmodernVersion #})
-               
-AA = \markup {
-  \score {
-    \AAmusic
-    \layout {
-      \context {
-        \Staff
-        \consists "Custos_engraver" 
-        \override Custos #'style = #'mensural 
-      }
-    }
-  }
-}
 
 %<<
 %  \new Staff \with {
