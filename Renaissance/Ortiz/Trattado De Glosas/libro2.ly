@@ -5,7 +5,8 @@
 \version "2.16.0"
 
 % Options
-#(ly:add-option 'urtext #f "Produce an Urtext version")
+%#(ly:add-option 'urtext #f "Produce an Urtext version")
+#(format #f "~%urtext option: ~a" (ly:get-option 'option))
 
 \header {
   tagline = ""
@@ -149,7 +150,8 @@ secondaLayout = \layout {
   \context {
     \Staff
     \consists "Custos_engraver" 
-    \override Custos #'style = #'mensural 
+    \override Custos #'style = #'mensural
+    \override Custos #'neutral-position = #5
   }
 }
 \include "lys/bk2_c2_r1.ly"
@@ -157,12 +159,27 @@ secondaLayout = \layout {
 \include "lys/bk2_c2_r3.ly"
 \include "lys/bk2_c2_r4.ly"
 \include "lys/bk2_c2_r5.ly"
+\include "lys/bk2_c2_r6.ly"
+Aexpose = #(if (eqv? (ly:get-option 'urtext) #t)
+               #{ #}
+               #{\Aplainsong #})
 \bookpart {
   \paper {
     indent = #0
     ragged-last = #(eqv? #t (ly:get-option 'urtext))
   }
   \include "text/seconda.ly"
+  
+  % On modern version, expose the plainsong
+  \score {
+    \new Staff \with {
+      \override TimeSignature #'style = #'mensural
+      \override NoteHead #'style = #'mensural
+    }
+    \Aexpose
+    \layout {\secondaLayout}
+  }
+  
   % Recercata prima
   \tocItem \markup\italic {"            Recercata prima sopra canto piano"}
   \AAtitle
@@ -204,13 +221,17 @@ secondaLayout = \layout {
   }
   
   % Recercata sesta
-  
-%  \include "lys/bk2_c2_r6.ly"
+  \tocItem \markup\italic {"            Recercata sesta sopra il detto canto piano"}
+  \AFtitle
+  \score {
+    \AFmusic
+    \layout {\secondaLayout}
+  }
 }
 
 % Terza maniera
-%\bookpart {
-%  \include "text/terza.ly"
+\bookpart {
+  \include "text/terza.ly"
 %  \include "lys/ofelici.ly"
 %  \include "text/felici.ly"
 %  \include "lys/ofelici_r1.ly"
@@ -234,8 +255,8 @@ secondaLayout = \layout {
 %  \include "lys/bk2_c3_r8.ly"
 %  \include "lys/bk2_c3_r9.ly"
   
-%  \markup \abs-fontsize #10 \column {
-%    \vspace #10
-%    \fill-line { \epsfile #X #40 #"trattado_end.eps" }
-%  }
-%}
+  \markup \abs-fontsize #10 \column {
+    \vspace #10
+    \fill-line { \epsfile #X #40 #"trattado_end.eps" }
+  }
+}

@@ -6,6 +6,17 @@ AAtitle = \markup \abs-fontsize #12 \center-column {
   \vspace #1 
 }
 
+Aplainsong = \relative c {
+  \time 4/4
+  \clef bass
+  \key d \minor
+  \cadenzaOn
+  #(set-accidental-style 'forget)
+  d\breve a g bes a g bes c d f e d f g c, d c g' f g c, bes ees d g, a c d f e d c bes a g a g\longa
+  \cadenzaOff
+  \bar"|."
+}
+
 AAcantusFirmus = \relative c {
   \time 4/4
   \clef bass

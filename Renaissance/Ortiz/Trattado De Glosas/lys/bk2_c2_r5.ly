@@ -20,7 +20,6 @@ AEcantusFirmus = \relative c {
   \scaleDurations 2/1 {g\fermata}
   \revert Staff.BarLine #'transparent
   \bar"|."
-  \pageBreak
   \cadenzaOff
 }
 
@@ -43,6 +42,7 @@ AErecercata = \relative c {
   \bar"|."
   %\urtextPageBreak
   \cadenzaOff
+  \pageBreak
 }
 
 AEurtextVersion = {

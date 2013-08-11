@@ -16,7 +16,6 @@ ADcantusFirmus = \relative c {
   d\breve a g bes a g \modernMeasBreak bes c d f e d f g c, d c g' f g c, bes ees d g, a c d f e d c bes a g a g\longa
   \revert Staff.BarLine #'transparent
   \bar"|."
-  \pageBreak
   \cadenzaOff
 }
 
@@ -40,8 +39,8 @@ ADrecercata = \relative c' {
   bes4. a8 bes [c d bes] \bar "|" c4 c4. bes8 a [g] \bar "|" a4. g8 a [bes c a] \bar "|" bes4 d4. c8 bes [a] \bar "|" bes4. a8 bes [c d bes] \bar "|" c4 c4. bes8 a [g] \bar "|"
   a4. g8 a [bes c a] bis\longa
   \bar"|."
-  \pageBreak
   \cadenzaOff
+  \pageBreak
 }
 
 ADurtextVersion = {
