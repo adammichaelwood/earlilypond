@@ -5,8 +5,7 @@
 \version "2.16.0"
 
 % Options
-%#(ly:add-option 'urtext #f "Produce an Urtext version")
-#(format #f "~%urtext option: ~a" (ly:get-option 'option))
+#(ly:add-option 'urtext #f "Produce an Urtext version")
 
 \header {
   tagline = ""
@@ -89,6 +88,7 @@ urtextPageBreak =
    (if (eq? #t (ly:get-option 'urtext))
        #{\pageBreak #}
        #{#}))
+
 
 urtextBreak =
 #(define-music-function (parser location) ()
@@ -230,11 +230,21 @@ Aexpose = #(if (eqv? (ly:get-option 'urtext) #t)
 }
 
 % Terza maniera
+\include "lys/ofelici.ly"
 \bookpart {
   \include "text/terza.ly"
-%  \include "lys/ofelici.ly"
-%  \include "text/felici.ly"
-%  \include "lys/ofelici_r1.ly"
+  \pageBreak
+  
+  % O Felici
+  \tocItem \markup\fontsize #1 {"      Un madrigale, o felici occhi miei"}
+  \BAtitle
+  \score {
+    \BAmusic
+    \layout{\BAlayout}
+  }
+  
+  %\include "text/felici.ly"
+  %\include "lys/ofelici_r1.ly"
 %  \include "lys/ofelici_r2.ly"
 %  \include "lys/ofelici_r3.ly"
 %  \include "lys/ofelici_r4.ly"
