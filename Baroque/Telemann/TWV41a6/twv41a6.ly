@@ -32,6 +32,13 @@
   tagline = ""
   copyright = \markup { "Copyright : " \char ##x00A9 " 2013 Benjamin Coudrin. Copyleft : released under cc-by-3.0 License" }
 }
+
+\layout {
+  \context {
+    \Staff
+    \override BassFigure #'font-size = #-2
+  }
+}
   
   
 %% LARGO
@@ -74,37 +81,37 @@
       }
     >>
       
-    \new FiguredBass \figuremode {
+    \new Staff <<
+      \figuremode {
         \set figuredBassAlterationDirection = #LEFT
         \set figuredBassPlusDirection = #LEFT
         \override VerticalAxisGroup #'minimum-Y-extent = #'()
         \override BassFigureAlignment #'stacking-dir = #UP
         \override FiguredBass.BassFigure #'font-size = #-2
-        s2 <6>2. <5 6>4
+        s2 <6>2. <6 5>4
         s2 <6>4 <7>2 <6>4
-        <4 6>2. <_+ 5>
+        <6 4>2. <5 _+>
         s <5>2 <6\\>4
-        <4 6>2. <3 5>
-        s <5 6>2 <_+>4
-        <3 4 6>2. <5 6>2 <_+>4
-        <3 4 6>2. <5 6>2 <6>4
+        <6 4>2. <5 3>
+        s <6 5>2 <_+>4
+        <6 4 3>2. <6 5>2 <_+>4
+        <6 4 3>2. <6 5>2 <6>4
         <6\\>2. <6>4 <_+> <6>
         <_+>1.
         <5>2. <6>
         <_+> <6>
-        <_- 5 6> <_+>
-        s <6>2 <2 4>4
+        <6 5 _-> <_+>
+        s <6>2 <4 2>4
         <6>2. <6>
         s <6>
-        s <5 6>
-        <4 5>2 <3> <6>
+        s <6 5>
+        <5 4>2 <3> <6>
         <7>2. <6->4 <6> <6->
         <6\\> <6> <5> <7> <6> <_+>
         <7>2 <6>4 <7> <_+>2
         s1.
-    }
+      }
     
-    \new Staff <<
       \set Staff.instrumentName = #"Continuo"
       \set Staff.shortInstrumentName = #""
       \relative c {
@@ -135,7 +142,7 @@
           d2 r4 d f d
           b! d b gis2 e4
           f2 r4 d' e e,
-          a a' (e) e,2 r4
+          a a' (e) a,2 r4
         }
       }
     >>
@@ -153,27 +160,101 @@
         \clef alto
         \repeat volta 2 {
           a4 c8 [b16 a] b8 [e,] e'4
+          r8 d16 [c] b8 [a] gis16 [e e e] a [e e e]
+          b' [e, e e] c' [e, e e] d' [e d cis] d8 [d]
+          d4. c!16 [b] c8 [b16 a] e8 [gis]
+          a4 r16 c [b c] d [c b a] g [a b c]
+          d [g fis g] e [c b c] d [c b a] g [a b c]
+          d [f e d] g [f e d] e8 [c] r16 g [fis g]
+          a [g fis e] d [e fis g] a [d cis d] b [g fis g]
+          a [g fis e] d [e fis g] a [c b a] d [c b a]
+          g [b a g] c [b a g] fis [a g fis] b [a g fis]
+          g8 [e] e'4 r8 d [d c16 b]
+          c2 b4 r8 b'
+          \times 2/3 {a [(b a)]} \times 2/3 {g [(a g)]} \times 2/3 {fis [(g fis)]} \times 2/3 {e [(fis e)]}
+          dis8 [fis] b, [dis] e8. [fis16] dis8. [e16]
+          e8 [b] c4 r8 b16 [a] b8 [gis]
+          a [cis] d4 r8 c!16 [b] c8 [a]
+          b [dis] e4 r8 d16 [cis] d8 [b]
+          c [e] f4 r8 e16 [d] e8 [cis]
+          d4 f8 [e16 d] e8 [a,] a'4
+          r8 g16 [f e8 d] cis16 [a a a] d [a a a]
+          e' [a, a a] f' [a, a a] g' [a g fis] g8 [g]
+          g4. f!16 [e] f8 [e16 d] a8 [cis]
+          d4 r8 d,16 [e] fis [e d e] fis [g a b]
+          c [c b c] a [c g c] fis, [a c a] fis [a c a]
+          b8 [g] r g16 [a] b [a g a] b [c d e]
+          f [f e f] d [f c f] b, [d f d] b [d f d]
         }
         \repeat volta 2 {
         }
       }
     >>
      
-    \new FiguredBass \figuremode {
+    \new Staff <<
+      \figuremode {
         \set figuredBassAlterationDirection = #LEFT
         \set figuredBassPlusDirection = #LEFT
         \override VerticalAxisGroup #'minimum-Y-extent = #'()
         \override BassFigureAlignment #'stacking-dir = #UP
         \override FiguredBass.BassFigure #'font-size = #-2
-        s2 <2 4>8 <6>4.
-    }
-      
-    \new Staff <<
+        s2 <4 2>8 <6>4.
+        <7>4 <6> <_+>4. <6 4>8
+        <4+ 2>4 <6> <6\\> <6 4>
+        <6 5> s s <_+>
+        s <6\\> s s
+        <6>1
+        <6>2. <6\\>4
+        <_+>2 <6>
+        <_+> <6>
+        <7>4 <6> <7> <6>
+        s <6> <7> <3>
+        <4 2> <5> <6 5> s
+        <6\\> <6> <6\\> <5>
+        <4+ 2>2 <6>4 <_+>
+        s <6> <7 _!> <6>
+        <6>8 <_+> <6>4 <7> <6>
+        <6>8 <_+> <6>4 <7> <6>
+        <6> <6> <7 _-> <6 _->
+        <6> s <4 2> <6>
+        <7> <6> <_+> s8 <6 4>
+        <4+ 2>4 <6> <6\\> <6- 4>
+        <6 5> s4. <_->8 <_+>4
+        <_+> <6\\ 4> <_+> s
+        <5 _!> <5> <7 _+> s
+        s <6 4> s2
+        <5 _!>4 <5> <7 3> s
+      }      
       \relative c' {
         \clef bass
         \key a \minor
         \repeat volta 2 {
           r4 a r8 g [g f16 e]
+          f2 e4 r8 e'
+          \times 2/3 {d [(e d)]} \times 2/3 {c [(d c)]} \times 2/3 {b [(c b)]} \times 2/3 {a [(b a)]}
+          gis8 [b] e, [gis] a [d,] e [e,]
+          a4 a' g r
+          b, c g r
+          b g c e
+          d r fis g
+          d r fis r
+          e r dis r
+          e g8 [fis16 e] fis8 [b,] b'4
+          r8 a16 [g fis8 e] dis16 [b b b] e [b b b]
+          fis' [b, b b] g' [b, b b] a' [b a gis] a8 [a]
+          a4. g!16 [fis] g8 [a b b,]
+          e4 (e16) [d e c] d [c d e] d [f e d]
+          c [b a g'] f [e f d] e [d e f] e [g f e]
+          d [c b a'] g [fis g e] f [e f g] f [a g f]
+          e [d c bes'] a [g a f] g [f g a] g [bes a g]
+          f8 [d] d'4 r8 c [c bes16 a]
+          bes2 a4 r8 a
+          \times 2/3 {g8 [(a g)]} \times 2/3 {f8 [(g f)]} \times 2/3 {e8 [(f e)]} \times 2/3 {d8 [(e d)]}
+          cis8 [e] a, [cis] d [g] a [a,]
+          d16 [e fis g] a [g fis e] d4 r
+          a'8 [g f e] d4 r
+          g16 [a b c] d [c b a] g4 r
+          d'8 [c b a] g4 r
         }
         \repeat volta 2 {
         }
@@ -199,16 +280,16 @@
       }
     >>
       
-    \new FiguredBass \figuremode {
+    \new Staff <<
+      \figuremode {
         \set figuredBassAlterationDirection = #LEFT
         \set figuredBassPlusDirection = #LEFT
         \override VerticalAxisGroup #'minimum-Y-extent = #'()
         \override BassFigureAlignment #'stacking-dir = #UP
         \override FiguredBass.BassFigure #'font-size = #-2
         s4 <6>8 s4 <6>8
-    }
+      }
       
-    \new Staff <<
       \relative c {
         \key a \minor
         \clef bass
@@ -241,7 +322,8 @@
       }
     >>
     
-    \new FiguredBass \figuremode {
+    \new Staff <<
+      \figuremode {
         \set figuredBassAlterationDirection = #LEFT
         \set figuredBassPlusDirection = #LEFT
         \override VerticalAxisGroup #'minimum-Y-extent = #'()
@@ -249,9 +331,8 @@
         \override FiguredBass.BassFigure #'font-size = #-2
         <6>8
         s4 <6>8 <_+>
-    }
+      }
       
-    \new Staff <<
       \relative c' {
         \clef bass
         \key a \minor
