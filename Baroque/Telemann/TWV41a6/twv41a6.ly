@@ -19,10 +19,10 @@
   left-margin   = 10\mm
   top-margin    = 10\mm
   bottom-margin = 20\mm
-  ragged-last-bottom = ##t 
+  ragged-last-bottom = ##f
   ragged-bottom = ##f
   annotate-spacing = ##f
-  #(define page-breaking ly:page-turn-breaking)
+  %#(define page-breaking ly:page-turn-breaking)
 }
 
 \header {
@@ -34,12 +34,16 @@
 }
 
 \layout {
+  indent = #30
   \context {
     \Staff
     \override BassFigure #'font-size = #-2
   }
 }
   
+\markup {
+  \vspace #18
+}  
   
 %% LARGO
 \score {
@@ -185,6 +189,21 @@
           c [c b c] a [c g c] fis, [a c a] fis [a c a]
           b8 [g] r g16 [a] b [a g a] b [c d e]
           f [f e f] d [f c f] b, [d f d] b [d f d]
+          e8 [c] c'4 r8 bes [bes a16 g]
+          a2 g4 r8 g
+          \times 2/3 {f8 [(g f)]} \times 2/3 {e8 [(f e)]} \times 2/3 {d8 [(e d)]} \times 2/3 {c8 [(d c)]} 
+          b8 [d] g, [b] c8. [d16] d8. [c16]
+          c4 r d ~ d16 [e f d]
+          e8 [c] g'4~ g8 [fis16 e] fis [g e fis]
+          g8 [g,] r4 e'~ e16 [f! g e]
+          f8 [d] a'4. gis16 [fis] gis [a fis gis]
+          a,4 c8 [b16 a] b8 [e,] e'4
+          r8 d16 [c] b8 [a] gis16 [e e e] a [e e e]
+          b' [e, e e] c' [e, e e] d' [e d cis] d8 [d]
+          d4. c!16 [b] c8 [b16 a] e8 [gis]
+          a [c] e [g] f16 [e d e] f4
+          r8 b, [d f] e16 [d c d] e4
+          
         }
         \repeat volta 2 {
         }
@@ -224,6 +243,20 @@
         <5 _!> <5> <7 _+> s
         s <6 4> s2
         <5 _!>4 <5> <7 3> s
+        s <6> <7> <_->
+        <4 2>2 <6 5>
+        <6>4 <6> <6> <5>
+        <4 2>2 <6>
+        s4 <3> <4 2> <6>
+        s2 <7>4 <6\\>
+        <6> <_!> <4 2> <6>
+        s2 <7>4 <6\\>
+        <6> s <4 2>8 <6> s4
+        <7> <6> <_+> s8 <6 4>
+        <6 4+>4 <6> <6\\> <6 4>
+        <6 5> s s <_+>
+        s <6> s2
+        s4 <6> s2
       }      
       \relative c' {
         \clef bass
@@ -255,12 +288,25 @@
           a'8 [g f e] d4 r
           g16 [a b c] d [c b a] g4 r
           d'8 [c b a] g4 r
+          c,4 e8 [d16 c] d8 [g,] g'4
+          r8 f16 [e] d8 [c] b!16 [g g g] c [g g g]
+          d' [g, g g] e' [g, g g] f' [g f e] f8 [f]
+          f4. e16 [d] e8 [c] g' [g,] c4 c'4. b16 [a] b [c a b]
+          c4 r a~ a16 [b c a] b8 [g] d'4~ d8 [cis16 b] cis [d b cis]
+          d4 r b,~ b16 [c d b]
+          c8 [a] a'4 r8 g [g f16 e]
+          f2 e4 r8 e'
+          \times 2/3 {d8 [(e d)]} \times 2/3 {c8 [(d c)]} \times 2/3 {b8 [(c b)]} \times 2/3 {a8 [(b a)]}
+          gis8 [b] e, [gis] a [d] e [e,]
+          a16 [e a b] c [a b cis] d [e f e] d [c b a]
+          g [d g a] b [g a b] c [d e d] c [bes a g]
         }
         \repeat volta 2 {
         }
       }
     >>
   >>
+  \layout { indent = #0 }
 }
 
 %% SOAVE  
@@ -302,6 +348,7 @@
       }
     >>
   >>
+  \layout { indent = #0 }
 }
   
 %% ALLEGRO
@@ -346,4 +393,5 @@
       }
     >>
   >>
+  \layout { indent = #0 }
 }
