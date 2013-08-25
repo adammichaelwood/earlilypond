@@ -162,51 +162,56 @@
         \key a \minor
         \time 4/4
         \clef alto
-        \repeat volta 2 {
-          a4 c8 [b16 a] b8 [e,] e'4
-          r8 d16 [c] b8 [a] gis16 [e e e] a [e e e]
-          b' [e, e e] c' [e, e e] d' [e d cis] d8 [d]
-          d4. c!16 [b] c8 [b16 a] e8 [gis]
-          a4 r16 c [b c] d [c b a] g [a b c]
-          d [g fis g] e [c b c] d [c b a] g [a b c]
-          d [f e d] g [f e d] e8 [c] r16 g [fis g]
-          a [g fis e] d [e fis g] a [d cis d] b [g fis g]
-          a [g fis e] d [e fis g] a [c b a] d [c b a]
-          g [b a g] c [b a g] fis [a g fis] b [a g fis]
-          g8 [e] e'4 r8 d [d c16 b]
-          c2 b4 r8 b'
-          \times 2/3 {a [(b a)]} \times 2/3 {g [(a g)]} \times 2/3 {fis [(g fis)]} \times 2/3 {e [(fis e)]}
-          dis8 [fis] b, [dis] e8. [fis16] dis8. [e16]
-          e8 [b] c4 r8 b16 [a] b8 [gis]
-          a [cis] d4 r8 c!16 [b] c8 [a]
-          b [dis] e4 r8 d16 [cis] d8 [b]
-          c [e] f4 r8 e16 [d] e8 [cis]
-          d4 f8 [e16 d] e8 [a,] a'4
-          r8 g16 [f e8 d] cis16 [a a a] d [a a a]
-          e' [a, a a] f' [a, a a] g' [a g fis] g8 [g]
-          g4. f!16 [e] f8 [e16 d] a8 [cis]
-          d4 r8 d,16 [e] fis [e d e] fis [g a b]
-          c [c b c] a [c g c] fis, [a c a] fis [a c a]
-          b8 [g] r g16 [a] b [a g a] b [c d e]
-          f [f e f] d [f c f] b, [d f d] b [d f d]
-          e8 [c] c'4 r8 bes [bes a16 g]
-          a2 g4 r8 g
-          \times 2/3 {f8 [(g f)]} \times 2/3 {e8 [(f e)]} \times 2/3 {d8 [(e d)]} \times 2/3 {c8 [(d c)]} 
-          b8 [d] g, [b] c8. [d16] d8. [c16]
-          c4 r d ~ d16 [e f d]
-          e8 [c] g'4~ g8 [fis16 e] fis [g e fis]
-          g8 [g,] r4 e'~ e16 [f! g e]
-          f8 [d] a'4. gis16 [fis] gis [a fis gis]
-          a,4 c8 [b16 a] b8 [e,] e'4
-          r8 d16 [c] b8 [a] gis16 [e e e] a [e e e]
-          b' [e, e e] c' [e, e e] d' [e d cis] d8 [d]
-          d4. c!16 [b] c8 [b16 a] e8 [gis]
-          a [c] e [g] f16 [e d e] f4
-          r8 b, [d f] e16 [d c d] e4
-          
-        }
-        \repeat volta 2 {
-        }
+        a4 c8 [b16 a] b8 [e,] e'4
+        r8 d16 [c] b8 [a] gis16 [e e e] a [e e e]
+        b' [e, e e] c' [e, e e] d' [e d cis] d8 [d]
+        d4. c!16 [b] c8 [b16 a] e8 [gis]
+        a4 r16 c [b c] d [c b a] g [a b c]
+        d [g fis g] e [c b c] d [c b a] g [a b c]
+        d [f e d] g [f e d] e8 [c] r16 g [fis g]
+        a [g fis e] d [e fis g] a [d cis d] b [g fis g]
+        a [g fis e] d [e fis g] a [c b a] d [c b a]
+        g [b a g] c [b a g] fis [a g fis] b [a g fis]
+        g8 [e] e'4 r8 d [d c16 b]
+        c2 b4 r8 b'
+        \times 2/3 {a [(b a)]} \times 2/3 {g [(a g)]} \times 2/3 {fis [(g fis)]} \times 2/3 {e [(fis e)]}
+        dis8 [fis] b, [dis] e8. [fis16] dis8. [e16]
+        e8 [b] c4 r8 b16 [a] b8 [gis]
+        a [cis] d4 r8 c!16 [b] c8 [a]
+        b [dis] e4 r8 d16 [cis] d8 [b]
+        c [e] f4 r8 e16 [d] e8 [cis]
+        d4 f8 [e16 d] e8 [a,] a'4
+        r8 g16 [f e8 d] cis16 [a a a] d [a a a]
+        e' [a, a a] f' [a, a a] g' [a g fis] g8 [g]
+        g4. f!16 [e] f8 [e16 d] a8 [cis]
+        d4 r8 d,16 [e] fis [e d e] fis [g a b]
+        c [c b c] a [c g c] fis, [a c a] fis [a c a]
+        b8 [g] r g16 [a] b [a g a] b [c d e]
+        f [f e f] d [f c f] b, [d f d] b [d f d]
+        e8 [c] c'4 r8 bes [bes a16 g]
+        a2 g4 r8 g
+        \times 2/3 {f8 [(g f)]} \times 2/3 {e8 [(f e)]} \times 2/3 {d8 [(e d)]} \times 2/3 {c8 [(d c)]} 
+        b8 [d] g, [b] c8. [d16] d8. [c16]
+        c4 r d ~ d16 [e f d]
+        e8 [c] g'4~ g8 [fis16 e] fis [g e fis]
+        g8 [g,] r4 e'~ e16 [f! g e]
+        f8 [d] a'4. gis16 [fis] gis [a fis gis]
+        a,4 c8 [b16 a] b8 [e,] e'4
+        r8 d16 [c] b8 [a] gis16 [e e e] a [e e e]
+        b' [e, e e] c' [e, e e] d' [e d cis] d8 [d]
+        d4. c!16 [b] c8 [b16 a] e8 [gis]
+        a [c] e [g] f16 [e d e] f4
+        r8 b, [d f] e16 [d c d] e4
+        r8 a, [c e] d16 [c b c] d4
+        b16 [a gis a] b4 gis16 [fis e fis] gis4
+        r4 a' r8 g [g f16 e]
+        f2 e4 r8 e
+        \times 2/3 {d8 [(e d)]} \times 2/3 {c8 [(d c)]} \times 2/3 {b8 [(c b)]} \times 2/3 {a8 [(b a)]}
+        gis16 [e e e] a [e e e] b' [e, e e] c' [e, e e]
+        \times 2/3 {d'8 [(e d)]} \times 2/3 {c8 [(d c)]} \times 2/3 {b8 [(c b)]} \times 2/3 {a8 [(b a)]}
+        gis8 [b] e, [gis] a8. [b16] b8. [a16]
+        a4 r r2
+        \bar "|."
       }
     >>
      
@@ -257,6 +262,15 @@
         <6 5> s s <_+>
         s <6> s2
         s4 <6> s2
+        s4 <6> <5> s
+        <6>2 <_+>
+        s4 <6> <7> <3>
+        <4 2> <5> s2
+        <6 5> <6\\>4 <6>
+        <4 2> <6> <6\\> s
+        <6 5> s <6\\> <6>
+        <4+ 2> s <6> <6 5>8 <_+>
+        s1
       }      
       \relative c' {
         \clef bass
@@ -300,6 +314,15 @@
           gis8 [b] e, [gis] a [d] e [e,]
           a16 [e a b] c [a b cis] d [e f e] d [c b a]
           g [d g a] b [g a b] c [d e d] c [bes a g]
+          f [c f g] a [f g a] b! [c d c] b [a gis fis]
+          gis [a b a] gis [fis e dis] e [fis gis fis] e [d c b]
+          a'4 c8 [b16 a] b8 [e,] e'4
+          r8 d16 [c b8 a] gis [e] r4
+          gis16 [e e e] a [e e e] b' [e, e e] c' [e, e e]
+          \times 2/3 {d'8 [(e d)]} \times 2/3 {c8 [(d c)]} \times 2/3 {b8 [(c b)]} \times 2/3 {a8 [(b a)]}
+          gis16 [e e e] a [e e e] b' [e, e e] c' [e, e e]
+          d'4. c16 [b] c8 [a] d, [e]
+          a,4 r r2
         }
         \repeat volta 2 {
         }
