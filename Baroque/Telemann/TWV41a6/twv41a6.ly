@@ -12,7 +12,7 @@
 \version "2.14.2"
 
 #(set-default-paper-size "a4")
-#(set-global-staff-size 18)
+#(set-global-staff-size 17)
 
 \paper {
   line-width    = 190\mm
@@ -41,6 +41,7 @@
   }
 }
   
+\bookpart {
 \markup {
   \vspace #18
 }  
@@ -152,7 +153,9 @@
     >>
   >>
 }
+}
   
+\bookpart {  
 %% ALLEGRO
 \score {
   \new StaffGroup <<
@@ -331,7 +334,9 @@
   >>
   \layout { indent = #0 }
 }
+}
 
+\bookpart {
 %% SOAVE  
 \score {
   \new StaffGroup <<
@@ -341,11 +346,37 @@
         \key a \minor
         \time 6/8 
         \clef alto
-        \repeat volta 2 {
-          r8 g [e] c16 [(d) c (b) c8]
-        }
-        \repeat volta 2 {
-        }
+        r8 g [e] c16 [(d) c (b) c8]
+        r8 d [e] f16 [(g) f (e) f8~]
+        f [g f] e4 d8
+        r g4~ g16 [b, c b c a]
+        b8 g'4~g16 [a, b a b g]
+        a [e'] \appoggiatura e4 d8.\stopped [c16] b [g' fis e d c]
+        b [c] a8. [g16] g8 \breathe d' [b]
+        g16 [a g fis g8] r8 a [b]
+        c16 [(d) c (b) c8] (c8) [d c]
+        b4 a8 r d4
+        (d16) [f e d c b] c [a] fis'4
+        (fis16) [fis g fis e dis] e8 a,4
+        (a16) [a b a g fis] \times 2/3 {g16 [(b a)]} \times 2/3 {a16 [(c b)]} b8
+        (b16) [e] fis,8. e16 e8 [e'16 b cis d]
+        cis [e] g8. [g,16] g8 [f!16 e f8]
+        r8 d'16 [a b c] b [d] f8. f,16
+        f8 [e16 d e8] r c'16 [(e) d (c)]
+        e, [(c') b (c) d (c)] r8 c16 [(e) d (c)]
+        fis, [(c') b (c) d (c)] r8 c16 [(e) d (c)]
+        b8 [g' e] c16 [(d) c (b) c8]
+        r d [e] f16 [(g) f (e) f8]
+        (f) [g f] e4 d8
+        r8 c'4 (c16) [e, f e f d]
+        e8 c'4 (c16) [d, e d e c]
+        d [a'] \appoggiatura a4 g8.\stopped [f16] e [c' b a g f]
+        e [f] d8. [c16] c8 \breathe f,4
+        (f16) [(a) g (f) e (f)] c'8 f,4
+        (f16) [a g f e d] e [g a b c g]
+        a [c d e f d] e [f] d8. [c16]
+        c4. r
+        \bar "|."
       }
     >>
       
@@ -357,23 +388,33 @@
         \override BassFigureAlignment #'stacking-dir = #UP
         \override FiguredBass.BassFigure #'font-size = #-2
         s4 <6>8 s4 <6>8
+        <6> s <6> s4.
+        <6 5> s
+        <6> <7>4 <6>8
+        <6 4>4. <6 5>4 <7 5>8
+        <7>4 <6> <6\\>8 <6>
+        s <_+> s4. <6 _+>8
       }
       
       \relative c {
         \key a \minor
         \clef bass
         \time 6/8
-        \repeat volta 2 {
-          c8 [r g'] a [r e]
-        }
-        \repeat volta 2 {
-        }
+        c8 [r g'] a [r e]
+        f [r e] d [r d']
+        b [r b] c [c, g']
+        b, [r b] e [r e]
+        d [r d] c [r c]
+        fis, [r fis] g [a b]
+        c [d d,] g [r d']
       }
     >>
   >>
   \layout { indent = #0 }
 }
-  
+}
+ 
+\bookpart { 
 %% ALLEGRO
 \score {
   \new StaffGroup <<
@@ -417,4 +458,5 @@
     >>
   >>
   \layout { indent = #0 }
+}
 }
