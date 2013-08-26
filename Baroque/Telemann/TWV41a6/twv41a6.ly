@@ -19,7 +19,7 @@
   left-margin   = 10\mm
   top-margin    = 10\mm
   bottom-margin = 20\mm
-  ragged-last-bottom = ##f
+  ragged-last-bottom = ##t
   ragged-bottom = ##f
   annotate-spacing = ##f
   %#(define page-breaking ly:page-turn-breaking)
@@ -41,10 +41,9 @@
   }
 }
   
-\bookpart {
 \markup {
   \vspace #18
-}  
+}
   
 %% LARGO
 \score {
@@ -83,6 +82,7 @@
           a a, d c8 [b] b4. a8
           a1.
         }
+        \pageBreak
       }
     >>
       
@@ -153,9 +153,8 @@
     >>
   >>
 }
-}
-  
-\bookpart {  
+
+
 %% ALLEGRO
 \score {
   \new StaffGroup <<
@@ -215,6 +214,7 @@
         gis8 [b] e, [gis] a8. [b16] b8. [a16]
         a4 r r2
         \bar "|."
+        \pageBreak
       }
     >>
      
@@ -334,9 +334,8 @@
   >>
   \layout { indent = #0 }
 }
-}
 
-\bookpart {
+
 %% SOAVE  
 \score {
   \new StaffGroup <<
@@ -377,6 +376,7 @@
         a [c d e f d] e [f] d8. [c16]
         c4. r
         \bar "|."
+        \pageBreak
       }
     >>
       
@@ -394,6 +394,29 @@
         <6 4>4. <6 5>4 <7 5>8
         <7>4 <6> <6\\>8 <6>
         s <_+> s4. <6 _+>8
+        s4 <6>8 <6> s <6>
+        s4. <6 5>
+        s4 <_+>8 <5!> s <6 4>
+        <6 5> s2 <6\\>8
+        <_+>4. <7>4 <6>8
+        <6 5> s4. <6\\>8 <6>
+        <6> <6\\ 5> <_+> s4.
+        <7 _+>4 <6 5>8 <5 4> s <_!>
+        <6>s2 <6 5>8
+        <5 4> s <3> <6>4.
+        s <6>
+        <6\\> <6 5>
+        s4 <6>8 s4 <6>8
+        <6> s <6> s4.
+        <6 5> s
+        <6> <7>4 <6>8
+        <6 4>4. <6 5>4 <7 5>8
+        <7>4 <6> <6>8 <6>
+        s4. <7>4 <6>8
+        s4. <6>
+        <6 5> s4 <6>8
+        s <6> <6> s4.
+        s s
       }
       
       \relative c {
@@ -407,14 +430,36 @@
         d [r d] c [r c]
         fis, [r fis] g [a b]
         c [d d,] g [r d']
+        e [r b] c [r b]
+        a [r a'] fis [r fis]
+        g [g, d'] b [r a]
+        gis [r gis'] a [r a,]
+        b [r b'] c [r c]
+        dis, [r dis] e [fis g]
+        g, [a b] e, [r e']
+        a, [r cis] d [r d]
+        fis, [r fis'] g [r b,]
+        c [r c] e, [r e]
+        a [r a] e [r e]
+        a [r a] fis [r fis]
+        g [r g'] a [r e]
+        f [r e] d [r d']
+        b [r b] c [c, g']
+        e [r e] a [r a]
+        g [r g] f [r f]
+        b, [r b] c [d e]
+        f [g g,] a [r a]
+        d [r d] a [r a]
+        b [r b] c [r e]
+        f [e d] c [g' g,]
+        c4. r
       }
     >>
   >>
   \layout { indent = #0 }
 }
-}
- 
-\bookpart { 
+
+
 %% ALLEGRO
 \score {
   \new StaffGroup <<
@@ -459,4 +504,4 @@
   >>
   \layout { indent = #0 }
 }
-}
+
