@@ -469,9 +469,38 @@
         \time 2/4 
         \key a \minor
         \clef alto
-        \partial 8 e8
         \repeat volta 2 {
+          \partial 8 e8
           a,8 [c] b [a16 gis]
+          a8 e4 fis16 [gis]
+          a [(b c) a] b [(c d) b]
+          c [a e a] b [gis e gis]
+          a [(b c) a] b [(c d) b]
+          c [b a c] b8 [e]
+          a, [c] b [a16 gis]
+          a8 e4 f'8
+          e [d16 (c)] d [(c) b (c)]
+          a4 r8 b
+          \times 2/3 {c [(b c)]} \times 2/3 {c [(b c)]}
+          fis,16 [a g a] fis [a d c]
+          \times 2/3 {b8 [(a b)]} \times 2/3 {b [(a b)]}
+          e,16 [g fis g] e [g c b]
+          \times 2/3 {a8 [(gis a)]} \times 2/3 {a [(gis a)]}
+          dis,16 [fis e fis] dis [fis b a]
+          g [b c b] a [c d c]
+          b [d e d] cis [e fis e]
+          \times 2/3 {dis8 [(b dis)]} \times 2/3 {fis [(dis fis)]}
+          a4. g16 [fis]
+          g [fis e fis] b,8 [dis]
+          e4 (e16) [e dis e]
+          g [e dis e] g [e dis e]
+          c [e (dis e] dis [e dis e])
+          g [e dis e] g [e dis e]
+          b [e (dis e] dis [e dis e])
+          \times 2/3 {a,8 [(gis a)]} \times 2/3 {a [(gis a)]}
+          a4. c8
+          b [a16 (g)] a [(g) fis (g)]
+          e4.
         }
         \repeat volta 2 {
         }
