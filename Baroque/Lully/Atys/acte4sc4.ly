@@ -41,21 +41,7 @@
 }
 
 \include "../../../3rdParty/Viole/ornements-viole.ly"
-
-ter = {
-  \override Staff.TimeSignature #'style = #'single-digit
-  \time 3/4
-}
-
-bin = {
-  \override Staff.TimeSignature #'style = #'default
-  \time 4/4
-}
-
-bla = {
-  \override Staff.TimeSignature #'style = #'default
-  \time 2/2
-}
+\include "../../../include/mensuration.ly"
 
 %% PREMIER DESSUS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 premdessus = {
