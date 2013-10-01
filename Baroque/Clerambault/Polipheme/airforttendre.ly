@@ -28,6 +28,19 @@ Bdessus = {
     r g'4. f8 ees4.\mordent d8
     ees4. (f8) ees4. (d8) c4. (bes8)
     a2\stopped f'4. ees8 d4.\stopped c8
+    d2 ees4. d8 c4.\stopped f8
+    d4.\stopped (c8) d4. (e8) f4 (d8) [g]
+    fis2\stopped ~ fis8 [g (f g)] g4.\stopped (fis16 [g])
+    a1 r4 g4 
+    g2. (fis4\stopped e4.) fis8
+    g2 d4. c8 bes4.\stopped a8
+    \grace a8 (bes4.) g8 d'2. d4
+    d2. (cis4\stopped bis4.) cis8
+    \grace c8 (d2) a' a4. bes8
+    e,2. e4 f4. g8
+    fis2.\stopped f4 g4. a8
+    \grace a8 (bes1) d,4. g8
+    e2\stopped e4. e8 fis4. g8
   }
 }
 
@@ -47,6 +60,19 @@ Bbaryton = {
     c2. c4 g' g
     c2 c4. bes8 a4.\stopped g8
     f1 f4 f
+    bes2 g4. ees8 f4. f8
+    bes,1 r2
+    r1. 
+    d'1 d4. ees8
+    a,2. a4 bes4. c8
+    bes2\stopped \grace a8 (g2) r
+    g1 a4. bes8
+    e,2. e4 fis4. g8
+    fis2 \grace e8 (d2) r4 d'
+    d2. (cis8\stopped) [bis] cis2
+    d2. c4 bes4. a8
+    g2. g4 bes g
+    c2 c4. bes8 a4.\stopped g8
     \bar "|." \break
   }
 }
@@ -55,7 +81,11 @@ Blyrbar = \lyricmode {
   Ah Ren- dez moy vo- tre Pré- sence _
   ve- nez Cal- mer la vi- o- len- ce
   de mes feux, et de mes tour- ments,
-  de mes
+  de mes feux et de mes tour- ments
+  Ah Ren- dez moy vo- tre pré- sence _
+  Ah! Ren- dez moy vo- tre pré- sen- ce
+  Ve- nez cal- mer la vi- o- len- ce
+  de mes feux et de mes tour- 
 }
 
 %% BASSE CONTINUE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -77,6 +107,7 @@ Bbassefig = \figuremode {
   <_->1 <6- 4>4 <7 _+>
   <_->1.
   <7->1 <6 4>4 <7- 3>
+  
 }
 
 Bbasse = {
