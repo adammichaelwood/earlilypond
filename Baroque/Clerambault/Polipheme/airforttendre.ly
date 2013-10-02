@@ -41,6 +41,21 @@ Bdessus = {
     fis2.\stopped f4 g4. a8
     \grace a8 (bes1) d,4. g8
     e2\stopped e4. e8 fis4. g8
+    fis4. (e8) d4. (c8) bes4.\stopped (a8)
+    g1 a4. bes8
+    bes2 (a2.\stopped) g4
+    g2^\markup{\bold\italic fin}\fermata d' d4. ees8
+    a,2. a4 bes4. c8
+    bes2 \grace a8 (g2.) d'4
+    d2. (cis4\stopped bis4.) cis8
+    \grace c8 (d1) r4 a
+    bes4. (c8) d4. (e8) f4 (d8) [g]
+    fis2 ~ fis8 [g (f g)] g4.\stopped (fis16 [g])
+    a4. d,8 e4. fis8 g4. a8
+    bes4 (a8\mordent [g]) fis2.\stopped g4
+    g1 r2
+    r1.
+    r2 e2. e4
   }
 }
 
@@ -73,6 +88,21 @@ Bbaryton = {
     d2. c4 bes4. a8
     g2. g4 bes g
     c2 c4. bes8 a4.\stopped g8
+    d'2. d,4 g2
+    \grace f8 (e1) fis4. g8
+    d1 (c4) d
+    \grace d8 (g,1) r2
+    r1.
+    r
+    r
+    r
+    r
+    r
+    r
+    r
+    r2 bes'2. bes4
+    d,1 g8 f e d
+    cis1\stopped \grace bis8 (a4) r8 a'
     \bar "|." \break
   }
 }
@@ -107,7 +137,19 @@ Bbassefig = \figuremode {
   <_->1 <6- 4>4 <7 _+>
   <_->1.
   <7->1 <6 4>4 <7- 3>
-  
+  s2 <6->4. <7 4>8 <4>4 <6>
+  s1.
+  <_+>1 <6 4>2
+  <_+>1 <6>2
+  <6 5 _->2 <4> <_+>
+  s1.
+  s
+  s
+  s
+  <2>1 <5/>2
+  <_+>1 <6>4. <6\\>8
+  s1 <6>2
+  s1 <6\\>2
 }
 
 Bbasse = {
@@ -132,6 +174,19 @@ Bbasse = {
     c1 g'4 g
     c2 c4. bes8 a4. g8
     f1 f4 f
+    bes2 g4. ees8 f4 f,
+    bes,2. bes'4 a4. g8
+    d'1 ~ d2 ~
+    d2. c4 bes2
+    c d d,
+    g1 ~ g2
+    g'1 a4. bes8
+    e,2. e4 fis4. g8
+    fis2 (\grace e8 d2) r4 d'
+    d1 cis2
+    d2. c4 bes4. a8
+    g1 bes4 g
+    c2 c4. bes8 a4. g8
   }
   \bar "|."
 }
