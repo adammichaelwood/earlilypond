@@ -65,13 +65,13 @@ Abasse = {
     bes1
     ees,2 f
     \bin bes a4. g8
-    f2 ~ f4. f8
+    f2 ~ f4. f8 
     bes8. [c16] bes [a] g32 [a bes g] c8. [\times 1/2 {s32 eis, ees ees]} f8 [eis16 d]
-    c8. [\times 1/2 {s32 g' a bes]} c16 [ d c bes] a [g a bes] c[ bes c c,]
-    f2 ~ f ~
+    c8. [\times 1/2 {s32 g' a bes]} c16 [ d c bes] a [g a bes] c[ bes c c,] 
+    f2 ~ f ~ 
     f4 ees d2 ~
-    d ees ~
-    ees f ~
+    d ees ~ 
+    ees f ~ 
     f d
     ees d8. [ees16] f4
     \deux \grace s8 bes,1
