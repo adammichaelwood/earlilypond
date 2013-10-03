@@ -74,3 +74,34 @@
     piece = "Air fort tendre"
   }
 }
+
+%% Second Récit
+\include "recitatif2.ly"
+\score {
+  \new StaffGroup  <<
+    \new Voice = "baryton" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \Cbaryton >>
+    \new Lyrics \lyricsto baryton { \Clyrbar }
+    \new Staff <<
+      \override Staff.BarLine #'allow-span-bar = ##f
+      #(set-accidental-style 'forget)
+      \figuremode { \Cbassefig }
+      \Cbasse
+    >>
+  >>
+}
+
+%% Vengez moy
+\include "vengezmoy.ly"
+\score {
+  \new StaffGroup  <<
+    \new Voice = "dessus" <<\override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \Ddessus >>
+    \new Voice = "baryton" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \Dbaryton >>
+    \new Lyrics \lyricsto baryton { \Dlyrbar }
+    \new Staff <<
+      \override Staff.BarLine #'allow-span-bar = ##f
+      #(set-accidental-style 'forget)
+      \figuremode { \Dbassefig }
+      \Dbasse
+    >>
+  >>
+}
