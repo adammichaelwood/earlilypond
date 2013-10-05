@@ -30,13 +30,13 @@ Abaryton = {
 }
 
 Alyrbar = \lyricmode {
-  Po- li- pheme in- qui- et a- mou- reux & ja- loux
-  Cher- choit l'ai- ma- ble ga- la té- e les Vents _
-  Im- pé- tu- eux et la mer a- git- té- e
-  sem- bloit par- ta- ger son Cou- roux.
+  Po- li- phême in- qui- et, a- mou- reux, et ja- loux,
+  Cher- choit l'ai- ma- ble Ga- la té- e,
+  Les Vents __ _ im- pé- tu- eux et la mer a- git- té- e
+  sem- bloient par- ta- ger son cou- roux.
   Ve- nez, s'é- cri- oit il ne- re- i- de sé- vè- re,
-  Ve- nez par vos a- pas Cal- mer mon trou- ble~af- freux
-  par- ta- ger la flâ- me sin- cè- re 
+  Ve- nez par vos ap- pas cal- mer mon trou- ble~af- freux
+  par- ta- gez la flâ- me sin- cè- re 
   de mon coeur a- mou- reux.
 }
 
@@ -44,16 +44,16 @@ Alyrbar = \lyricmode {
 Abassefig = \figuremode {
   s1
   <6 5>2 <7>
-  s2 <6>4. <6>8
+  s2 <6>4. <6\\>8
   s1
-  s2 <_!>4 s8 <6>16 <6\\>
-  <_+>1
+  s2 <_+>8 <5/>8 s8 <6>16 <6\\>
+  <_+>2 <6>4 <4>8 <_+>
   s1
   s4 <4+> <6>2
   s2 <6 5>
   s1
-  s
-  s2 <6>4 <4>8 <3>
+  s2 <5/>
+  s4 <4+> <6>4 <4>8 <3>
   s1
 }
 
