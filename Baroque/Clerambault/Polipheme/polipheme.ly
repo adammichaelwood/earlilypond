@@ -95,10 +95,6 @@
       \Bbasse
     >>
   >>
-  
-  \header {
-    piece = "Air fort tendre"
-  }
 }
 
 %% Second Récit
