@@ -86,6 +86,19 @@ Fbaryton = {
     d2\stopped f8 f
     bes4 bes8 a g f
     eis2\stopped ees4
+    r4 c'8 bes a g
+    f4 c4. c8
+    f,2 r4 \break
+    r2. r2. r2. 
+    r2. r2. r2. 
+    r2. r2.
+    r8 bes' c4. d8
+    g,2 r4
+    c8 [(d)] ees [(d)] c [(bes)]
+    a ([bes] a) g (f4)
+    bes2 a8 g
+    f g ees4.\stopped (d16) ees
+    d2\stopped bes8 bes
   }
 }
 
@@ -95,11 +108,16 @@ Flyrbar = \lyricmode {
   A- mants ja- loux rom- pez vos chai- nes
   Quand rien ne flat- te votre ar- deur
   Quel- ques fois en ven- geant vos pei- nes
+  vous en re- dou- blez la ri- gueur.
+  A- mants ja- loux rom- pez vos chai- nes
+  Quand rien ne flat- te cotre ar- deur,
+  Quel- que
 }
 
 %% BASSE CONTINUE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Fbassefig = \figuremode {
-  s2.*4
+  s2. s2.
+  s2. s2.
   <6>2.
   <5/>
   s
@@ -108,7 +126,34 @@ Fbassefig = \figuremode {
   s
   <6>2 <6 5>4
   s <4> <3>
-  s2.*3
+  s2. s2.
+  s2. s2.
+  <6>
+  <6>4 <7 4> <3>
+  s2. s s s
+  <6>4 <6> s
+  s2. s s
+  <6>
+  <6>4 <7 4> <3>
+  s2. s
+  <_+>
+  <6>
+  s4 <4> <_+>
+  s2.
+  <5/>
+  s
+  s
+  <_+>
+  <_+>
+  <6>2 <6 5>4
+  s4 <4> <_+>
+  s2.
+  <6>4 <6> s
+  s2.
+  s
+  s
+  <6> <6>4 <7 4> <3>
+  s2.
 }
 
 Fbasse = {
@@ -147,6 +192,24 @@ Fbasse = {
     bes, r4
     r r g'8 [g]
     c [bes] \times 2/3 {c [(d c)]} \times 2/3 {bes [(c bes)]}
+    a2 r4
+    f4 c' c,
+    f2 r4
+    eis'8 [d eis c d eis]
+    f2 r4
+    bes,8 [a] \times 2/3 {bes [(c d)]} \times 2/3 {bes [(c d)]}
+    g,2 r4
+    c8 [bes] \times 2/3 {c [(d c)]} \times 2/3 {bes [(c bes)]}
+    a2 bes4 ~
+    bes c c,
+    f'8 [ees] \times 2/3 {f [(g f)]} \times 2/3 {ees [(f ees)]}
+    d4 c bes
+    \times 2/3 {ees8 [(d ees)]} \times 2/3 {f [(ees f)]} \times 2/3 {g [(f g)]} 
+    c,2 r4
+    f8 [ees] \times 2/3 {f [(g f)]} \times 2/3 {ees [(f ees)]} 
+    d2 r4
+    d,8 [ees] f4 ~ f
+    bes2 r4
     \bar "||"\mark \markup \normalsize { \musicglyph  #"scripts.segno" }
   }
 }
