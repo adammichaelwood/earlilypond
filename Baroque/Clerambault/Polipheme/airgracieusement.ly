@@ -6,7 +6,7 @@
 
 %% DESSUS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Fdessus = {
-  \clef french
+  \clefDessus
   \ter
   \key g \minor
   \tempo "Air"
@@ -55,6 +55,25 @@ Fdessus = {
     f2 r4
     bes8 [(a)] \times 2/3 {bes [(c bes)]} \times 2/3 {a\stopped [(g a)]}
     bes2 r4
+    r r r8 bes
+    ees2 r8 c
+    f2 r8 f
+    \times 2/3 {g [(f g)]} \times 2/3 {c, [(d ees)]} \times 2/3 {f [(g ees)]}
+    d8\stopped [(c) bes (c) d (ees)]
+    f2 r4
+    d8 [(c)] \times 2/3 {d [(ees f)]} \times 2/3 {d [(ees f)]}
+    bes,4 bes8 [bes] c [d]
+    g, [ees'] c4.\stopped bes8
+    bes8_\markup{\italic fort} [(a) bes (c) d (ees)] \break
+    f4. ees8 [d\stopped c]
+    d [(c)] \times 2/3 {d [(ees f)]} \times 2/3 {d [(ees f)]} 
+    g2 r4
+    g8 [(f) g (eis) f (g)]
+    \grace g (a4.) f8 [g a]
+    bes [(a) g (f) ees (d)]
+    c [(bes)] a4.\stopped bes8 \break
+    bes2^\markup{\bold\italic fin}\fermata \bar "||" r4
+    r2.
   }
 }
 
@@ -99,6 +118,21 @@ Fbaryton = {
     bes2 a8 g
     f g ees4.\stopped (d16) ees
     d2\stopped bes8 bes
+    f'4 g8 a bes g
+    c2 a4\stopped
+    r4 bes8 a bes d,
+    ees4 f4. f8
+    bes,2 r4
+    r4 bes'8 bes f g
+    aes4 a4.\stopped a8
+    g4 g8 g a! bes
+    ees,4 f4. f8
+    bes,2 r4
+    r2. r r
+    r2. r r
+    r
+    r4\fermata r4 d
+    g2 g8 bes
   }
 }
 
@@ -111,7 +145,11 @@ Flyrbar = \lyricmode {
   vous en re- dou- blez la ri- gueur.
   A- mants ja- loux rom- pez vos chai- nes
   Quand rien ne flat- te cotre ar- deur,
-  Quel- que
+  Quel- ques fois en ven- geant vos pei- nes
+  vous en re- dou- blez la ri- gueur
+  vous en re- dou- blez la ri- gueur
+  vous en re- dou- blez la ri- gueur
+  La mort d'un ri- val
 }
 
 %% BASSE CONTINUE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -154,6 +192,25 @@ Fbassefig = \figuremode {
   s
   <6> <6>4 <7 4> <3>
   s2.
+  s
+  s
+  <6>
+  <6 5>4 <4> <3>
+  s2.
+  <6>
+  s4 <7->2
+  s2 <4+ 2>8 <6>
+  <6 5>4 <4> <3>
+  s2.
+  <5/>
+  s
+  s
+  <_+>
+  s
+  <6>2 <6 5>4
+  s <4> <3>
+  s2.
+  s
 }
 
 Fbasse = {
@@ -210,6 +267,25 @@ Fbasse = {
     d2 r4
     d,8 [ees] f4 ~ f
     bes2 r4
+    r8 bes ees4 ~ ees
+    r8 c f4. ees8
+    d2 r8 d
+    ees4 f f,
+    g4. g8 [f ees]
+    d2 r4
+    r bes'8 [c d bes]
+    ees4 ~ ees r8 d
+    ees4 f f,
+    bes2 r4
+    a8 [g a f g a]
+    bes2 r4
+    ees8 [d] \times 2/3 {ees [(f g)]} \times 2/3 {ees [(f g)]}
+    c,2 r4
+    f8 [ees] \times 2/3 {f [(g f)]} \times 2/3 {ees [(f ees)]}
+    d2 ees4 ~
+    ees f f,
+    bes2_\markup{\bold\italic fin}\fermata r4
+    r r g
     \bar "||"\mark \markup \normalsize { \musicglyph  #"scripts.segno" }
   }
 }

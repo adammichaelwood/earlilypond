@@ -6,7 +6,7 @@
 
 %% DESSUS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Ddessus = {
-  \clef french
+  \clefDessus
   \time 2/4
   \key g \minor
   \relative c' {

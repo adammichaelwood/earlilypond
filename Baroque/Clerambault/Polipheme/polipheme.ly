@@ -24,6 +24,8 @@
 
 #(set-default-paper-size "a4")
 #(set-global-staff-size 15)
+clefDessus = \clef french
+%clefDessus = \clef treble
 
 \paper {
   #(define page-breaking ly:minimal-breaking)

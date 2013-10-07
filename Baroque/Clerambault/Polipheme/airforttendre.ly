@@ -6,7 +6,7 @@
 
 %% DESSUS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Bdessus = {
-  \clef french
+  \clefDessus
   \time 3/2
   \key d \minor
   \relative c'' {
@@ -17,7 +17,7 @@ Bdessus = {
     d2. (cis4\stopped bis4. cis8)
     \grace c8 (d1) r4 a 
     bes4. (c8) d4. (e8) f4 (d8) [g]
-    fis2 ~ fis8 [g (fis g) g4.\stopped (fis16 [g])
+    fis2 ~ fis8 [g (fis g)] g4.\stopped (fis16 [g])
     a4. (g8) fis4.\stopped (e8) d4. (c8)
     bes4.\stopped a8 bes2 (a4.\stopped) g8
     g1 r2
