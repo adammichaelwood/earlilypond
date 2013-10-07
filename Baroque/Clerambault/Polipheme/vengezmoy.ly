@@ -11,7 +11,7 @@ Ddessus = {
   \key g \minor
   \relative c' {
     r4 r8 ees16 [f]
-    g8\segno [g16 g] ees8 [c]
+    g8\segno_\markup{\italic fort} [g16 g] ees8 [c]
     g'8 [ees16 d] c8 [c']
     bis [bes16 a] g8 [ees']
     d [d16 d] bis8 [g]
@@ -21,7 +21,7 @@ Ddessus = {
     ees [c'] d, [bis']
     c,2
     r
-    r4 r8 aes'16 [bes]
+    r4 r8 aes'16_\markup{\italic doux} [bes]
     c8 [c16 bes] aes [g f ees]
     d4 r8 bis'16 [c]
     d8 [d16 d] bis8 [d]
@@ -32,13 +32,13 @@ Ddessus = {
     g [d'16 c] d8 [g,]
     f [d'16 c] bes [c a bes]
     g8 [g'] a, [fis']
-    g4. r16 g,
+    g4. r16 g,_\markup{\italic fort}
     a [g a bis] a [bis a c]
     bis [a bis c] bis [c bis d]
     c [bis c d] c [d ees f]
     g2
     r
-    r4 r8 aes,16 [bes]
+    r4 r8 aes,16_\markup{\italic doux} [bes]
     c8 [c16 bes] aes [g f ees]
     d4 r8 bis'16 [c]
     d8 [d16 d] bis8 [d]
@@ -48,14 +48,14 @@ Ddessus = {
     d [c d ees] d [ees d f]
     ees [d ees f] ees [g f a]
     g8 [c] d, [bis']
-    c8 [g'16 f] g8 [d]
-    ees [g16 f] g8 [d]
-    ees [g,] c [ees]
+    c8 [g'16_\markup{\italic fort} f] g8 [d_\markup{\italic doux}]
+    ees [g16_\markup{\italic fort} f] g8 [d_\markup{\italic doux}]
+    ees [g,_\markup{\italic fort}] c [ees]
     d16 [c bis a] g [ees d c]
-    bis8 [d'16 c] d8 [d,]
+    bis8 [d'16_\markup{\italic doux} c] d8 [d,]
     g [g'16 f] g8 [g,]
     ees' [d16 c] bis8.\stopped [c16]
-    c4 r8 ees,16 [f]
+    c4 r8 ees,16_\markup{\italic fort} [f]
     g8 [g16 g] ees8 [c]
     g'8 [ees16 d] c8 [c']
     bis [bes16 a] g8 [ees']
@@ -66,7 +66,7 @@ Ddessus = {
     ees [c'] d, [bis']
     c,2^\markup{\bold\italic fin}\fermata
     r
-    r4 r8 c'16 [d]
+    r4 r8 c'16_\markup{\italic doux} [d]
     ees!8 [ees16 d] c [bes aes g]
     f2
     r8 f g [aes]
@@ -78,11 +78,11 @@ Ddessus = {
     f [\grace ees (d)] \grace c (bes) [ees]
     d8. [c16] d8. [ees16]
     d4 (c8.\stopped) [bes16]
-    bes4 r8 g16 [aes]
+    bes4 r8 g16_\markup{\italic fort} [aes]
     bes8 [bes16 bes] g8 [ees]
     bes'2
     r2
-    r4 r8 c16 [d]
+    r4 r8 c16_\markup{\italic doux} [d]
     ees8 [ees16 d] c [bes aes g]
     f2
     r8 f g [aes]
