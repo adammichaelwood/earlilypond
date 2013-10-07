@@ -206,28 +206,28 @@ Bbassefig = \figuremode {
   <6>1.
   s2 <6> <_->4. <6>8
   <_+>1 <6 4>2
-  <_+>1 <6>4. <6>8
+  <_+>1 <6>4. <6\\>8
   s4 <6 5 _-> <4>2 <_+>
   s1.
-  <6 4+ 3>1 s4 <6 5/>
+  <6 4+ 3>1 s4 <6 5>
   <_+>1.
-  s1 <6>4. <5/>8
+  <5>1 <6>4. <5/>8
   s1.
-  s2. <6>4 <5/>2
+  s2. <6\\>4 <5/>2
   <4>2 <_+>1
-  s1 <5/>4 <6 4>
+  s1 <3>4 <6 4>
   <2+>2 <5/>1
-  s1.
-  <6 4+>1 s4 <6 4>4
-  s1.
-  <5/>1 <6>4. <5/>8
+  <_+>1.
+  <6 4+>1 s4 <6 5>4
+  <_+>1.
+  <5>1 <6>4. <5/>8
   s1.
   <5/>1.
-  <5/>2 <4> <_+>
+  <7>2 <4> <_+>
   <_+>1 <_+>2
   <6>4. <6\\>8 <_->4. <6>8 <6\\>2
   <_+>1.
-  <6>2 <6\\>4. <6>8 <5>2
+  <6>2 <6\\>4. <6>8 <5/>2
   s4. <6 5 _->8 <4>2 <3+>
   s1.
 }
@@ -242,7 +242,7 @@ Bbasse = {
     g'1 g4. bes8
     e,2. e4 fis4. g8
     fis2\stopped \grace e8 (d2.) d4
-    g,4. a8 bes4. c8 d4. e8
+    g,4. a8 bes4. c8 d4. ees8
     d1 ~ d2 ~
     d d'4. c8 bes4. a8
     g4. c,8 d2 d,
@@ -275,7 +275,7 @@ Bbasse = {
     g g4. bes8
     e,2. e4 fis4. g8
     fis2\stopped \grace e8 (d2.) d4
-    g,4. a8 bes4. c8 d4. e8
+    g,4. a8 bes4. c8 d4. ees8
     d1 ~ d2
     d'2. c4 bes4. a8
     g4 c, d2 d,
@@ -284,7 +284,7 @@ Bbasse = {
     a1 ~ a4. a'8
     f2. f8 g a4 a8 bis
     c1 ~ c4. a8
-    d2. bis4 gis4. a8
+    d2. bis4 gis4.\stopped a8
     e2 e,1
     a1 a'2 ~
     a gis1
@@ -293,14 +293,27 @@ Bbasse = {
     a1 a4. a'8
     f2. f8 g a4 a8 bis
     c1 ~ c4 r8 c
-    cis2. c4 d2
+    cis2.\stopped c4 d2
     g, a a,
     d1 d'2
     ees4. d8 c4. bes8 a4. g8
     d'2 d, c
     bes a4. g8 fis2
     g4. c,8 d1
-    g1 g'2 ~
+    g1 #(make-music
+         'SequentialMusic
+         'elements
+         (list (make-music
+                'NoteEvent
+                'articulations
+                (list (make-music
+                       'SlurEvent
+                       START))
+                'duration
+                (ly:make-duration 1 0 1)
+                'pitch
+                (ly:make-pitch 0 4 0))))
+    %\displayMusic {g'2}
     %\bar "||" \mark \markup \normalsize { \musicglyph  #"scripts.segno" }
   }
   \bar "|."

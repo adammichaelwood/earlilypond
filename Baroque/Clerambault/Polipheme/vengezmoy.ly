@@ -215,7 +215,7 @@ Dbassefig = \figuremode {
   <_+>4 <6>
   <_+>2
   s
-  <7 _->4 r8 <6 5>
+  <7 _->4 r8 <6 5 _!>
   <_+>2
   <6>8 <6 5 _-> <4> <_+>
   s2
@@ -223,7 +223,7 @@ Dbassefig = \figuremode {
   <6>
   <6 5 _->
   <_+>
-  <5>
+  <5/>
   s
   s4. <6 5>8
   <5/>2
@@ -237,24 +237,24 @@ Dbassefig = \figuremode {
   <6>4 <7>8 <6>
   <_+>4 <6>
   s2
-  s
+  <6>
   <6 5 _->
   <_+>
-  s
+  <5/>
   s
   s
   <6>4 <6 5 _->
   <_+>2
   s4. <6>8
   <6> <6 5 _-> <4> <_+>
-  s4. <_+>8
+  s4. s16 <_+>
+  s4. s16 <_+>
   s2
   s
-  s
-  s
-  s
-  s
-  s
+  <_+>4. <4+>8
+  <6>2
+  s8 <6 5 _-> <4>8 <_+>
+  s2
   s
   <6>
   <_+>4 <6>
@@ -266,19 +266,19 @@ Dbassefig = \figuremode {
   s4. <5>8
   s2
   <6>
-  s
+  <7>
   <6 5>
   s2
   s
-  <6 4>
-  s4 <6>8. <6>16
+  <6 4>4 <7>8 <5/>
+  s4 <6>8. <6\\>16
   s2
   s
   <6>4. <6>8
   s4. <6 5>8
   <4>4 <3>
+  s4 <6>
   s2
-  s
   <6>
   s
   <6>
@@ -286,13 +286,13 @@ Dbassefig = \figuremode {
   <6 5>
   s
   s
-  <6 4>
-  s
-  s
-  s
-  s
-  s
-  s
+  <6 4>4 <7>8 <5/>
+  s4 <6>8. <6\\>16
+  s2
+  <_->
+  s4 <6 4>8. <4+>16
+  <6>2
+  <4>4 <3>
   s
 }
 
@@ -363,9 +363,9 @@ Dbasse = {
     bes2
     bes,
     r8 bes' c [d]
-    ees [ees] ees8. [d16]
+    ees [ees] ees8.\stopped [d16]
     c4 r8 c
-    f8. [f16] f8.\stopped [ees16]
+    f8. ([f16] f8.\stopped [ees16])
     d8 [bes] ees [c]
     g'8. [a16] bes8 [ees,]
     f4 f,
@@ -378,11 +378,11 @@ Dbasse = {
     a8. [bes16] c8. [aes16]
     bes2
     bes,
-    r8 bes c d
-    ees8. [ees16] ees8. [d16]
+    r8 bes' c d
+    ees8. [ees16] ees8.\stopped [d16]
     c4. c8
-    f'4 r8 f,
-    bes8. [bes16] bes8. [aes16]
+    f4 r8 f,
+    bes8. [bes16] bes8.\stopped [aes16]
     g8. [f16] ees16 [f g aes]
     bes4 bes,
     ees8 [ees'16 f] g [f ees d]
