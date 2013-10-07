@@ -142,3 +142,19 @@
     >>
   >>
 }
+
+%% Air Gracieusement
+\include "airgracieusement.ly"
+\score {
+  \new StaffGroup  <<
+    \new Voice = "dessus" <<\override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \Fdessus >>
+    \new Voice = "baryton" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \Fbaryton >>
+    \new Lyrics \lyricsto baryton { \Flyrbar }
+    \new Staff <<
+      \override Staff.BarLine #'allow-span-bar = ##f
+      #(set-accidental-style 'forget)
+      \figuremode { \Fbassefig }
+      \Fbasse
+    >>
+  >>
+}

@@ -388,5 +388,4 @@ Dbasse = {
     ees8 [ees'16 f] g [f ees d]
     \bar "||"\mark \markup \normalsize { \musicglyph  #"scripts.segno" }
   }
-  \bar "|."
 }

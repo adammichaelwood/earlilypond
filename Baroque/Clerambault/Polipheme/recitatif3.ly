@@ -49,10 +49,9 @@ Ebassefig = \figuremode {
   s2. <5/>4
   s1
   s2 s8 <7> <4> <_+>
-  s2
+  s1
   s4 <7+ 6- 2 4> <3>2
   s4 <6 5 _->2
-  s2.
   <4>4 <_+> s2
   <4+>4 <6> <6\\>
   s2 <5>
@@ -76,7 +75,6 @@ Ebasse = {
     \ter f4 e d
     \bin c2 ees
     \ter bes'4 a8. [bes16] \times 1/2 {c4 c,}
-    f2.
+    f2.\bar "|."
   }
-  \bar "|."
 }
