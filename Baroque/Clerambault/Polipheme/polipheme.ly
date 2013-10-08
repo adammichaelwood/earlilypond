@@ -24,8 +24,8 @@
 
 #(set-default-paper-size "a4")
 #(set-global-staff-size 15)
-clefDessus = \clef french
-%clefDessus = \clef treble
+%clefDessus = \clef french
+clefDessus = \clef treble
 
 \paper {
   #(define page-breaking ly:minimal-breaking)
@@ -139,6 +139,8 @@ clefDessus = \clef french
   >>
 }
 
+\pageBreak
+
 %% Troisieme Récit
 \include "recitatif3.ly"
 \score {
@@ -152,6 +154,16 @@ clefDessus = \clef french
       \Ebasse
     >>
   >>
+  \layout {
+    \context {
+      \Staff
+      \override BassFigure #'font-size = #-1
+    }
+    \context {
+      \Lyrics
+      \override LyricText #'font-size = #-1
+    }
+  }
 }
 
 %% Air Gracieusement
@@ -161,13 +173,24 @@ clefDessus = \clef french
     \new Voice = "dessus" <<\override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \Fdessus >>
     \new Lyrics \lyricsto dessus { \Flyrdes }
     \new Voice = "baryton" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \Fbaryton >>
-    \new Lyrics \lyricsto baryton {\override Lyrics.LyricText #'font-size = #-1 \Flyrbar }
+    \new Lyrics \lyricsto baryton {
+      \Flyrbar
+    }
     \new Staff <<
-      \override Staff.BassFigure #'font-size = #-2
       \override Staff.BarLine #'allow-span-bar = ##f
       #(set-accidental-style 'forget)
       \figuremode { \Fbassefig }
       \Fbasse
     >>
   >>
+  \layout {
+    \context {
+      \Staff
+      \override BassFigure #'font-size = #-2
+    }
+    \context {
+      \Lyrics
+      \override LyricText #'font-size = #-1
+    }
+  }
 }

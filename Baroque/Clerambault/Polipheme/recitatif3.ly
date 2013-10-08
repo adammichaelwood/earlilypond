@@ -11,17 +11,17 @@ Ebaryton = {
   \relative c {
     \bin
     \autoBeamOff
-    r8 f16 f a8 c g4\stopped g8 a
-    \grace a (bes8.) bes16 r8 bes16 bes bes8 d bes8\stopped bes16 a
-    a2\stopped a16 a a c f,8 f16 f
-    d8\stopped d16 f bes a g f e8\stopped e16 f d8\stopped d16 e
-    c2 r8 g'16 g bes8 bes16 d
-    g,8 g ees16\stopped e e d d8.\stopped d16 r8 bes'16 bes
-    \ter bes8 c16 d \grace d8 (e4) e16 r e8
-    \bin a,4\stopped a8 a16 bes g4 r8 d'16 d
-    \ter bis8\stopped bes16 g c8 c16 c f,8 f16 e
-    \bin e8.\stopped e16 r4 g8 g16 g a8 bes
-    \ter d,8. e16 f4 f8 f16 e
+    r8 f16 f a8 c g4\stopped g8 a \noBreak
+    \grace a (bes8.) bes16 r8 bes16 bes bes8 d bes8\stopped bes16 a \noBreak
+    a2\stopped a16 a a c f,8 f16 f \break
+    d8\stopped d16 f bes a g f e8\stopped e16 f d8\stopped d16 e \noBreak
+    c2 r8 g'16 g bes8 bes16 d \noBreak
+    g,8 g ees16\stopped e e d d8.\stopped d16 r8 bes'16 bes \noBreak
+    \ter bes8 c16 d \grace d8 (e4) e16 r e8 \break
+    \bin a,4\stopped a8 a16 bes g4 r8 d'16 d \noBreak
+    \ter bis8\stopped bes16 g c8 c16 c f,8 f16 e \noBreak
+    \bin e8.\stopped e16 r4 g8 g16 g a8 bes \noBreak
+    \ter d,8. e16 f4 f8 f16 e \noBreak
     \grace e8 (f2.)
     \bar "|." \break
   }
