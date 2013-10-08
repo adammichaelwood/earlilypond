@@ -44,7 +44,7 @@ Bdessus = {
     fis4.\stopped (e8) d4. (c8) bes4.\stopped (a8)
     g1 a4. bes8
     bes2 (a2.\stopped) g4
-    g2^\markup{\bold\italic fin}\fermata \bar "||" d' d4. ees8
+    g2^\markup{\bold\italic fin}\fermata \bar "||" \bar "" \break d' d4. ees8
     a,2. a4 bes4. c8
     bes2\stopped \grace a8 (g2.) d'4
     d2. (cis4\stopped bis4.) cis8
@@ -52,7 +52,7 @@ Bdessus = {
     bes4. (c8) d4. (e8) f4 (d8) [g]
     fis2\stopped ~ fis8 [g (fis g)] g4.\stopped (fis16 [g])
     a4. d,8 e4. fis8 g4. a8
-    bes4 (a8\stopped [g]) fis2.\stopped g4
+    bes4 (a8\stopped [g]) fis2.\stopped g4 \break
     g1 r2
     r1.
     r2 e2. e4

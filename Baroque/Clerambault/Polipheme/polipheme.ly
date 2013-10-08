@@ -31,18 +31,18 @@ clefDessus = \clef french
   #(define page-breaking ly:minimal-breaking)
   bookTitleMarkup = \markup \abs-fontsize #6 \column {
     \vspace #1
-    \fill-line { \fontsize #8 \fromproperty #'header:composer }
+    \fill-line { \fontsize #5 \fromproperty #'header:composer }
+    %\vspace #1
+    \fill-line { \fontsize #2 \fromproperty #'header:composerDate }
     \vspace #1
-    \fill-line { \fontsize #4 \fromproperty #'header:composerDate }
-    \vspace #4
-    \fill-line { \fontsize #10 \bold \fromproperty #'header:title }
+    \fill-line { \fontsize #8 \bold \fromproperty #'header:title }
     \vspace #1
     \fill-line { \fontsize #2 \bold \fromproperty #'header:subtitle }
     \vspace #1
     \fill-line { \postscript #"-20 0 moveto 40 0 rlineto stroke" }
-    \vspace #6
+    \vspace #2
     \fill-line { \fontsize #-1 \bold \fromproperty #'header:source }
-    \vspace #6
+    \vspace #2
   }
 }
 \markup\null
@@ -62,6 +62,14 @@ clefDessus = \clef french
     \RemoveEmptyStaffContext
     \override VerticalAxisGroup #'remove-first = ##t 
   }
+  \context { 
+    \Staff
+    \override BassFigure #'font-size = #-1
+  } 
+  \context { 
+    \Lyrics
+    \override LyricText #'font-size = #0
+  } 
 }
 
 \include "../../../3rdParty/Viole/ornements-viole.ly"
@@ -82,7 +90,6 @@ clefDessus = \clef french
   >>
 }
 
-
 %% Air fort tendre
 \include "airforttendre.ly"
 \score {
@@ -98,6 +105,8 @@ clefDessus = \clef french
     >>
   >>
 }
+
+\pageBreak
 
 %% Second Récit
 \include "recitatif2.ly"
@@ -152,8 +161,9 @@ clefDessus = \clef french
     \new Voice = "dessus" <<\override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \Fdessus >>
     \new Lyrics \lyricsto dessus { \Flyrdes }
     \new Voice = "baryton" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \Fbaryton >>
-    \new Lyrics \lyricsto baryton { \Flyrbar }
+    \new Lyrics \lyricsto baryton {\override Lyrics.LyricText #'font-size = #-1 \Flyrbar }
     \new Staff <<
+      \override Staff.BassFigure #'font-size = #-2
       \override Staff.BarLine #'allow-span-bar = ##f
       #(set-accidental-style 'forget)
       \figuremode { \Fbassefig }
