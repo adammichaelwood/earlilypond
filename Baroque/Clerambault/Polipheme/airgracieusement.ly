@@ -50,7 +50,11 @@ Fdessus = {
     f [(eis)] d [(c) bes (a)]
     g [(f)] eis4.\stopped f8
     f2 r4
-    r2. r2. r2.
+    \clef bass
+    r8 bes, c4. d8 \break
+    \clefDessus
+    %r2.
+    r2. r2.
     r4 c'8_\markup{\italic doux} [bes] a [g]
     f2 r4
     bes8 [(a)] \times 2/3 {bes [(c bes)]} \times 2/3 {a\stopped [(g a)]}
@@ -71,10 +75,45 @@ Fdessus = {
     g8 [(f) g (eis) f (g)]
     \grace g (a4.) f8 [g a]
     bes [(a) g (f) ees (d)]
-    c [(bes)] a4.\stopped bes8 \break
-    bes2^\markup{\bold\italic fin}\fermata \bar "||" r4
-    r2.
+    c [(bes)] a4.\stopped bes8
+    bes2^\markup{\bold\italic fin}\fermata \bar "||" \bar "" \break r4
+    r2. r2. r2.
+    r2. r2.
+    r4 r d,
+    g2 g8 [bes]
+    fis4\stopped f g
+    a d, r8 d'_\markup{\italic doux}
+    d2 (c8\stopped) [bes]
+    a\stopped [(g)] \times 2/3 {a [(bes c)]} \times 2/3 {bes [(a g)]}
+    fis8\stopped [(eis) fis (g) a (bes)]
+    \times 2/3 {c [(d ees)]} d [(c)] bes\stopped [(a)]
+    bes [(c)] a4.\stopped g8
+    g2 g4_\markup{\italic fort}
+    c4. d8 ees4
+    bis2\stopped bes8 [c]
+    d4 g, r
+    r2. r2.
+    r4 r r8 d'8_\markup{\italic doux}
+    ees4. d8 [c (bis)]
+    c8 [(d)] bis4.\stopped c8
+    c2 r4
+    a2 r4
+    a2 a8 [d]
+    cis2\stopped r8 c
+    d4. d8 eis4
+    f8 [(eis16\stopped d)] cis4.\stopped d8
+    d2 r4_\markup{\bold \italic {Da capo} }
+    \bar "||"
   }
+}
+
+Flyrdes = \lyricmode {
+  _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+  _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+  _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+  _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+  _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+  A- mants ja-
 }
 
 %% BARYTON %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -111,8 +150,8 @@ Fbaryton = {
     r2. r2. r2. 
     r2. r2. r2. 
     r2. r2.
-    r8 bes' c4. d8
-    g,2 r4
+    r2.%r8 bes' c4. d8
+    g'2 r4
     c8 [(d)] ees [(d)] c [(bes)]
     a ([bes] a) g (f4)
     bes2 a8 g
@@ -133,6 +172,31 @@ Fbaryton = {
     r
     r4\fermata r4 d
     g2 g8 bes
+    fis4\stopped f g
+    a d, r8 a'
+    bes4. bes8 c4
+    d c4.\stopped d8 \break
+    d2 r4
+    r2. r
+    r4 r d, g2 g8 bes
+    fis4\stopped f g
+    a d, r8 d'
+    fis,4.\stopped f8 g4
+    c, d4. d8
+    g,2 r4
+    r2. r
+    r4 r g' c4. d8 ees4
+    bis2\stopped bes8 c
+    d4 g, r8 g
+    c4. bes8 aes [(g)]
+    f [(ees)] d4.\stopped c8
+    c2 r8 eis8
+    ees4. f8 g4
+    f2 eis8 d
+    a'4 a r8 a
+    bis4. bes8 cis4
+    d f, (eis8.) d16
+    d2 r4_\markup{\bold \italic {Da capo} }
   }
 }
 
@@ -143,13 +207,21 @@ Flyrbar = \lyricmode {
   Quand rien ne flat- te votre ar- deur
   Quel- ques fois en ven- geant vos pei- nes
   vous en re- dou- blez la ri- gueur.
-  A- mants ja- loux rom- pez vos chai- nes
+  %A- mants ja-
+  loux rom- pez vos chai- nes
   Quand rien ne flat- te cotre ar- deur,
   Quel- ques fois en ven- geant vos pei- nes
   vous en re- dou- blez la ri- gueur
   vous en re- dou- blez la ri- gueur
   vous en re- dou- blez la ri- gueur
-  La mort d'un ri- val
+  La mort d'un ri- val qui sçait plai- re
+  Ac- ca- ble l'ob- jet de vos voeux
+  La mort d'un ri- val qui sçait plai- re
+  Ac- ca- ble l'ob- jet de vos voeux,
+  Si vous con- ten- tez la co- lè- re
+  L'a- mour en est plus mal- heu- reux
+  Si vous con- ten- tez la co- lè- re
+  L'a- mour en est plus mal- heu- reux.
 }
 
 %% BASSE CONTINUE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -211,6 +283,35 @@ Fbassefig = \figuremode {
   s <4> <3>
   s2.
   s
+  <_+>
+  <5/>
+  s2 <6 4>4
+  <6> <7> <6>
+  <_+>2.
+  <6>
+  <_+>
+  <5/>
+  <7>2 <6>4
+  <7 _+>2 <6 4>4
+  <_+>2 s8 <7 6 4>
+  <7- 5/>2.
+  <7>4 <4> <_+>
+  <_+>2.
+  s
+  <_+>
+  <5/>
+  <6>
+  <_+>
+  <4+>
+  <6>2 <6 5 _->4
+  s <4> <_+>
+  <_+>2.
+  <5/>
+  s2 <6 3+>8 <6>
+  <_+>2.
+  <4+>2 <6\\>4
+  s <4> <_+>
+  s2.
 }
 
 Fbasse = {
@@ -286,6 +387,35 @@ Fbasse = {
     ees f f,
     bes2_\markup{\bold\italic fin}\fermata r4
     r r g
-    \bar "||"\mark \markup \normalsize { \musicglyph  #"scripts.segno" }
+    d'4 c8 [bes] a [g]
+    fis [eis fis d eis fis]
+    g2 g'4
+    f ees2
+    d8 [c] \times 2/3 {d [(ees d)]} \times 2/3 {c [(d c)]}
+    bes2 g4
+    d' c8 [bes a g]
+    fis2 g4
+    ees'8 [f ees d ees c]
+    d2. ~
+    d2 r8 d'
+    fis,4. f8 g4
+    c, d d,
+    g2 r4
+    r r c
+    g' f8 [ees d c]
+    bis2 c8 [d]
+    ees [f ees d] c4
+    g'2 g,4
+    f4. aes8 [g f]
+    ees2 f4 ~
+    f g2
+    c r4
+    cis4. bis8 a4
+    d2 c8 [bes]
+    a [g a bes a g]
+    f2 eis4
+    d a' a,
+    d2 r4_\markup{\bold \italic {Da capo} }
+    \bar "||"
   }
 }

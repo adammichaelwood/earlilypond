@@ -150,6 +150,7 @@ clefDessus = \clef french
 \score {
   \new StaffGroup  <<
     \new Voice = "dessus" <<\override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \Fdessus >>
+    \new Lyrics \lyricsto dessus { \Flyrdes }
     \new Voice = "baryton" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \Fbaryton >>
     \new Lyrics \lyricsto baryton { \Flyrbar }
     \new Staff <<
