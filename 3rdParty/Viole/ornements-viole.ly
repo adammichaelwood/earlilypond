@@ -67,29 +67,28 @@ barre =
 }
 
 %%%%%%%%%%%% Fonction Scheme pour les ornements
-#(define (add-vdg-ornament music rotation size glyph-name) 
- (if 
-  (equal? (ly:music-property music 'name) 'EventChord) 
-  (let ((note (car (ly:music-property music 'elements)))) 
-    (set! (ly:music-property note 'articulations) 
-          (append (ly:music-property note 'articulations) 
-                  (list 
-                   (let ((obj (make-music 'FingeringEvent))) 
+#(define (add-vdg-ornament music rotation size glyph-name)
+ (if
+  (equal? (ly:music-property music 'name) 'NoteEvent)
+    (set! (ly:music-property music 'articulations)
+          (append (ly:music-property music 'articulations)
+                  (list
+                   (let ((obj (make-music 'FingeringEvent)))
                      (set! (ly:music-property obj 'tweaks)
                            (acons 'X-extent (lambda (grob)
                              (ly:stencil-extent
                                (grob-interpret-markup grob
                                  glyph-name)
                                X))
-                           (acons 'stencil (lambda (grob) 
-                              (grob-interpret-markup grob 
-                                (markup 
+                           (acons 'stencil (lambda (grob)
+                              (grob-interpret-markup grob
+                                (markup
                                   #:rotate rotation
                                   #:fontsize size
-                                  glyph-name))) 
-                              (ly:music-property obj 'tweaks)))) 
-                     obj))))) 
-  music)) 
+                                  glyph-name)))
+                              (ly:music-property obj 'tweaks))))
+                     obj))))
+  music))
 
 
 %%%%%%%%%%%% Définition des ornements

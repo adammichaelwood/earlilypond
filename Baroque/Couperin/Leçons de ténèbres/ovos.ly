@@ -1,8 +1,9 @@
 %%  ovos.ly
+%%  This file is part of the Earlilypond project
+%%
 %%  Copyright (c) 2013 Benjamin Coudrin <benjamin.coudrin@gmail.com>
 %%                All Rights Reserved
 %%
-%%  Copyleft :
 %%  This program is free software. It comes without any warranty, to
 %%  the extent permitted by applicable law. You can redistribute it
 %%  and/or modify it under the terms of the Do What The Fuck You Want
