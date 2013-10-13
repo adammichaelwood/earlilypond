@@ -23,7 +23,6 @@ def main():
 	pwd = os.getcwd()
 	print pwd
 	
-	dir_list = list()
 	file_list = list()
     
 	filepath = sys.argv[1]
