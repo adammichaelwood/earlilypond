@@ -1,7 +1,7 @@
-%%  diciassettesimo_continuo.ly
+%%  bellinzani_follia.ly
 %%  This file is part of the Earlilypond project
 %%  
-%%  Copyright (c) 2011-2013 Benjamin Coudrin <benjamin.coudrin@gmail.com>
+%%  Copyright (c) 2013 Benjamin Coudrin <benjamin.coudrin@gmail.com>
 %%                All Rights Reserved
 %%
 %%  This program is free software. It comes without any warranty, to
@@ -10,19 +10,8 @@
 %%  To Public License, Version 2, as published by Sam Hocevar. See
 %%  http://sam.zoy.org/wtfpl/COPYING for more details.
 
-  r2.
-  r2.
-  r2.
-  <6!>2.
-  r2.
-  r4. <6>4.
-  r4 <_+>4 r16 <6>16 <6>16 r16
-  <_+>2.
-  r2.
-  r2.
-  r2.
-  <6!>2.
-  r2.
-  r4. <6>4.
-  r2 r8 <_+>8
-  r2.
+\version "2.16.0"
+
+#(ly:set-option 'relative-includes #t)
+
+\include "Baroque/Bellinzani/12 Recorder Sonatas, Op 3/Sonata XII/Follia/follia.ly"

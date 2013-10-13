@@ -15,7 +15,7 @@
   subtitle = \markup \center-column { \concat { "Cantate IV" \override #'(baseline-skip . 2) \super e} \small "a voix seule, et simphonie"}
   source = \markup \left-column {
     "Sources : "
-    "[1] Cantates Françoises a I et II voix, avec simphonie et sans simphonie composées par Mr Clerambault, organiste et Maitre de clavecin. Livre Premier. "
+     "[1] Cantates Françoises a I et II voix, avec simphonie et sans simphonie composées par Mr Clerambault, organiste et Maitre de clavecin. Livre Premier. "
     \with-url #"http://catalogue.bnf.fr/ark:/12148/cb39782645k/PUBLIC" {"http://catalogue.bnf.fr/ark:/12148/cb39782645k/PUBLIC"}
     "[2] Recueil de cantates à une ou deux voix avec un ou deux dessus et basse de différents auteurs (extrait)"
     \with-url #"http://bibliotheque.versailles.fr/cgi-bin/abnetclop.exe/O7105/ID73f95892/NT4" {"http://bibliotheque.versailles.fr/cgi-bin/abnetclop.exe/O7105/ID73f95892/NT4"}
@@ -31,18 +31,17 @@ clefDessus = \clef french
   #(define page-breaking ly:minimal-breaking)
   bookTitleMarkup = \markup \abs-fontsize #6 \column {
     \vspace #1
-    \fill-line { \fontsize #5 \fromproperty #'header:composer }
-    %\vspace #1
-    \fill-line { \fontsize #2 \fromproperty #'header:composerDate }
+    \fill-line { \override #'(font-name . "Calluna") \fontsize #5 \fromproperty #'header:composer }
+    \fill-line { \override #'(font-name . "Calluna") \fontsize #2 \fromproperty #'header:composerDate }
     \vspace #1
-    \fill-line { \fontsize #8 \bold \fromproperty #'header:title }
+    \fill-line { \override #'(font-name . "Calluna Bold") \fontsize #8 \fromproperty #'header:title }
     \vspace #1
-    \fill-line { \fontsize #2 \bold \fromproperty #'header:subtitle }
+    \fill-line { \override #'(font-name . "Calluna Bold") \fontsize #2 \fromproperty #'header:subtitle }
     \vspace #1
     \fill-line { \postscript #"-20 0 moveto 40 0 rlineto stroke" }
     \vspace #2
-    \fill-line { \fontsize #-1 \bold \fromproperty #'header:source }
-    \vspace #2
+    \fill-line { \override #'(font-name . "Calluna Light") \fontsize #-1 \fromproperty #'header:source }
+    \vspace #2    
   }
 }
 \markup\null

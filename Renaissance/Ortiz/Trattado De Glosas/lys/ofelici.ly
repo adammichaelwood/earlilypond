@@ -13,11 +13,11 @@ BAcantusNotes = \relative c'' {
   \clef #(if (eqv? #t (ly:get-option 'urtext))
              "soprano"
              "treble")
-  r\breve r1 g1 d'2 d d2. c4 bes2 g bes bes a1 g2 bes2. a4 g1 f2 g g d' d d2. c4 bes2 g4 a
-  bes c d bes c2. bes4 a2 g1 f2 g\breve r\breve r2 bes1 bes2 c2. bes4 bes2 a bes d d d c c ees1
+  r\breve r1 g1 d'2 d d2. c4 bes2 g bes bes a1 g2 bes2. a4 g1 f2 g g d' d \modernBreak d2. c4 bes2 g4 a
+  bes c d bes c2. bes4 a2 g1 f2 g\breve r\breve r2 bes1 bes2 c2. bes4 bes2 a bes d \modernBreak d d c c ees1
   d2 d d d c bes a d2. c4 bes a g2 bes a g1 f2
-  g1 r2 g2 a bes c a bes2. bes4 c2 d d c d d c a bes c a1 g2 g g1 f2 f d f f f
-  e1 e d4 e f g a bes c2. bes4 bes1 a2 bes r4 d4 c a bes bes a2 g f f e1 d d2 r4 d'4 c a bes bes a2
+  g1 r2 g2 a bes \modernBreak c a bes2. bes4 c2 d d c d d c a bes c a1 g2 g g1 f2 f d f f f
+  e1 e d4 e f g a bes c2. \modernBreak bes4 bes1 a2 bes r4 d4 c a bes bes a2 g f f e1 d d2 r4 d'4 c a bes bes a2
   g2 f f e1 d2 d'2. c4 bes2. a4 g2. f4 d2 e1 d\breve\fermata
   \bar"|."
   \pageBreak

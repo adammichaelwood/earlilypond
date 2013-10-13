@@ -102,6 +102,18 @@ urtextNoBreak =
        #{\noBreak #}
        #{#}))
 
+modernBreak =
+#(define-music-function (parser location) ()
+   (if (eq? #t (ly:get-option 'urtext))
+       #{#}
+       #{\break #}))
+
+modernNoBreak =
+#(define-music-function (parser location) ()
+   (if (eq? #t (ly:get-option 'urtext))
+       #{#}
+       #{\noBreak #}))
+
 urtextMeasBreak =
 #(define-music-function (parser location) ()
    (if (eq? #t (ly:get-option 'urtext))
