@@ -1,8 +1,9 @@
 %%  rv40.ly
-%%  Copyright (c) 2012 Benjamin Coudrin <benjamin.coudrin@gmail.com>
+%%  This file is part of the Earlilypond project
+
+%%  Copyright (c) 2012-2013 Benjamin Coudrin <benjamin.coudrin@gmail.com>
 %%                All Rights Reserved
 %%
-%%  Copyleft :
 %%  This program is free software. It comes without any warranty, to
 %%  the extent permitted by applicable law. You can redistribute it
 %%  and/or modify it under the terms of the Do What The Fuck You Want
@@ -31,7 +32,7 @@
     subtitle = \markup \center-column { "Sonata n.5 in mi minore "\small \italic "(RV 40)" }
     composer =  \markup \right-column { "Antonio Vivaldi" \small "(1678-1741)" }
     tagline = ""
-    copyright = \markup { "Copyright : " \char ##x00A9 " 2012 Benjamin Coudrin. Copyleft : released under cc-by-3.0 License" }
+    copyright = \markup { "Copyright : " \char ##x00A9 " 2012-2013 Benjamin Coudrin. Copyleft : released under cc-by-3.0 License" }
   }
 
   stdClef = \clef bass
