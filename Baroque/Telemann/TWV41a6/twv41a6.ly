@@ -34,6 +34,22 @@
   copyright = \markup { "Copyright : " \char ##x00A9 " 2013 Benjamin Coudrin. Copyleft : released under cc-by-3.0 License" }
 }
 
+\header {
+  tagline = \markup { "Copyright : " \char ##x00A9 " 2013 Earlilypond, Benjamin Coudrin" }
+  composer = "Georg Philipp Telemann"
+  composerDate = "1681-1767"
+  date = "1710"
+  title = "POLIPHÊME"
+  subtitle = \markup \center-column { \concat { "Cantate IV" \override #'(baseline-skip . 2) \super e} \small "a voix seule, et simphonie"}
+  source = \markup \left-column {
+    "Sources : "
+     "[1] Cantates Françoises a I et II voix, avec simphonie et sans simphonie composées par Mr Clerambault, organiste et Maitre de clavecin. Livre Premier. "
+    \with-url #"http://catalogue.bnf.fr/ark:/12148/cb39782645k/PUBLIC" {"http://catalogue.bnf.fr/ark:/12148/cb39782645k/PUBLIC"}
+    "[2] Recueil de cantates à une ou deux voix avec un ou deux dessus et basse de différents auteurs (extrait)"
+    \with-url #"http://bibliotheque.versailles.fr/cgi-bin/abnetclop.exe/O7105/ID73f95892/NT4" {"http://bibliotheque.versailles.fr/cgi-bin/abnetclop.exe/O7105/ID73f95892/NT4"}
+  }
+}
+
 \layout {
   indent = #30
   \context {
@@ -506,7 +522,49 @@
         \repeat volta 2 {
           g'8
           c, [e] d [c16 b]
-          
+          c8 g4 a16 [b]
+          c [(d e) c] d [(e f) d]
+          e [c g c] d [b g b]
+          c [(d e) c] d [(e f) d]
+          e [d c e] d8 [fis]
+          g8 f!4 e16 [d]
+          e8 d4 fis8
+          g f!4 e16 [d]
+          e8 d4 e8
+          f16 [e d e] a,8 [cis]
+          d16 [a bes a] cis [a d a]
+          e' [a, bes a] d [a e' a,]
+          f' [a, bes a] cis [a d a]
+          e' [a, bes a] d [a e' a,]
+          f' [(e f d)] fis [(e fis d)]
+          \times 2/3 {g8 [(a bes)]} \times 2/3 {e, [(f g)]}
+          \times 2/3 {cis, [(d e)]} a,8 [g]
+          f [d'] e, [cis']
+          d4 r8 e
+          \times 2/3 {f8 [(e f)]} \times 2/3 {f [(e f)]}
+          b,16 [d c d] b [d g f]
+          \times 2/3 {e8 [(d e)]} \times 2/3 {e [(d e)]}
+          a,16 [c b c] a [c f e]
+          \times 2/3 {d8 [(cis d)]} \times 2/3 {d [(cis d)]}
+          gis,16 [b a b] gis [b e d]
+          c [e d c] b [d c b]
+          a [e f e] gis [e a e]
+          b' [e, f e] a [e b' e,]
+          c' [e, f e] gis [e a e]
+          b' [e, f e] a [e b' e,]
+          c' [(b c a)] cis [(b cis a)]
+          \times 2/3 {d8 [(cis d)]} \times 2/3 {d [(cis d)]}
+          d4. c!16 [b]
+          c [b a b] e,8 [gis]
+          a4 ~ a16 [a gis a]
+          c [a gis a] c [a gis a]
+          f [a (gis a] gis [a gis a)]
+          c [a gis a] c [a gis a]
+          e [a (gis a] gis [a gis a)]
+          \times 2/3 {d8 [(e f)]} \times 2/3 {b, [(c d)]}
+          \times 2/3 {gis,8 [(a b)]} e,8 [f']
+          e [d16 (c)] d [(c) b (c)]
+          a4.
         }
       }
     >>
@@ -534,7 +592,8 @@
         s2
         <7>4. <6>8
         <7>2
-        <7 _+>4. <6>8
+        <7 _+>4. 
+        <6>8
         <5> <6> <5> <6>
         <5> <6> <5> <6\\>
         <_+>2
@@ -547,6 +606,51 @@
         <6>
         <5>
         <6 5>4 <7 _+>8 <3>
+        <6>4. <_+>8
+        s4.
+        <6>8
+        s2
+        s4 <6>8 <6>
+        s4 <6>
+        s2
+        <6>4 <6>
+        s4. <6\\>8
+        <6>4 s
+        s4. <6\\>8
+        <6>4 s
+        s4. <6>8
+        s <_-> <_+>4
+        <6> <6\\>
+        <6> <6>8 <6\\>
+        s4 <6\\>
+        <6> <6>8 <6\\>
+        s4 <4+ 2>
+        <6>2
+        <_+>4. <6>8
+        s4 <6 _->8 <_+>
+        s4 <6>
+        s2
+        <7 _!>4. <6>8
+        s2
+        <7>4. <6>8
+        <7>2
+        <7 _+>4. <6>8
+        s4 <6>
+        <6> <6\\>
+        <6> <6>8 <6\\>
+        s4 <6\\>
+        <6> <6>8 <6\\>
+        s4 <4+ 2>
+        <6> <5>
+        <6 5>2
+        s4 <_+>
+        s <6>
+        s2
+        s
+        s
+        <6>
+        <6>
+        <_+>4. <3>8
         <6>4. <_+>8
         s4.
       }
@@ -587,6 +691,51 @@
           dis8 [fis] b, [a]
           g [c] a [b]
           e,4.
+          b''8
+          c4 g
+          c,8 [d] e [d]
+          c4 b
+          c g8 [f']
+          e4 b
+          c g8 [a]
+          b [g] g [g]
+          c [g] g [a]
+          b [g] g [g]
+          c [g] g [cis']
+          d [g,] a [g]
+          f4 e8 [d]
+          cis4 f8 [e]
+          d4 e8 [d]
+          cis4 f8 [e]
+          d4 c
+          bes2
+          a4 r8 cis
+          d4 g,8 [a]
+          d, [d'] cis [a]
+          d4 d
+          g r8 b,
+          c4 c
+          f r8 a,
+          b4 b
+          e r8 gis,
+          a4 d
+          c b8 [a]
+          gis4 c8 [b]
+          a4 b8 [a]
+          gis4 c8 [b]
+          a4 g!
+          f8 [f'] b, [d]
+          gis, [b] e, [gis']
+          a [d,] e [e,]
+          a [b] c [b]
+          a4 a
+          d r
+          a a
+          c r
+          f,2
+          e4 r8 d'
+          c [f] d [e]
+          a,4.
         }
         \repeat volta 2 {
         }
