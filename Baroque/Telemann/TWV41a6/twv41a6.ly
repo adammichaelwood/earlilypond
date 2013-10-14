@@ -501,9 +501,12 @@
           \times 2/3 {a,8 [(gis a)]} \times 2/3 {a [(gis a)]}
           a4. c8
           b [a16 (g)] a [(g) fis (g)]
-          e4.
+          e4. \break
         }
         \repeat volta 2 {
+          g'8
+          c, [e] d [c16 b]
+          
         }
       }
     >>
@@ -517,6 +520,35 @@
         \override FiguredBass.BassFigure #'font-size = #-2
         <6>8
         s4 <6>8 <_+>
+        s4 <6>8 <6\\>
+        s4 <6>
+        s <_+>
+        <6> <6>
+        s <_+>
+        <6> <6>8 <_+>
+        s4 <6>8 <6\\>
+        <6>4. <_+>8
+        s4 <6>
+        s2
+        <7 _+>4. <6>8
+        s2
+        <7>4. <6>8
+        <7>2
+        <7 _+>4. <6>8
+        <5> <6> <5> <6>
+        <5> <6> <5> <6\\>
+        <_+>2
+        <6>4 <6 5>
+        s <_+>
+        s <6>
+        s2
+        s
+        s
+        <6>
+        <5>
+        <6 5>4 <7 _+>8 <3>
+        <6>4. <_+>8
+        s4.
       }
       
       \relative c' {
@@ -526,6 +558,35 @@
         \partial 8 gis8
         \repeat volta 2 {
           a4 d,8 [e]
+          a, [b] c [b]
+          a4 gis
+          a e8 [d']
+          c4 gis
+          a e'8 [d]
+          c4 d8 [e]
+          a, [b] c [b]
+          c [f] d [e]
+          a, [a'] gis [e]
+          a4 a,
+          d r8 fis
+          g4 g,
+          c r8 e
+          fis4 fis,
+          b r8 dis
+          e4 fis
+          g a
+          b r8 b
+          c [a dis b]
+          e [a,] b [b,]
+          e [fis] g [fis]
+          e4 e
+          a r
+          e e
+          g r
+          fis e
+          dis8 [fis] b, [a]
+          g [c] a [b]
+          e,4.
         }
         \repeat volta 2 {
         }
