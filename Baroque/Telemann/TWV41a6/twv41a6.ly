@@ -27,27 +27,13 @@
 }
 
 \header {
-  title = "Sonata A-Moll"
-  subtitle = \markup \center-column { "für Viola di gamba und Continuo"\small \italic "(TWV 41:a6)" }
-  composer =  \markup \right-column { "Georg Philipp Telemann" \small "(1681-1767)" }
+  copyright = \markup { "Copyright : " \char ##x00A9 " 2013 Earlilypond, Benjamin Coudrin" }
   tagline = ""
-  copyright = \markup { "Copyright : " \char ##x00A9 " 2013 Benjamin Coudrin. Copyleft : released under cc-by-3.0 License" }
-}
-
-\header {
-  tagline = \markup { "Copyright : " \char ##x00A9 " 2013 Earlilypond, Benjamin Coudrin" }
   composer = "Georg Philipp Telemann"
   composerDate = "1681-1767"
-  date = "1710"
-  title = "POLIPHÊME"
-  subtitle = \markup \center-column { \concat { "Cantate IV" \override #'(baseline-skip . 2) \super e} \small "a voix seule, et simphonie"}
-  source = \markup \left-column {
-    "Sources : "
-     "[1] Cantates Françoises a I et II voix, avec simphonie et sans simphonie composées par Mr Clerambault, organiste et Maitre de clavecin. Livre Premier. "
-    \with-url #"http://catalogue.bnf.fr/ark:/12148/cb39782645k/PUBLIC" {"http://catalogue.bnf.fr/ark:/12148/cb39782645k/PUBLIC"}
-    "[2] Recueil de cantates à une ou deux voix avec un ou deux dessus et basse de différents auteurs (extrait)"
-    \with-url #"http://bibliotheque.versailles.fr/cgi-bin/abnetclop.exe/O7105/ID73f95892/NT4" {"http://bibliotheque.versailles.fr/cgi-bin/abnetclop.exe/O7105/ID73f95892/NT4"}
-  }
+  title = \markup \center-column { "Sonata A-Moll" \small "für Viola di gamba und Continuo"}
+  subtitle = "TWV 41:a6"
+  source = ""
 }
 
 \layout {
@@ -57,9 +43,28 @@
     \override BassFigure #'font-size = #-2
   }
 }
-  
+
+\paper {
+  #(define page-breaking ly:minimal-breaking)
+  bookTitleMarkup = \markup \abs-fontsize #6 \column {
+    \vspace #1
+    \fill-line { \override #'(font-name . "Calluna") \fontsize #5 \fromproperty #'header:composer }
+    \fill-line { \override #'(font-name . "Calluna") \fontsize #2 \fromproperty #'header:composerDate }
+    \vspace #1
+    \fill-line { \override #'(font-name . "Calluna Bold") \fontsize #8 \fromproperty #'header:title }
+    \vspace #1
+    \fill-line { \override #'(font-name . "Calluna Bold") \fontsize #2 \fromproperty #'header:subtitle }
+    \vspace #1
+    \fill-line { \postscript #"-20 0 moveto 40 0 rlineto stroke" }
+    \vspace #2
+    \fill-line { \override #'(font-name . "Calluna Light") \fontsize #-1 \fromproperty #'header:source }
+    \vspace #2    
+  }
+}
+\markup\null
+
 \markup {
-  \vspace #18
+  \vspace #12
 }
   
 %% LARGO
