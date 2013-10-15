@@ -33,7 +33,11 @@
   composerDate = "1681-1767"
   title = \markup \center-column { "Sonata A-Moll" \small "für Viola di gamba und Continuo"}
   subtitle = "TWV 41:a6"
-  source = ""
+  source = \markup \left-column {
+    "Sources : "
+     "[1] Sonates. Viole de gambe, basse continue. TWV 41 a 6. La mineur."
+    \with-url #"http://catalogue.bnf.fr/ark:/12148/cb13986849s/PUBLIC" {"http://catalogue.bnf.fr/ark:/12148/cb13986849s/PUBLIC"}
+  }
 }
 
 \layout {
@@ -47,16 +51,16 @@
 \paper {
   #(define page-breaking ly:minimal-breaking)
   bookTitleMarkup = \markup \abs-fontsize #6 \column {
-    \vspace #1
+    \vspace #2
     \fill-line { \override #'(font-name . "Calluna") \fontsize #5 \fromproperty #'header:composer }
     \fill-line { \override #'(font-name . "Calluna") \fontsize #2 \fromproperty #'header:composerDate }
-    \vspace #1
-    \fill-line { \override #'(font-name . "Calluna Bold") \fontsize #8 \fromproperty #'header:title }
-    \vspace #1
-    \fill-line { \override #'(font-name . "Calluna Bold") \fontsize #2 \fromproperty #'header:subtitle }
-    \vspace #1
-    \fill-line { \postscript #"-20 0 moveto 40 0 rlineto stroke" }
     \vspace #2
+    \fill-line { \override #'(font-name . "Calluna Bold") \fontsize #8 \fromproperty #'header:title }
+    \vspace #2
+    \fill-line { \override #'(font-name . "Calluna Bold") \fontsize #2 \fromproperty #'header:subtitle }
+    \vspace #2
+    \fill-line { \postscript #"-20 0 moveto 40 0 rlineto stroke" }
+    \vspace #4
     \fill-line { \override #'(font-name . "Calluna Light") \fontsize #-1 \fromproperty #'header:source }
     \vspace #2    
   }
@@ -64,7 +68,7 @@
 \markup\null
 
 \markup {
-  \vspace #12
+  \vspace #4
 }
   
 %% LARGO
