@@ -36,7 +36,9 @@
   source = \markup \left-column {
     "Sources : "
      "[1] Sonates. Viole de gambe, basse continue. TWV 41 a 6. La mineur."
-    \with-url #"http://catalogue.bnf.fr/ark:/12148/cb13986849s/PUBLIC" {"http://catalogue.bnf.fr/ark:/12148/cb13986849s/PUBLIC"}
+     \with-url #"http://catalogue.bnf.fr/ark:/12148/cb13986849s/PUBLIC" {"http://catalogue.bnf.fr/ark:/12148/cb13986849s/PUBLIC"}
+     "[2] Halle: Mitteldeutscher Verlag, n.d., Paul Rubardt"
+     \with-url #"http://imslp.org/wiki/Special:ImagefromIndex/268035" {"http://imslp.org/wiki/Special:ImagefromIndex/268035"}
   }
 }
 
