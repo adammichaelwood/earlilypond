@@ -243,6 +243,8 @@ Aexpose = #(if (eqv? (ly:get-option 'urtext) #t)
 
 % Terza maniera
 \include "lys/ofelici.ly"
+\include "lys/ofelici_r1.ly"
+\include "lys/ofelici_r2.ly"
 \bookpart {
   \include "text/terza.ly"
   \pageBreak
@@ -254,10 +256,30 @@ Aexpose = #(if (eqv? (ly:get-option 'urtext) #t)
     \BAmusic
     \layout{\BAlayout}
   }
+  %\pageBreak
   
-  %\include "text/felici.ly"
-  %\include "lys/ofelici_r1.ly"
-%  \include "lys/ofelici_r2.ly"
+  \include "text/felici.ly"
+  
+  \pageBreak
+  
+  \tocItem \markup\italic{"            Recercata prima sopra o felici occhi miei"}
+  \BBtitle
+  \score {
+    \BBmusic
+    \layout {\secondaLayout}
+  }
+  
+  \pageBreak
+  
+  \tocItem \markup\italic{"            Recercata seconda sopra il detto madrigal"}
+  \BCtitle
+  \score {
+    \BCmusic
+    \layout {\secondaLayout}
+  }
+  
+  \pageBreak
+  
 %  \include "lys/ofelici_r3.ly"
 %  \include "lys/ofelici_r4.ly"
 %  \include "text/doulce.ly"
