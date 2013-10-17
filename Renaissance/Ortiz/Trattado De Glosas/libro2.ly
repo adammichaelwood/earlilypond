@@ -247,6 +247,7 @@ Aexpose = #(if (eqv? (ly:get-option 'urtext) #t)
 \include "lys/ofelici_r2.ly"
 \include "lys/ofelici_r3.ly"
 \include "lys/ofelici_r4.ly"
+\include "lys/doulcememoire.ly"
 \bookpart {
   \include "text/terza.ly"
   \pageBreak
@@ -294,8 +295,16 @@ Aexpose = #(if (eqv? (ly:get-option 'urtext) #t)
   }
   \pageBreak
   
-%  \include "text/doulce.ly"
-%  \include "lys/doulcememoire.ly"
+  \include "text/doulce.ly"
+  % Doulce memoire
+  \CAtitle
+  \score {
+    \CAmusic
+    \layout{\CAlayout}
+  }
+  
+  \pageBreak
+
 %  \include "lys/doulcememoire_r1.ly"
 %  \include "lys/doulcememoire_r2.ly"
 %  \include "lys/doulcememoire_r3.ly"
