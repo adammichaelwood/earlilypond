@@ -245,6 +245,8 @@ Aexpose = #(if (eqv? (ly:get-option 'urtext) #t)
 \include "lys/ofelici.ly"
 \include "lys/ofelici_r1.ly"
 \include "lys/ofelici_r2.ly"
+\include "lys/ofelici_r3.ly"
+\include "lys/ofelici_r4.ly"
 \bookpart {
   \include "text/terza.ly"
   \pageBreak
@@ -257,9 +259,7 @@ Aexpose = #(if (eqv? (ly:get-option 'urtext) #t)
     \layout{\BAlayout}
   }
   %\pageBreak
-  
   \include "text/felici.ly"
-  
   \pageBreak
   
   \tocItem \markup\italic{"            Recercata prima sopra o felici occhi miei"}
@@ -268,7 +268,6 @@ Aexpose = #(if (eqv? (ly:get-option 'urtext) #t)
     \BBmusic
     \layout {\secondaLayout}
   }
-  
   \pageBreak
   
   \tocItem \markup\italic{"            Recercata seconda sopra il detto madrigal"}
@@ -277,11 +276,24 @@ Aexpose = #(if (eqv? (ly:get-option 'urtext) #t)
     \BCmusic
     \layout {\secondaLayout}
   }
-  
   \pageBreak
   
-%  \include "lys/ofelici_r3.ly"
-%  \include "lys/ofelici_r4.ly"
+  \tocItem \markup\italic{"            Recercata terza sopra il detto madrigal"}
+  \BDtitle
+  \score {
+    \BDmusic
+    \layout {\secondaLayout}
+  }
+  \pageBreak
+  
+  \tocItem \markup\italic{"            Recercata quarta che e une quinta voce sopra il detto madrigal"}
+  \BEtitle
+  \score {
+    \BEmusic
+    \layout {\secondaLayout}
+  }
+  \pageBreak
+  
 %  \include "text/doulce.ly"
 %  \include "lys/doulcememoire.ly"
 %  \include "lys/doulcememoire_r1.ly"
