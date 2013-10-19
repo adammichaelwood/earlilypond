@@ -1,6 +1,5 @@
 \version "2.12.3"
 
-\tocItem \markup\italic{"            Recercata quarta che e' una quinta voce sopra la detta Canzone"}
 \markup \abs-fontsize #12 \center-column {
   \vspace #2
   \fill-line { \center-column {"RECERCATA QUARTA CHE E UNA QUINTA" "VOCE SOPRA LA MEDESIMA CANZONE" } }

@@ -249,6 +249,9 @@ Aexpose = #(if (eqv? (ly:get-option 'urtext) #t)
 \include "lys/ofelici_r4.ly"
 \include "lys/doulcememoire.ly"
 \include "lys/doulcememoire_r1.ly"
+\include "lys/doulcememoire_r2.ly"
+\include "lys/doulcememoire_r3.ly"
+\include "lys/doulcememoire_r4.ly"
 \bookpart {
   \include "text/terza.ly"
   \pageBreak
@@ -314,9 +317,23 @@ Aexpose = #(if (eqv? (ly:get-option 'urtext) #t)
   }
   \pageBreak
   
-%  \include "lys/doulcememoire_r2.ly"
-%  \include "lys/doulcememoire_r3.ly"
-%  \include "lys/doulcememoire_r4.ly"
+  \tocItem \markup\italic{"            Recercata seconda sopra la detta Canzone"}
+  \CCtitle
+  \score {
+    \CCmusic
+    \layout {\secondaLayout}
+  }
+  \pageBreak
+  
+  \tocItem \markup\italic{"            Recercata terza sopra la detta Canzone"}
+  \CDtitle
+  \score {
+    \CDmusic
+    \layout {\secondaLayout}
+  }
+  \pageBreak
+  
+  \tocItem \markup\italic{"            Recercata quarta che e' una quinta voce sopra la detta Canzone"}
 %  \include "text/tenori.ly"
 %  \include "lys/bk2_c3_r1.ly"
 %  \include "lys/bk2_c3_r2.ly"
