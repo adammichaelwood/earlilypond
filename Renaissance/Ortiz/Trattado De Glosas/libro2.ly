@@ -334,6 +334,13 @@ Aexpose = #(if (eqv? (ly:get-option 'urtext) #t)
   \pageBreak
   
   \tocItem \markup\italic{"            Recercata quarta che e' una quinta voce sopra la detta Canzone"}
+  \CEtitle
+  \score {
+    \CEmusic
+    \layout {\secondaLayout}
+  }
+  \pageBreak
+  
 %  \include "text/tenori.ly"
 %  \include "lys/bk2_c3_r1.ly"
 %  \include "lys/bk2_c3_r2.ly"
