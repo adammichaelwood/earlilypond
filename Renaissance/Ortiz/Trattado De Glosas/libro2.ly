@@ -83,6 +83,12 @@ modernSwitch =
        #{ \clef $modClef #}
        (make-music 'Music 'void #t)))
 
+urtextSwitch =
+#(define-music-function (parser location modClef) (string?)
+   (if (eq? #f (ly:get-option 'urtext))
+       (make-music 'Music 'void #t)
+       #{ \clef $modClef #}))
+
 urtextPageBreak =
 #(define-music-function (parser location) ()
    (if (eq? #t (ly:get-option 'urtext))
@@ -252,6 +258,7 @@ Aexpose = #(if (eqv? (ly:get-option 'urtext) #t)
 \include "lys/doulcememoire_r2.ly"
 \include "lys/doulcememoire_r3.ly"
 \include "lys/doulcememoire_r4.ly"
+\include "lys/bk2_c3_r1.ly"
 \bookpart {
   \include "text/terza.ly"
   \pageBreak
@@ -339,10 +346,16 @@ Aexpose = #(if (eqv? (ly:get-option 'urtext) #t)
     \CEmusic
     \layout {\secondaLayout}
   }
-  \pageBreak
   
-%  \include "text/tenori.ly"
-%  \include "lys/bk2_c3_r1.ly"
+  \include "text/tenori.ly"
+  
+  \pageBreak
+  \tocItem \markup\italic{"            Recercata prima sopra li detti tenori"}
+  \DAtitle
+  \score {
+    \DAmusic
+    \layout {\secondaLayout}
+  }
 %  \include "lys/bk2_c3_r2.ly"
 %  \include "lys/bk2_c3_r3.ly"
 %  \include "lys/bk2_c3_r4.ly"
