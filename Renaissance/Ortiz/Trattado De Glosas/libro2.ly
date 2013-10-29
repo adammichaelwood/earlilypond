@@ -259,6 +259,7 @@ Aexpose = #(if (eqv? (ly:get-option 'urtext) #t)
 \include "lys/doulcememoire_r3.ly"
 \include "lys/doulcememoire_r4.ly"
 \include "lys/bk2_c3_r1.ly"
+\include "lys/bk2_c3_r2.ly"
 \bookpart {
   \include "text/terza.ly"
   \pageBreak
@@ -356,7 +357,10 @@ Aexpose = #(if (eqv? (ly:get-option 'urtext) #t)
     \DAmusic
     \layout {\secondaLayout}
   }
-%  \include "lys/bk2_c3_r2.ly"
+  
+  \pageBreak
+  \tocItem \markup\italic{"            Recercata seconda sopra li detti tenori"}
+  
 %  \include "lys/bk2_c3_r3.ly"
 %  \include "lys/bk2_c3_r4.ly"
 %  \include "lys/bk2_c3_r5.ly"
