@@ -13,41 +13,42 @@
 \version "2.16.2"
 \include "../../../include/format.ily"
 \include "psalm51.ly"
+\include "../../../3rdParty/Viole/ornements-viole.ly"
 
-% Front page
-\bookpart {
-  \header {
-    composer = "Michel-Richard de Lalande"
-    composerDate = "1657-1726"
-    date = "1730"
-    title = "Miserere"
-    subtitle = "a voix seule"
-    opus = ""
-    editor = "Benjamin Coudrin"
-    sources = \markup \left-column {
-      \concat {"[1] " \italic "Les III leçons de Ténèbres et le Miserere à voix seule de Feu Mr De La Lande" ", Gravé par L. Hue, 1730"}
-      \with-url #"http://catalogue.bnf.fr/ark:/12148/cb397877619" "http://catalogue.bnf.fr/ark:/12148/cb397877619"
-      \concat {"[2] " \italic "Biblia Sacra juxta Vulgatam Clementinam" ", M. Tweedale (ed.), The Clementine Vulgate project." }
-      \with-url #"http://vulsearch.sourceforge.net/html/" "http://vulsearch.sourceforge.net/html/"
-      \concat {"[3] " \italic "La Bible, Ancien et Nouveau Testament" ", Traduction de Louis Segond, 1874-1880, révisée en 1910"}
+\header {
+  composer = "Michel-Richard de Lalande"
+  composerDate = "1657-1726"
+  date = "1730"
+  title = "Miserere"
+  subtitle = "a voix seule"
+  opus = ""
+  editor = "Benjamin Coudrin"
+  sources = \markup \left-column {
+    \concat {"[1] " \italic "Les III leçons de Ténèbres et le Miserere à voix seule de Feu Mr De La Lande" ", Gravé par L. Hue, 1730"}
+    \with-url #"http://catalogue.bnf.fr/ark:/12148/cb397877619" "http://catalogue.bnf.fr/ark:/12148/cb397877619"
+    \concat {"[2] " \italic "Biblia Sacra juxta Vulgatam Clementinam" ", M. Tweedale (ed.), The Clementine Vulgate project." }
+    \with-url #"http://vulsearch.sourceforge.net/html/" "http://vulsearch.sourceforge.net/html/"
+    \concat {"[3] " \italic "La Bible, Ancien et Nouveau Testament" ", Traduction de Louis Segond, 1874-1880, révisée en 1910"}
     \with-url #"http://fr.wikisource.org/wiki/Bible_Segond_1910" "http://fr.wikisource.org/wiki/Bible_Segond_1910"
-    }
-    notes = \markup {
-      \center-column {
-        \bold {"Psaume 51(50):3-21"}
-        \fill-line {
-          \hspace #1
-          \override #'(line-width . 39)
-          \latinPsalm
-          \postscript #"0 0 moveto 0 -85 rlineto stroke"
-          \override #'(line-width . 39)
-          \frenchPsalm
-          \hspace #1
-        }
+  }
+  notes = \markup {
+    \center-column {
+      \bold {"Psaume 51(50):3-21"}
+      \fill-line {
+        \hspace #1
+        \override #'(line-width . 39)
+        \latinPsalm
+        \postscript #"0 0 moveto 0 -85 rlineto stroke"
+        \override #'(line-width . 39)
+        \frenchPsalm
+        \hspace #1
       }
     }
   }
-  
+}
+
+% Front page
+\bookpart {
   \paper {
     bookTitleMarkup = \pieceFrontPageMarkup
   }
@@ -55,3 +56,12 @@
 }
 
 % Music
+\include "music/scores.ly"
+\bookpart {
+  \paper {
+    bookTitleMarkup = \pieceTitleMarkup
+    indent = 30\mm
+  }
+  % Verse 1
+  \score { \AAmusic }
+}
