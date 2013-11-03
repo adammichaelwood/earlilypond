@@ -69,19 +69,17 @@ pieceFrontPageMarkup = \markup \abs-fontsize #10 \box { \column {
   \vspace #1
   \fill-line { \fontsize #3 \fromproperty #'header:composer }
   \fill-line { \override #'(font-family . Nimbus) \fontsize #1 \fromproperty #'header:composerDate }
-  \vspace #6
+  \vspace #2.5
   \fill-line { \fontsize #10 \caps { \fromproperty #'header:title } }
   \vspace #1
   \fill-line { \fontsize #2 \caps {\fromproperty #'header:subtitle } }
-  \vspace #2
-  \fill-line { \fontsize #6 \bold \fromproperty #'header:opus }
-  \vspace #2
+  \vspace #1.5
   \fill-line { \postscript #"-30 0 moveto 60 0 rlineto stroke" }
   \fill-line { \postscript #"-30 2 moveto 60 0 rlineto stroke" }
-  \vspace #3
-  \fill-line { \left-column { "Sources : " \fontsize #0 \fromproperty #'header:sources } }
-  \vspace #3
-  \fill-line { \fontsize #0 \fromproperty #'header:notes }
-  \vspace #8
+  \vspace #1
+  \fill-line { \fontsize #-2 \fromproperty #'header:notes }
+  \vspace #0.5
+  \fill-line { \left-column { "Sources : " \fontsize #-2 \fromproperty #'header:sources } }
+  \vspace #2
   \fill-line { \concat { \publisherDefault ", " \fromproperty #'header:editor } }
 } }

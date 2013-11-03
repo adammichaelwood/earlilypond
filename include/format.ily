@@ -17,3 +17,13 @@
 
 % Paper settings
 #(set-default-paper-size "a4")
+\paper {
+  line-width    = 188\mm
+  left-margin   = 10\mm
+  top-margin    = 10\mm
+  bottom-margin = 20\mm
+  ragged-last-bottom = ##t 
+  ragged-bottom = ##f
+  annotate-spacing = ##f
+  #(define page-breaking ly:page-turn-breaking)
+}
