@@ -83,3 +83,26 @@ pieceFrontPageMarkup = \markup \abs-fontsize #10 \box { \column {
   \vspace #2
   \fill-line { \concat { \publisherDefault ", " \fromproperty #'header:editor } }
 } }
+
+%% piece front page
+%% Requires (in header) :
+%%   - composer
+%%   - title
+%%   - subtitle
+pieceTitleMarkup = \markup {
+  \column {
+    \fill-line {
+      \null
+      \override #`(direction . ,UP) {
+        \dir-column {
+          \center-align \fontsize #-1 \bold
+          \caps \fromproperty #'header:subtitle
+          \center-align \fontsize #4 \bold
+          \caps \fromproperty #'header:title
+        }
+      }
+      \fromproperty #'header:composer
+    }
+    \vspace #2
+  }
+}

@@ -27,3 +27,8 @@
   annotate-spacing = ##f
   #(define page-breaking ly:page-turn-breaking)
 }
+
+% Layout commons
+layoutCommons = \layout {
+  #(layout-set-staff-size 17)
+}

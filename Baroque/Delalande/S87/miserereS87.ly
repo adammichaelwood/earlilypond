@@ -15,6 +15,7 @@
 \include "psalm51.ly"
 \include "../../../3rdParty/Viole/ornements-viole.ly"
 
+
 \header {
   composer = "Michel-Richard de Lalande"
   composerDate = "1657-1726"
@@ -63,5 +64,5 @@
     indent = 30\mm
   }
   % Verse 1
-  \score { \AAmusic }
+  \score { \AAmusic \layout{\layoutCommons} }
 }

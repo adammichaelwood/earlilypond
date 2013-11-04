@@ -20,4 +20,12 @@ lyrSettings = {
   \override Lyrics . LyricText #'font-shape = #'italic
 }
 
+figSettings = {
+  \set figuredBassAlterationDirection = #LEFT
+  \set figuredBassPlusDirection = #LEFT
+  \override VerticalAxisGroup #'minimum-Y-extent = #'()
+  \override BassFigureAlignment #'stacking-dir = #UP
+  \override FiguredBass.BassFigure #'font-size = #-2
+}
+
 \include "v1.ly"
