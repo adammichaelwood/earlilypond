@@ -31,4 +31,28 @@
 % Layout commons
 layoutCommons = \layout {
   #(layout-set-staff-size 17)
+  \context {
+    \Score
+    \override SpacingSpanner #'uniform-stretching = ##t
+    \override Stem #'neutral-direction = #1
+  }
+  \context {
+    \Voice
+    \override TupletNumber #'stencil = ##f 
+    \override TupletBracket #'bracket-visibility = ##f 
+  }
+  \context {
+    \RemoveEmptyStaffContext
+    \override VerticalAxisGroup #'remove-first = ##t 
+  }
+  \context { 
+    \Staff
+    \override BassFigure #'font-size = #-1
+  } 
+  \context { 
+    \Lyrics
+    \override LyricText #'font-size = #0
+    \override LyricText #'font-shape = #'italic
+  } 
 }
+
