@@ -31,6 +31,12 @@ Avoice = {
     cis'4 c16 d e cis fis4 e8 g
     \vmordant cis,4. c16 d \grace cis4 (b4) r16 b b c
     \vmordant gis4 r8 b16 c d4. \vplaintehoriz c16 b
+    c4 c16 c d e fes8. [e16] d [c] b [a]
+    \vmordant gis8. a16 b8. c16 c4 (\vmordant b8.) a16
+    a4 r16 c c b \vmordant a4. \grace g4 (f8)
+    c8. a16 \vplaintehoriz g8. f16 g4 g8 e
+    c'8. c16 c8. d16 \vmordant b4. b16 e
+    \vmordant dis4 d8 e \grace e4 (f8.) b,16 b8 [a16] b
     \bar "|." \break
   }
 }
