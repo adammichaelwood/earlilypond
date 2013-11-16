@@ -33,10 +33,14 @@ Avoice = {
     \vmordant gis4 r8 b16 c d4. \vplaintehoriz c16 b
     c4 c16 c d e fes8. [e16] d [c] b [a]
     \vmordant gis8. a16 b8. c16 c4 (\vmordant b8.) a16
-    a4 r16 c c b \vmordant a4. \grace g4 (f8)
-    c8. a16 \vplaintehoriz g8. f16 g4 g8 e
+    a4 r16 c c b \vmordant a4. \grace g4 (fis8)
+    b8. a16 \vplaintehoriz g8. fis16 g4 g8 e
     c'8. c16 c8. d16 \vmordant b4. b16 e
-    \vmordant dis4 d8 e \grace e4 (f8.) b,16 b8 [a16] b
+    \vmordant dis4 d8 e \grace e4 (fis8.) b,16 b8 [a16] b
+    \grace b4 (cis4.) c8 f8. g16 \vmordant f8. e16
+    \vmordant dis4 \grace cis4 (b8) fis' g8. fis16 e [d] c [b]
+    c4 a8. c16 g4 (\vmordant fis8) fis16 g
+    \grace fis4 (e2) r
     \bar "|." \break
   }
 }
@@ -51,6 +55,11 @@ Alyrics = \lyricmode {
   et le so- leil, se- chant les la- rmes de l'Au- ro- re,
   Donne un nou- vel e- clat a leurs vi- ves cou- leurs.
   Tout s'em- bel- lit, les hu- mi- des Na- ya- des,
+  font ser- pen- ter __ _ leurs eaux sur les ga- zons nais- sans,
+  et les Syl- vains, les Fau- nes, les Dry- a- des,
+  cé- lè- brent par leurs jeux, le re- tour du Prin- tems.
+  Et les Syl- vains, les Fau- nes, les Dry- a- des,
+  cé- lè- brent par leurs jeux, le re- tour du Prin- tems.
 }
 
 %% FIGURED BASS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -80,6 +89,12 @@ Abassefig = \figuremode {
   \bassFigureExtendersOff
   s8
   <_+>2 <5/>
+  s <6 5 _->
+  <4\+>8. <6>16 <6\\>4 <6 4> <_+>
+  \bassFigureExtendersOn
+  <_>8 <_> <_>
+  \bassFigureExtendersOn
+  
 }
 
 Abasse = {
@@ -100,6 +115,16 @@ Abasse = {
     e d4 e
     fis fis, b8 [cis] dis [b]
     e2 gis,
+    a2 d~
+    d8. [c16] b8 [a] e'4 e,
+    a8. [a'16] a8. [g16] fis8. [fis16] fis8. [e16]
+    dis2 e ~
+    e4 fis g e
+    b'4. e,8 b [b'16 a] gis8 [e]
+    a2 ais
+    b e,
+    a, b
+    e, r
   }
   \bar "|."
 }
