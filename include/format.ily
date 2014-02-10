@@ -25,7 +25,7 @@
   ragged-last-bottom = ##t 
   ragged-bottom = ##f
   annotate-spacing = ##f
-  #(define page-breaking ly:page-turn-breaking)
+  #(define page-breaking ly:minimal-breaking)
 }
 
 % Layout commons

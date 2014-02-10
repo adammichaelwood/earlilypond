@@ -37,7 +37,7 @@ Avoice = {
     b8. a16 \vplaintehoriz g8. fis16 g4 g8 e
     c'8. c16 c8. d16 \vmordant b4. b16 e
     \vmordant dis4 d8 e \grace e4 (fis8.) b,16 b8 [a16] b
-    \grace b4 (cis4.) c8 f8. g16 \vmordant f8. e16
+    \grace b4 (cis4.) c8 fis8. g16 \vmordant fis8. e16
     \vmordant dis4 \grace cis4 (b8) fis' g8. fis16 e [d] c [b]
     c4 a8. c16 g4 (\vmordant fis8) fis16 g
     \grace fis4 (e2) r
