@@ -48,8 +48,8 @@ global = {
   \override Score.SpacingSpanner #'spacing-increment = #1.0 % tight spacing
   \time 2/2
   \once \override Staff.TimeSignature #'style = #'mensural
-  \override Voice.NoteHead #'style = #'mensural
-  \override Voice.Rest #'style = #'mensural
+  \override Voice.NoteHead #'style = #'neomensural
+  \override Voice.Rest #'style = #'neomensural
   \set Staff.printKeyCancellation = ##f
   \cadenzaOn % turn off bar lines
   \skip 1*1
@@ -146,15 +146,15 @@ bassus = \relative c {
 }
 
 suplyrics = \lyricmode {
-  _ Se- cou- rez moy ma- da- me par _ _ _ a- mours _ _ _ _
+  _ Se- cou- rez moy ma- da- me par _ _ _ a- mours _ _ _
   ou aul- tre- ment
   ou aul- tre- ment
-  la mort me vient que- rir
-  aul- tre que vous ne peut don- ner se- cours
-  a mon las coeur le- quel pour vous sen va mou- rir
-  hel- las hel- las ve- nez tost se- cou- rir
-  cel- luy qui vit pour vous en gran- de tris- tes- se
-  car de mon coeur vous es- tes la mais- tres- se.
+  la mort _ _ _ _ _ me _ vient que- rir
+  aul- tre que vous ne peut don- ner _ _ _ se- cours _ _ _
+  a mon las coeur le- quel pour vous sen va _ _ _ _ _ mou- _ rir
+  hel- _ _ _ _ _ _ las _ hel- _ las ve- nez tost se- _ _ _ cou- rir _ _ _
+  cel- luy qui vit pour vous en gran- de tris- tes- _ _ _ _ _ _ _ _ se
+  car de _ _ son coeur vous es- tes la mais- tres- _ _ _ _ _ _ _ _ _ se.
 }
 
 \score {
