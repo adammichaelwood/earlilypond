@@ -121,6 +121,6 @@ pieceBigTitleMarkup = \markup \abs-fontsize #6 \column {
     \vspace #1
     \fill-line { \postscript #"-20 0 moveto 40 0 rlineto stroke" }
     \vspace #2
-    \fill-line { \fontsize #0 \fromproperty #'header:sources }
+    \fill-line { \fontsize #1 \fromproperty #'header:sources }
     \vspace #2    
   }
