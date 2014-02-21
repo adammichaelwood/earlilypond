@@ -124,3 +124,14 @@ pieceBigTitleMarkup = \markup \abs-fontsize #6 \column {
     \fill-line { \fontsize #1 \fromproperty #'header:sources }
     \vspace #2    
   }
+  
+pieceMediumTitleMarkup = \markup \abs-fontsize #6 \column {
+    \vspace #1
+    \fill-line { \fontsize #5 \fromproperty #'header:composer }
+    \fill-line { \fontsize #2 \fromproperty #'header:composerDate }
+    \vspace #1
+    \fill-line { \fontsize #8 \bold \caps \fromproperty #'header:title }
+    \vspace #1
+    \fill-line { \postscript #"-20 0 moveto 40 0 rlineto stroke" }
+    \vspace #2
+  }

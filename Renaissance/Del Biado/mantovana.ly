@@ -23,7 +23,7 @@
 }
 
 \paper {
-  bookTitleMarkup = \pieceBigTitleMarkup
+  bookTitleMarkup = \pieceMediumTitleMarkup
 }
 
 \layout {
@@ -43,10 +43,10 @@ soprano = \relative c'' {
   
   % main
   \clef "treble"
+  \slurDashed
   \repeat volta 2 {
     a8 [b] c [d]
     e4 e8 [e]
-    \slurDashed
     f4 (f8) [f]
     e4 e8 [(e)]
     d4 d8 [d]
@@ -61,14 +61,27 @@ soprano = \relative c'' {
     >>
   }
   \repeat volta 2 {
-    a'4 a8 [a]
+    a'4 a8 [(a)]
     g4 g8 [g]
     f4 f8 [f]
-    e2
+    <<
+      \new Voice="mantoalttrois" {\voiceOne e2}
+      { \voiceTwo \tweak #'font-size #-2 e4 \tweak #'font-size #-2 e }
+    >>
     c8 [d] e [c]
-    f4 e
-    d4. e8
-    c2
+    f4
+    <<
+      \new Voice="mantoaltquatre" {\voiceOne e4}
+      { \voiceTwo \tweak #'font-size #-2 e8 [\tweak #'font-size #-2 e] }
+    >>
+    <<
+      \new Voice="mantoaltcinq" {\voiceOne d4. e8}
+      { \voiceTwo \tweak #'font-size #-2 d8 [\tweak #'font-size #-2 c] \tweak #'font-size #-2 d8 [\tweak #'font-size #-2 e] }
+    >>
+    <<
+      \new Voice="mantoaltsix" {\voiceOne c2}
+      { \voiceTwo \tweak #'font-size #-2 c4 \tweak #'font-size #-2 c }
+    >>
     c8 [d] e [f]
     d4 b
     b8 [c] d [e]
@@ -76,11 +89,18 @@ soprano = \relative c'' {
     a8 [b] c [d]
     e4 e8 [e]
     f4 f8 [f]
-    e4 e8 [e]
-    d4 d8 [d]
+    e4 e8 [(e)]
+    d4 (d8) [d]
     c4 d8 [c]
-    b [a] b4
-    a2
+    b [a]
+    <<
+      \new Voice="mantoaltcinq" {\voiceOne b4}
+      { \voiceTwo \tweak #'font-size #-2 b8 [\tweak #'font-size #-2 c] }
+    >>
+    <<
+      \new Voice="mantoaltcinq" {\voiceOne a2}
+      { \voiceTwo \tweak #'font-size #-2 a4 [\tweak #'font-size #-2 a] }
+    >>
   }  
 }
 
@@ -205,11 +225,11 @@ basse = \relative c' {
 soplyrics = \lyricmode {
   Fug- gi Fug- gi Fug- gi da que- sto cie- lo
   As- pro e du- ro spie- ta- _ to _ ge- lo
-Tu che tutto imprigioni e leghi
-Né per pianto ti frangi o pieghi
-fier tiranno, gel de l'anno
-fuggi fuggi fuggi là dove il Verno
-su le brine ha seggio eterno.
+  Tu che tut- to~im- pri- gi- oni e le- ghi
+  Né _ per _ pian- to ti fran- _ gi o pie- ghi
+  fier _ ti- _ ran- no, gel _ de _ l'an- no
+  fug- gi fug- gi fug- gi là do- ve il Ver- no
+  su le bri- ne ha seg- _ gio e- ter- no.
 }
 
 \score {
@@ -220,4 +240,35 @@ su le brine ha seggio eterno.
     \new Voice = "Tenor" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \tenor >>
     \new Voice = "Basse" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \basse >>
   >>
+}
+
+\markup {
+  \column {
+    \vspace #0.3
+    \fill-line {
+      \hspace #0.1 % décalage par rapport à la marge de gauche
+      % peut être supprimé si l'espace sur la page est réduit
+      \column {
+        "Vieni vieni candida vien vermiglia"
+        "tu del mondo sei maraviglia"
+        "Tu nemica d'amare noie"
+        "Dà all'anima delle gioie"
+        "messagger per Primavera"
+        "tu sei dell'anno la giovinezza"
+        "tu del mondo sei la vaghezza."
+      }
+      \hspace #0.1  % ajout d'espace horizontal entre les colonnes
+      \column {
+        "Vieni vieni vieni leggiadra e vaga"
+        "Primavera d'amor presaga"
+        "Odi Zefiro che t'invita"
+        "e la terra che il ciel marita"
+        "al suo raggio venga Maggio"
+        "vieni con il grembo di bei fioretti,"
+        "Vien su l'ale dei zefiretti."
+      }
+      \hspace #0.1 % décalage par rapport à la marge de droite
+      % peut être supprimé si l'espace sur la page est réduit
+    }
+  }
 }
