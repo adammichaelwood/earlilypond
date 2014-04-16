@@ -40,18 +40,44 @@ titlePageMarkup = \markup \abs-fontsize #10 \column {
   \vspace #1
   \fill-line { \fontsize #2 \fromproperty #'header:composerDate }
   \vspace #10
-  \fill-line { \fontsize #10 \bold \fromproperty #'header:title }
+  \fill-line { \fontsize #10 \caps { \bold \fromproperty #'header:title } }
   \vspace #1
-  \fill-line { \fontsize #1 \bold \fromproperty #'header:subtitle }
+  \fill-line { \fontsize #1 \caps { \bold \fromproperty #'header:subtitle } }
   %\vspace #1
   %\fill-line { \postscript #"-20 0 moveto 40 0 rlineto stroke" }
   \vspace #3
-  \fill-line { \fontsize #6 \bold \fromproperty #'header:opus }
+  \fill-line { \fontsize #6 \caps { \bold \fromproperty #'header:opus } }
   \vspace #3
   \fill-line { \fontsize #6 \bold \fromproperty #'header:instrument }
   %\vspace #3
   %\fill-line { \epsfile #X #40 #"ortiz.eps" }    
   \vspace #8
+  \fill-line { \concat { \publisherDefault ", " \fromproperty #'header:editor } }
+}
+
+%% Book front page with image
+%% Requires (in header) :
+%%   - composer
+%%   - composerDate (birth-death)
+%%   - title
+%%   - subtitle
+%%   - opus
+%%   - image
+%%   - editor
+titlePageMarkupImage = \markup \abs-fontsize #10 \column {
+  \vspace #1
+  \fill-line { \fontsize #4 \fromproperty #'header:composer }
+  \vspace #1
+  \fill-line { \fontsize #2 \fromproperty #'header:composerDate }
+  \vspace #10
+  \fill-line { \fontsize #12 \caps { \bold \fromproperty #'header:title } }
+  \vspace #1
+  \fill-line { \fontsize #3 \caps { \bold \fromproperty #'header:subtitle } }
+  \vspace #6
+  \fill-line { \fontsize #6 \caps { \bold \fromproperty #'header:opus } }
+  \vspace #6
+  \fill-line { \fromproperty #'header:image }    
+  \vspace #10
   \fill-line { \concat { \publisherDefault ", " \fromproperty #'header:editor } }
 }
 
