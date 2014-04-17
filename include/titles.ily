@@ -161,3 +161,8 @@ pieceMediumTitleMarkup = \markup \abs-fontsize #6 \column {
     \fill-line { \postscript #"-20 0 moveto 40 0 rlineto stroke" }
     \vspace #2
   }
+  
+bookNotePageMarkup = \markup \abs-fontsize #6 \column {
+  \vspace #1
+  \fill-line { \fontsize #8 \bold \caps "Notes" }
+}

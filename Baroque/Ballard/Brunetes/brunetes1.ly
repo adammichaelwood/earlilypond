@@ -49,10 +49,26 @@
 \bookpart {
   \paper {
     bookTitleMarkup = \titlePageMarkupImage
+    print-page-number = ##f
   }
   \markup\null
 }
 
+% Blank page
+\bookpart {
+  \paper {
+    bookTitleMarkup = \markup\null
+  }
+  \markup\null
+}
+
+% Notes
+\bookpart {
+  \paper {
+    bookTitleMarkup = \bookNotePageMarkup
+  }
+  \markup\null
+}
 % Music
 %\include "music/scores.ly"
 %\bookpart {
