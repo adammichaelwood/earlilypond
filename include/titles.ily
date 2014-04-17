@@ -164,5 +164,19 @@ pieceMediumTitleMarkup = \markup \abs-fontsize #6 \column {
   
 bookNotePageMarkup = \markup \abs-fontsize #6 \column {
   \vspace #1
-  \fill-line { \fontsize #8 \bold \caps "Notes" }
+  \fill-line { \fontsize #8 \caps \fromproperty #'header:title }
+  \vspace #1
+  \fill-line { \fontsize #8 \caps \fromproperty #'header:subtitle }
+  \vspace #1
+  \fill-line { \fontsize #7 \caps \fromproperty #'header:subsubtitle }
+  \vspace #1
+  \fill-line { \fontsize #7 "." }
+  \vspace #1
+  \fill-line { \fontsize #8 \caps \fromproperty #'header:opus }
+  \vspace #1
+  \fill-line { \fontsize #7 "." }
+  \vspace #4
+  %\fill-line { \fontsize #4 \fromproperty #'header:sources }
+  %\fill-line { \fontsize #8 \bold \caps "Notes" }
+  
 }
