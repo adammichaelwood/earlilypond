@@ -13,20 +13,21 @@
 \version "2.16.2"
 \include "../../../include/format.ily"
 \include "../../../include/notation.ily"
+\include "../../../include/notes.ily"
 
 
 \header {
   composer = "Christophe Ballard"
   composerDate = "1671-1715"
   date = "1724"
-  title = "Brunetes"
+  title = \markup{\caps{"Brunetes"}}
   subtitle = \markup { \center-column {
-    \line { \epsfile #X #10 #"../../../include/images/sepdesleft.eps" \caps{" ou "} \epsfile #X #10 #"../../../include/images/sepdesright.eps" }
+    \line { \caps{" ou "} }
     \caps {"petits airs tendres,"}
     \caps{"avec les doubles et la basse-continue;"}
     \caps{"melees de chansons a danser"}
   } }
-  opus = "Tome Premier"
+  opus = \markup {\caps {"Tome Premier"}}
   editor = "Benjamin Coudrin"
   %image = \markup { \epsfile #X #40 #"cover.eps" }
   image = \markup { \vspace #6 }
@@ -40,8 +41,21 @@
   notes = ""
 }
 
+\paper {
+  bookTitleMarkup = \pieceBigTitleMarkupNoSource
+  scoreTitleMarkup = \suiteSimpleTitleMarkup
+}
+
 % Front page
 \bookpart {
+  \header {
+    subtitle = \markup { \center-column {
+      \line { \epsfile #X #10 #"../../../include/images/sepdesleft.eps" \caps{" ou "} \epsfile #X #10 #"../../../include/images/sepdesright.eps" }
+      \caps {"petits airs tendres,"}
+      \caps{"avec les doubles et la basse-continue;"}
+      \caps{"melees de chansons a danser"}
+    } }
+  }
   \paper {
     bookTitleMarkup = \titlePageMarkupImage
     print-page-number = ##f
@@ -94,21 +108,7 @@
     }
   }
   
-  \markup \column {
-    \vspace #10
-    \justify \fontsize #-2 {
-      La présente édition est libre. Elle est distribuée sans aucune garantie, dans les limites permises par la loi. Vous pouvez
-      en faire usage, la redistribuer et/ou la modifier selon les termes de la licence Do What The Fuck You Want To Public Licence,
-      Version 2, telle que publiée par Sam Hocevar. Voir \with-url #"http://sam.zoy.org/wtfpl/COPYING" "http://sam.zoy.org/wtfpl/COPYING"
-      pour plus de détails.
-    }
-    \vspace #1
-    \justify \fontsize #-2 {
-      Cette édition fait partie du projet Earlilypond. Les fichiers sources du projet et de cette édition sont
-      accessibles, distribuables et modifiables selon les termes de la Do What The Fuck You Want To Public Licence, Version 2, depuis la page web
-      du projet \with-url #"https://code.google.com/p/earlilypond/" "https://code.google.com/p/earlilypond/"
-    }
-  }
+  \frenchLicence
 }
 
 % Blank page
@@ -118,21 +118,6 @@
     print-page-number = ##f
   }
   \markup\null
-}
-
-% Table of contents
-\bookpart {
-  \paper {
-    #(define page-breaking ly:minimal-breaking)
-    tocTitle = "Table des Matières"
-    bookTitleMarkup = \markup\null
-    tocTitleMarkup = \markup \column {
-      \vspace #2
-      \fontsize #6 \fill-line { \tocTitle }
-      \vspace #2
-    }
-  }
-  \markuplist \table-of-contents
 }
 
 % Dedicace
@@ -151,14 +136,102 @@
   \markup {Avertissement}
 }
 
-% Music
-%\include "music/scores.ly"
-%\bookpart {
-  %\paper {
-    %bookTitleMarkup = \pieceTitleMarkup
-    %indent = 30\mm
-  %}
-  % Verse 1
-  %\score { \AAmusic \layout{\layoutCommons} }
-%}
-\score { c }
+% Table des suites
+\bookpart {
+  \paper {
+    #(define page-breaking ly:minimal-breaking)
+    tocTitle = \markup {\center-column{\caps{"Table"} \fontsize #-1 {\center-column {
+      "des six Suites de Tons, sous lesquels" "sont rangez les Brunetes, ou Petits"
+      "Airs Tendres de ce Volume"}}}}
+    bookTitleMarkup = \markup\null
+    tocTitleMarkup = \markup \column {
+      \vspace #2
+      \fontsize #6 \fill-line { \tocTitle }
+      \vspace #2
+    }
+  }
+  \markuplist \table-of-contents
+}
+
+% Table alphabétique
+\bookpart {
+  \paper {
+    #(define page-breaking ly:minimal-breaking)
+    tocTitle = \markup {\center-column{\caps{"Table alphabetique"} \fontsize #-1 {\center-column {
+      "Des Brunetes, ou Petits Airs Tendres" "divisez en six Suites de Tons"}}}}
+    bookTitleMarkup = \markup\null
+    tocTitleMarkup = \markup \column {
+      \vspace #2
+      \fontsize #6 \fill-line { \tocTitle }
+      \vspace #2
+    }
+  }
+  \markuplist \table-of-contents
+}
+
+% Table des chansons à danser
+\bookpart {
+  \paper {
+    #(define page-breaking ly:minimal-breaking)
+    tocTitle = \markup {\center-column{\caps{"Table"} \fontsize #-1 {\center-column {\caps{
+      "Des chansons"} \caps{ "A danser en rond"}}}}}
+    bookTitleMarkup = \markup\null
+    tocTitleMarkup = \markup \column {
+      \vspace #2
+      \fontsize #6 \fill-line { \tocTitle }
+      \vspace #2
+    }
+  }
+  \markuplist \table-of-contents
+}
+
+Avoice = \relative c'' {
+  \clef soprano
+  \key d \minor
+  \bin
+  \partial 2 a2
+  \autoBeamOff
+  bes4 a g fis
+  g2
+}
+
+Alyrics = \lyricmode {
+  Le beau Ber- ger Tir- cis,
+}
+
+Abassefig = \figuremode {
+  <_+>2
+  s4 <6> <6> <_+>
+  s2
+}
+
+Abasse = \relative c {
+  \clef bass
+  \key d \minor
+  \bin
+  \autoBeamOff
+  \partial 2 d2
+  g4 f ees d
+  g, g'
+}
+\bookpart {
+  \header {
+    suite = "Suite en G re Sol Bemol"
+  }
+  
+  \score {
+    \new StaffGroup  <<
+      \new Voice = "voix" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \Avoice >>
+      \new Lyrics \lyricsto voix { \Alyrics }
+      \new Staff <<
+        \override Staff.BarLine #'allow-span-bar = ##f
+        #(set-accidental-style 'forget)
+        \figuremode { \Abassefig }
+        \Abasse
+      >>
+    >>
+    \header {
+      piece = "Le beau berger Tircis"
+    }
+  }
+}
