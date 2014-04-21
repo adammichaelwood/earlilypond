@@ -178,9 +178,15 @@ pieceMediumTitleMarkup = \markup \abs-fontsize #6 \column {
   }
   
 suiteSimpleTitleMarkup = \markup \abs-fontsize #6 \column {
-  \vspace #1
+  \vspace #5
   \fill-line { \fontsize #8 \bold \fromproperty #'header:suite }
-  \vspace #2
+  \vspace #3
+}
+
+scoreSimpleTitleMarkup = \markup \abs-fontsize #6 \left-column {
+  \vspace #1
+  \left-align { \fontsize #6 \caps \fromproperty #'header:piece }
+  \vspace #1
 }
   
 bookNotePageMarkup = \markup \abs-fontsize #6 \column {

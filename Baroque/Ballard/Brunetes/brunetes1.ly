@@ -41,9 +41,8 @@
   notes = ""
 }
 
-\paper {
-  bookTitleMarkup = \pieceBigTitleMarkupNoSource
-  scoreTitleMarkup = \suiteSimpleTitleMarkup
+\layout {
+  \layoutCommons
 }
 
 % Front page
@@ -110,6 +109,12 @@
   
   \frenchLicence
 }
+
+% Notes editoriales
+% - Les agréments sv et son inverse ~sA ne sont pas gérés
+%   compléter les fonctions \vsmarcato et \vsimarcato ou ajouter aux notes
+% - p4 (PDF p23) 4e systeme, ornement inconnu
+%   compléter la fonction \vflat ou ajouter aux notes
 
 % Blank page
 \bookpart {
@@ -185,53 +190,23 @@
   \markuplist \table-of-contents
 }
 
-Avoice = \relative c'' {
-  \clef soprano
-  \key d \minor
-  \bin
-  \partial 2 a2
-  \autoBeamOff
-  bes4 a g fis
-  g2
-}
-
-Alyrics = \lyricmode {
-  Le beau Ber- ger Tir- cis,
-}
-
-Abassefig = \figuremode {
-  <_+>2
-  s4 <6> <6> <_+>
-  s2
-}
-
-Abasse = \relative c {
-  \clef bass
-  \key d \minor
-  \bin
-  \autoBeamOff
-  \partial 2 d2
-  g4 f ees d
-  g, g'
-}
+% Suites
+\include "Tome1/tome1.ly"
 \bookpart {
   \header {
     suite = "Suite en G re Sol Bemol"
+    opus = ""
+  }
+  \paper {
+    bookTitleMarkup = \suiteSimpleTitleMarkup
+    scoreTitleMarkup = \scoreSimpleTitleMarkup
   }
   
-  \score {
-    \new StaffGroup  <<
-      \new Voice = "voix" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \Avoice >>
-      \new Lyrics \lyricsto voix { \Alyrics }
-      \new Staff <<
-        \override Staff.BarLine #'allow-span-bar = ##f
-        #(set-accidental-style 'forget)
-        \figuremode { \Abassefig }
-        \Abasse
-      >>
-    >>
-    \header {
-      piece = "Le beau berger Tircis"
-    }
-  }
+  \tocItem \markup "Le beau berger Tircis"
+  \score {\AAaaScore}
+  \markup {\AAaaLyricsSup}
+
+  \tocItem \markup "J'ay passé deux jours sans vous voir"  
+  \score {\AAabScore}
+  \markup {\AAabLyricsSup}
 }

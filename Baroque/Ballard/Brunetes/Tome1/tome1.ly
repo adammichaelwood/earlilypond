@@ -1,7 +1,7 @@
-%%  notation.ily
+%%  tome1.ly
 %%  This file is part of the Earlilypond project
 %%  
-%%  Copyright (c) 2013 Benjamin Coudrin <benjamin.coudrin@gmail.com>
+%%  Copyright (c) 2014 Benjamin Coudrin <benjamin.coudrin@gmail.com>
 %%                All Rights Reserved
 %%
 %%  This program is free software. It comes without any warranty, to
@@ -10,7 +10,6 @@
 %%  To Public License, Version 2, as published by Sam Hocevar. See
 %%  http://sam.zoy.org/wtfpl/COPYING for more details.
 
-% Common includes
-#(ly:set-option 'relative-includes #t)
-\include "mensuration.ly"
-\include "ornaments.ily"
+% Suite en G re Sol Bemol
+\include "GreSolBemol/lebeaubergertircis.ly"
+\include "GreSolBemol/jaipassedeuxjourssansvous.ly"
