@@ -26,7 +26,7 @@
   bookTitleMarkup = \pieceMediumTitleMarkup
 }
 
-\layout {
+localLayout = \layout {
   \layoutCommons
   \context {
     \Score
@@ -43,6 +43,7 @@ soprano = \relative c'' {
   
   % main
   \clef "treble"
+  \key a \minor
   \slurDashed
   \repeat volta 2 {
     a8 [b] c [d]
@@ -109,6 +110,7 @@ alto = \relative c'' {
   
   % main
   \clef "treble"
+  \key a \minor
   \repeat volta 2 {
     r2
     a4 a8 [a]
@@ -149,6 +151,7 @@ tenor = \relative c' {
   
   % main
   \clef "G_8"
+  \key a \minor
   \repeat volta 2 {
     r2
     c!4 c8 [c]
@@ -188,6 +191,7 @@ basse = \relative c' {
   
   % main
   \clef bass
+  \key a \minor
   \repeat volta 2 {
     r2
     a4 a8 [a]
@@ -232,17 +236,7 @@ soplyrics = \lyricmode {
   su le bri- ne ha seg- _ gio e- ter- no.
 }
 
-\score {
-  \new StaffGroup  <<
-    \new Voice = "Soprano" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \soprano >>
-    \new Lyrics \lyricsto Soprano { \soplyrics }
-    \new Voice = "Alto" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \alto >>
-    \new Voice = "Tenor" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \tenor >>
-    \new Voice = "Basse" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \basse >>
-  >>
-}
-
-\markup {
+verse = \markup {
   \column {
     \vspace #0.3
     \fill-line {
@@ -271,4 +265,36 @@ soplyrics = \lyricmode {
       % peut être supprimé si l'espace sur la page est réduit
     }
   }
+}
+
+\book {
+  \bookOutputSuffix "original"
+  \score {
+    \new StaffGroup  <<
+      \new Voice = "Soprano" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \soprano >>
+      \new Lyrics \lyricsto Soprano { \soplyrics }
+      \new Voice = "Alto" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \alto >>
+      \new Voice = "Tenor" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \tenor >>
+      \new Voice = "Basse" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \basse >>
+    >>
+    \layout {\localLayout}
+  }
+  \markup {\verse}
+}
+
+\book {
+    \bookOutputSuffix "E"
+    \score {
+    \new StaffGroup  <<
+      \new Voice = "Soprano" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \transpose a e {\soprano} >>
+      \new Lyrics \lyricsto Soprano { \soplyrics }
+      \new Voice = "Alto" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \transpose a e {\alto} >>
+      \new Voice = "Tenor" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \transpose a e {\tenor} >>
+      \new Voice = "Basse" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \transpose a e {\basse} >>
+    >>
+    \layout {
+      \localLayout
+    }
+  }
+  \markup {\verse}
 }

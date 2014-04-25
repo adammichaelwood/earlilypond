@@ -25,11 +25,11 @@
   }
 }
 
-\paper {
+localPaper = \paper {
   bookTitleMarkup = \pieceBigTitleMarkup
 }
 
-\layout {
+localLayout = \layout {
   \layoutCommons
   \context {
     \Score
@@ -94,6 +94,7 @@ superius = \relative c' {
   
   % main
   \clef "treble"
+  \key d \minor 
   r2 d d1 e f r2 f f f f e4 d e2 e f2. e4 d c d2 d d c f f f e c e2. d4 e f g f e d d1 c2
   d1 r2 d d1 e f r2 f f f f e4 d e2 e f2. e4 d c d2 d d c f f f e c e2. d4 e f g f
   e4 d d1 c2 d4 e f g a b c2. b4 a1 g2 a1 r2 f f f f e4 d e2 e f2. e4 d c d2 d d c f f f
@@ -109,6 +110,7 @@ contratenor = \relative c' {
   
   % main
   \clef "G_8"
+  \key d \minor 
   r2 a a2. b4 c1. c2 a d2. c4 c1 b2 c1 a r2 f f d e d4 e f g a b c1 c2. b4 c2 d
   c2 b a1 r2 d, f2. g4 a2. b4 c1. c2 a d2. c4 c1 b2 c1 a r2 f f d e d4 e f g a b c1 c2. b4 c2 d
   c2 b a1 a2 d1 c2 e\breve c1 r2 d d c c b c1 a r2 f f d e d4 e f g a b c1 c2. b4 c2 d c b a1
@@ -124,6 +126,7 @@ tenor = \relative c {
   
   % main
   \clef "G_8"
+  \key d \minor 
   r2 d f1 g a r2 a a a a g4 f g2 g f1 r2 d d4 e f g a1 r2 a2 a a g4 f e f g a b a
   g4 f e d e1 d r2 d f1 g a r2 a2 a a a g4 f g2 g f1 r2 d d4 e f g a1 r2 a a a g4 f e f g a b a
   g4 f e d e1 d r2 a' c1 b a r2 a a a a g4 f g2 g f1 r2 d d4 e f g a1 r2 a a a g4 f e f g a b a
@@ -139,6 +142,7 @@ bassus = \relative c {
   
   % main
   \clef bass
+  \key d \minor 
   r2 d d1 c f r2 d f2. e4 d2 d c1 f, r2 bes bes bes a d d d c a c1. g2 c d a1
   d1 r2 d d1 c f r2 d f2. e4 d2 d c1 f, r2 bes bes bes a d d d c a c1. g2 c d a1
   d1 r2 a a1 e' a, r2 d2 f2. e4 d2 d c1 f, r2 bes bes bes a d d d c a c1. g2 c d a1
@@ -157,12 +161,32 @@ suplyrics = \lyricmode {
   car de _ _ son coeur vous es- tes la mais- tres- _ _ _ _ _ _ _ _ _ se.
 }
 
-\score {
-  \new StaffGroup  <<
-    \new Voice = "Superius" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \global \superius >>
-    \new Lyrics \lyricsto Superius { \suplyrics }
-    \new Voice = "Contratenor" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \global \contratenor >>
-    \new Voice = "Tenor" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \global \tenor >>
-    \new Voice = "Bassus" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \global \bassus >>
-  >>
+\book {
+  \bookOutputSuffix "original"
+  \paper{\localPaper}
+  \score {
+    \new StaffGroup  <<
+      \new Voice = "Superius" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \global \superius >>
+      \new Lyrics \lyricsto Superius { \suplyrics }
+      \new Voice = "Contratenor" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \global \contratenor >>
+      \new Voice = "Tenor" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \global \tenor >>
+      \new Voice = "Bassus" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \global \bassus >>
+    >>
+    \layout{\localLayout}
+  }
+}
+
+\book {
+  \bookOutputSuffix "F"
+  \paper{\localPaper}
+  \score {
+    \new StaffGroup  <<
+      \new Voice = "Superius" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \global \transpose d f { \superius} >>
+      \new Lyrics \lyricsto Superius { \suplyrics }
+      \new Voice = "Contratenor" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \global \transpose d f { \contratenor} >>
+      \new Voice = "Tenor" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget)  \global \transpose d f { \tenor} >>
+      \new Voice = "Bassus" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \global \transpose d f { \bassus} >>
+    >>
+    \layout{\localLayout}
+  }
 }
