@@ -2,7 +2,7 @@
 
 DCtitle = \markup \abs-fontsize #12 \center-column {
   \vspace #2
-  \fill-line { \center-column {"RECERCATA SECONDA" } }
+  \fill-line { \center-column {"RECERCATA TERZA" } }
   \vspace #1 
 }
 
@@ -20,13 +20,13 @@ DCcantusSettings = {
 }
 DCcantusUrtext = {
   \DCcantusSettings
-  \repeat volta 2 {\DBcantusNotes} g\longa
+  \repeat volta 2 {\DBcantusNotes} f\longa
   \cadenzaOff
 }
 
 
-DBaltusNotes = \relative c'' {d1. d2 d d c1. c2 c c d1. d2 d d d1. d2 d1 d1. d2 d1 f1. f2 f1 d1 e1 d1 d\breve d1}
-DBaltusSettings = {
+DCaltusNotes = \relative c'' {d1. d2 d d c1. c2 c c d1. d2 d d d1. d2 d1 d1. d2 d1 f1. f2 f1 d1 e1 d1 d\breve d1}
+DCaltusSettings = {
   \set Staff.instrumentName = #"Altus"
   #(set-accidental-style 'forget)
   \cadenzaOn
@@ -36,7 +36,7 @@ DBaltusSettings = {
                "mezzosoprano"
                "treble")
 }
-DBaltusUrtext = {
+DCaltusUrtext = {
   \DBcantusSettings
   \repeat volta 2  {\DBcantusNotes} d\longa
   \cadenzaOff

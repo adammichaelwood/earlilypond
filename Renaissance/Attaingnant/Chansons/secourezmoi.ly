@@ -177,15 +177,30 @@ suplyrics = \lyricmode {
 }
 
 \book {
-  \bookOutputSuffix "F"
+  \bookOutputSuffix "G"
   \paper{\localPaper}
   \score {
     \new StaffGroup  <<
-      \new Voice = "Superius" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \global \transpose d f { \superius} >>
+      \new Voice = "Superius" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \global \transpose d g { \superius} >>
       \new Lyrics \lyricsto Superius { \suplyrics }
-      \new Voice = "Contratenor" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \global \transpose d f { \contratenor} >>
-      \new Voice = "Tenor" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget)  \global \transpose d f { \tenor} >>
-      \new Voice = "Bassus" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \global \transpose d f { \bassus} >>
+      \new Voice = "Contratenor" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \global \transpose d g { \contratenor} >>
+      \new Voice = "Tenor" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget)  \global \transpose d g { \tenor} >>
+      \new Voice = "Bassus" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \global \transpose d g { \bassus} >>
+    >>
+    \layout{\localLayout}
+  }
+}
+
+\book {
+  \bookOutputSuffix "A"
+  \paper{\localPaper}
+  \score {
+    \new StaffGroup  <<
+      \new Voice = "Superius" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \global \transpose d a { \superius} >>
+      \new Lyrics \lyricsto Superius { \suplyrics }
+      \new Voice = "Contratenor" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \global \transpose d a { \contratenor} >>
+      \new Voice = "Tenor" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget)  \global \transpose d a { \tenor} >>
+      \new Voice = "Bassus" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \global \transpose d a { \bassus} >>
     >>
     \layout{\localLayout}
   }

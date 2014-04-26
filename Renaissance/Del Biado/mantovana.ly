@@ -283,14 +283,14 @@ verse = \markup {
 }
 
 \book {
-    \bookOutputSuffix "E"
+    \bookOutputSuffix "G"
     \score {
     \new StaffGroup  <<
-      \new Voice = "Soprano" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \transpose a e {\soprano} >>
+      \new Voice = "Soprano" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \transpose a g {\soprano} >>
       \new Lyrics \lyricsto Soprano { \soplyrics }
-      \new Voice = "Alto" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \transpose a e {\alto} >>
-      \new Voice = "Tenor" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \transpose a e {\tenor} >>
-      \new Voice = "Basse" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \transpose a e {\basse} >>
+      \new Voice = "Alto" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \transpose a g {\alto} >>
+      \new Voice = "Tenor" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \transpose a g {\tenor} >>
+      \new Voice = "Basse" << \override Staff.BarLine #'allow-span-bar = ##f #(set-accidental-style 'forget) \transpose a g {\basse} >>
     >>
     \layout {
       \localLayout
