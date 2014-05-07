@@ -183,9 +183,10 @@ suiteSimpleTitleMarkup = \markup \abs-fontsize #6 \column {
   \vspace #3
 }
 
-scoreSimpleTitleMarkup = \markup \abs-fontsize #6 \left-column {
+scoreSimpleTitleMarkup = \markup \abs-fontsize #6 \column {
   \vspace #1
   \left-align { \fontsize #6 \caps \fromproperty #'header:piece }
+  \fill-line  { \fontsize #5 \italic \fromproperty #'header:part }
   \vspace #1
 }
   

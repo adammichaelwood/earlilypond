@@ -13,3 +13,6 @@
 % Suite en G re Sol Bemol
 \include "GreSolBemol/lebeaubergertircis.ly"
 \include "GreSolBemol/jaipassedeuxjourssansvous.ly"
+\include "GreSolBemol/jesuischarmedunebrune.ly"
+\include "GreSolBemol/monchertroupeau.ly"
+\include "GreSolBemol/cestdansceslieux.ly"

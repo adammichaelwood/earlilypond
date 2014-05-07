@@ -11,9 +11,7 @@
 %%  http://sam.zoy.org/wtfpl/COPYING for more details.
 
 \version "2.16.2"
-\include "../../../include/format.ily"
-\include "../../../include/notation.ily"
-\include "../../../include/notes.ily"
+\include "global.ily"
 
 
 \header {
@@ -113,8 +111,21 @@
 % Notes editoriales
 % - Les agréments sv et son inverse ~sA ne sont pas gérés
 %   compléter les fonctions \vsmarcato et \vsimarcato ou ajouter aux notes
+% - Les reprises des deuxièmes parties ne sont pas toujours claires
+%   Par choix nous n'avons pas mis de reprises pour les deuxièmes parties
+%   au moins deux fois plus longues que les premières parties (doubles ?)
+%   et nous les avons mises pour les deuxièmes parties courtes que les 1e
+% - Dans l'ensemble les congruences sont remplacées par des reprises standard
 % - p4 (PDF p23) 4e systeme, ornement inconnu
 %   compléter la fonction \vflat ou ajouter aux notes
+% - p18 (PDF p37) 4e système, dernière mesure
+%   ornement non identifié. A trouver ou ajouter aux notes/footnotes
+% - p18 (PDF p37) 5e système dernière mesure
+%   sous "traits" il y a une ligne non identifiée. Statuer.
+% - p18 (PDF p37) dernier système 1e mesure
+%   la 2e double semble pointer, vérifier (pour le moment, le point est ajouté)
+% - Les paragraphes de couplets supplémentaires sont en général mal alignés
+%   Trouver une technique pour aligner les blocs de couplets sur une grille
 
 % Blank page
 \bookpart {
@@ -130,7 +141,59 @@
   \paper {
     bookTitleMarkup = \markup\null
   }
-  \markup {A Son Altesse Sérénissime}
+  \markup \column {
+    \vspace #2
+    \fill-line { \fontsize #3 \bold \caps "Epistre" }
+    \vspace #4
+    \fill-line { \fontsize #1 \caps "A Son Altesse Serenissime"}
+    \fill-line { \fontsize #2 \caps "Madame la Princesse De Conty,"}
+    \fill-line { \fontsize #1 \caps "Douairiere."}
+    \vspace #4
+  }
+  \markup {\caps {Madame,}}
+  \markup \column {
+    \vspace #1
+  }
+  \markup \justify {
+    Le Recüeil que je prends la liberté d'offrir à vôtre \caps{Altesse} est
+    un tribut qui luy est justement dû. Il contient ce qu'il y a d'Airs
+    François les plus parfaits dans le caractère Tendre & Naturel ; 
+    Hé qui peut mieux sentir que Vôtre \caps {Altesse} ces graces
+    naïves & touchantes ? Elle qui sçait si bien l'art de gagner les coeurs,
+    par ce charme secret & cet attrait puissant qu'une heureuse
+    Naissance a répandus dans ses moindres discours,
+    & ses moindres actions. Je suis avec un tres profond respect,
+  }
+  \markup \column{
+    \vspace #1
+  }
+  \markup \center-column {
+    \fill-line { \caps "de Votre Altesse Serenissime," }
+  }
+  \markup \column {
+    \vspace #1
+  }
+  \markup \center-column { 
+    \fill-line {\caps "MADAME,"}
+  }
+  \markup \column {
+    \vspace #5
+  }
+  \markup \right-column {
+    \right-align {"Le tres humble & tres"}
+    \right-align {"obeïssant Serviteur,"}
+    \right-align {\caps "C. Ballard."}
+    \fill-line {" "}
+  }
+}
+
+% Blank page
+\bookpart {
+  \paper {
+    bookTitleMarkup = \markup\null
+    print-page-number = ##f
+  }
+  \markup\null
 }
 
 % Avertissement
@@ -138,7 +201,71 @@
   \paper {
     bookTitleMarkup = \markup\null
   }
-  \markup {Avertissement}
+  \markup \column {
+    \vspace #2
+    \fill-line { \fontsize #3 \bold \caps "AVERTISSEMENT." }
+    \vspace #4
+  }
+  \markup \justify {
+    Il y a peu de Recüeils qui doivent être reçûs plus agréablement que celuy-cy,
+    si l'on en juge par l'empressément avec lequel il est attendu du Public.
+    Les Airs dont il est composé ont été appellez \caps {Brunetes}, par rapport
+    à celuy qui commence \italic {Le beau Berger Tircis}, & à celuy qui finit par
+    ces paroles, \italic {Helas, Brunete, mes amours}. Une preuve de la bonté de
+    ces Airs, c'est que malgré leur ancienneté, on ne laisse pas de les
+    apprendre & de les chanter encore tous les jours ; ceux même qui possedent
+    la Musique dans toute son étendüe, se font un plaisir d'y goûter ce
+    caractere Tendre, Aisé, Naturel, qui flatte toûjours, sans lasse jamais,
+    & qui va beaucoup plus au coeur qu'à l'esprit.
+  }
+  \markup \justify {
+    \hspace #2
+    Pour peu qu'on veuille jetter les yeux sur le Recüeil de ces Airs, on n'aura
+    pas de peine à découvrir quels soins il a fallu se donner pour les publier
+    dans toute leur perfection. On les a rangez sous six différentes Suites de
+    Tons, dans lesquels on a jetté toute la variété possible, de sorte que des
+    Airs simples & passionnez, on passe à leurs Doubles : Des Doubles aux Airs
+    de Mouvement : De ces Airs aux Duo : Et des Duo aux Trio. Enchaînement qui,
+    sans doute, ne déplaira pas aux Gens de l'Art, & qui ne laissera pas
+    d'occuper agreablement ceux qui ne font aucune profession de Musique.
+  }
+  \markup \justify {
+    \hspace #2
+    On n'a pas apporté moins d'exactitude à l'Impression des Paroles, qu'on
+    trouvera purgées d'un nombre infini de fautes qui s'étoient glissées
+    dans les Copies qui en ont couru. Entre les differents Couplets on en a
+    fait choix des plus connus, & de ceux qui renfermoient quelque sel,
+    & quelque agréement : Pour les autres qui ne signifioient rien, ou dont
+    le stile & les pensées étoient fades & ennuïeues, on a crû les devoir
+    supprimer. D'ailleurs, lorsqu'il s'est rencontré des Airs d'un seul
+    Couplet assez agreables pour être repetez, on y a joint de nouveaux
+    Couplets, qui en sont une suite naturelle.
+  }
+  \markup \justify {
+    \hspace #2
+    A l'égard des douze Chansons à Danser en Rond, qui finissent ce Volume,
+    on les a choisies entre les meilleures de cette espece, & on les a fait
+    suivre par leurs Couplets qui poivoient le souffrir ; mais on s'est fait
+    une Loy, de n'y rien mêler, aussi-bien que dans le reste de ce Volume,
+    qui pût choquer la pudeur, & la bienseance; & l'on se flatte que cette
+    délicatesse sera du goût de tous les honnêtes Gens.
+  }
+  \markup \justify {
+    \hspace #2
+    Quoique l'on ait pris soin de joindre les Basses-Continües à tous les Airs
+    tendres, on n'a pû neanmoins se dispenser de donner à ce Volume, qui en
+    renferme un tres-grand nombre, une forme qui le rendît plus aisé à manier &
+    à transporter.
+  }
+}
+
+% Blank page
+\bookpart {
+  \paper {
+    bookTitleMarkup = \markup\null
+    print-page-number = ##f
+  }
+  \markup\null
 }
 
 % Table des suites
@@ -205,8 +332,33 @@
   \tocItem \markup "Le beau berger Tircis"
   \score {\AAaaScore}
   \markup {\AAaaLyricsSup}
+  \pageBreak
 
   \tocItem \markup "J'ay passé deux jours sans vous voir"  
   \score {\AAabScore}
   \markup {\AAabLyricsSup}
+  \pageBreak
+  
+  \tocItem \markup "Je suis charmé d'une Brune"  
+  \score {\AAacScore}
+  \markup {\AAacLyricsSup}
+  \pageBreak
+  
+  \tocItem \markup "Mon cher troupeau (Trio)"  
+  \score {\AAadScore}
+  \markup {\AAadLyricsSup}
+    \markup \column {
+    \vspace #10
+    \fill-line {" "}
+  }
+  \pageBreak
+  
+  \tocItem \markup "C'est dans ces lieux où regne l'innocence"  
+  \score {\AAaeScore}
+  \markup {\AAaeLyricsSup}
+  \markup \column {
+    \vspace #4
+    \fill-line {" "}
+  }
+  \pageBreak
 }

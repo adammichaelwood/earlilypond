@@ -32,8 +32,8 @@ localLayout = \layout {
     \Score
     \override SpacingSpanner #'uniform-stretching = ##t
     %\remove Bar_engraver
-    \override BarLine #'transparent = ##t
-    \remove "System_start_delimiter_engraver"
+    %\override BarLine #'transparent = ##t
+    %\remove "System_start_delimiter_engraver"
   }
 }
 
@@ -43,9 +43,21 @@ superius = \relative c' {
   \clef "treble"
   \key c \major
   \time 6/8
+  \autoBeamOff
   d4. ~ d4 c8
-  d4 e16 [f] g8 a
-  bes
+  d4 e16 [f] g8 a4
+  bes a8 g [\ficta fis g16 e]
+  g4. r
+  a a4 a8
+  bes4. ~ bes4 a8
+  g4 \ficta bes8 a g4
+  fis2.
+  a4 b16 [c] c8 b4
+  c4 b8 b8 [a c]
+  b8 a8. [g16] g8 \ficta fis4
+  g4 \ficta f! e d r
+  c [g f] f [e f16 d]
+  f4.
 }
 
 tenor = \relative c' {
