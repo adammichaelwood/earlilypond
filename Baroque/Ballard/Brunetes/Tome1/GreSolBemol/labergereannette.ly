@@ -10,190 +10,103 @@
 %%  To Public License, Version 2, as published by Sam Hocevar. See
 %%  http://sam.zoy.org/wtfpl/COPYING for more details.
 
-AAabVoice = \relative c'' {
+AAafVoice = \relative c'' {
   \clef soprano
   \key d \minor
-  \bla
-  \ter
   \autoBeamOff
   \repeat volta 2 {
+    \blater
+    g4 d'2
+    d c4
+    d2 d4
+    d g, d'
+    \vpmordant c2 d4
+    d2.
   }
-  
-}
-
-AAabLyricsUn = \lyricmode {
-  J'Ay pas- sé deux jours sans vous voir,
-  Plus cru- els qu'on ne pen-
-  se:
-  se: Je se- rois  
-  mort de de- ses- poir
-  D'u- ne plus lon- gue~ab- sen- ce;
-  He- las! Bru- 
+  bes4 bes bes
+  bes16 [a8 bes16] \vpmordant bis2
+  c2 c4
+  c c d
+  \vpmordant bes4. (a8) bes4
+  a2.
   \repeat volta 2 {
-    ne- te mes a- mours,
-    Ne puis- je vous voir
-    tous les
-  }
-  \alternative {
-    {jours! He- las Bru-...}
-    {jours!}
+    g4 d'2
+    
   }
 }
 
-AAabLyricsDeux = \lyricmode {
-  Je ne suis que trop in- for- mé
-  De mon fort & du vô-
-  tre:
-  tre: C'est peu de
- 
-  n'ê- tre point ai- mé,
-  Vous en ai- mez un au- tre:
-  He- las! Bru- ne- te mes a- mours,
-  Le vou- ez- vous ai- mer tou- jours!
-  He- las! Bru- ne- te mes a- mours,
-  Le vou- lez- vous ai- mer tou- jours!
+AAafLyrics = \lyricmode {
+  La Ber- gere An- net- te,
+  Sur les bords d'un ruis- seau,
+  Fi- loit sa que- noüil- let- te,
+  En gar- dant son Trou- peau:
 }
 
-AAabFiguresUn = \figuremode {
-  \repeat volta 2 {
-    s1
-    s2 <6>
-    s1
-    s
-  }
-  \alternative {
-    {s4}
-    {s1}
-  }
-  s1
+AAafFigures = \figuremode {
+  s2.
   s
   s
-  <_+>2 s
-  \repeat volta 2 {
-    <6> <6>4. <5/>8
-    s1
-    s
-  }
-  \alternative {
-    {s1}
-    {s1}
-  }
-}
-
-AAabFiguresDeux = \figuremode {
-  \repeat volta 2 {
-    s1
-    s2 <6>
-    s1
-    s
-  }
-  \alternative {
-    {s4}
-    {s1}
-  }
-  s1
   s
   s
-  <_+>2 s
-
-  <6>2 <6>4. <5/>8
-  s1
   s
-  s1
-  
-  <6>2 <6>4. <5/>8
-  s1
   s
-  s1
+  s
+  s
+  <5/>
+  s
+  s
 }
 
-AAabBassNotesUn = \relative c' {
-  \repeat volta 2 {
-    g2 fis
-    g c,
-    d4. e8 fis2
-    g4 c, d2
-  }
-  \alternative {
-    {g,4}
-    {g4 g'8 [f] ees2}
-  }
-  bes8 [c] d ees f4 f,
-  bes2 f'
-  fis g4 g,
-  d2 d'
-  \repeat volta 2 {
-    d cis
-    d4. e8 fis4 f
-    ees bes8 [c] d4 d,
-  }
-  \alternative {
-    {g2 \vferm d'}
-    {g,1}
-  }
-}
-
-AAabBassNotesDeux = \relative c' {
-  \repeat volta 2 {
-    g2 fis
-    g c,
-    d4. e8 fis2
-    g4 c, d2
-  }
-  \alternative {
-    {g,4}
-    {g4 g'8 [f] ees2}
-  }
-  bes8 [c] d ees f4 f,
-  bes2 f'
-  fis g4 g,
-  d2 d'
-  d cis
-  d4. e8 fis4 f
-  ees bes8 [c] d4 d,
-  g2 \vferm d'
-  d cis
-  d4. e8 fis4 f
-  ees bes8 [c] d4 d,
-  g1
-}
-
-AAabBass = \relative c {
+AAafBass = \relative c' {
   \clef bass
   \key d \minor
-  \bla
   \autoBeamOff
-  \AAabBassNotesUn
-  \AAabBassNotesDeux
+  \repeat volta 2 {
+    \displayMusic {
+    \blater
+    g2 fis4
+    g4 f ees
+    d2.
+    }
+    g2 f4
+    ees2.
+    d
+  }
+  g2 g4
+  d g2
+  c,4. bes8 a [g]
+  fis2.
+  g
+  d'4. e8 fis4
+  \repeat volta 2 {
+  }
 }
 
-AAabScore = \score {
+AAafScore = \score {
   \new StaffGroup  <<
     \new Voice = "Voice" <<
       \override Staff.BarLine #'allow-span-bar = ##f
       #(set-accidental-style 'forget)
-      \AAabVoice
+      \AAafVoice
     >>
     \new Lyrics \lyricsto Voice	 {
-      \AAabLyricsUn
-      \AAabLyricsDeux
+      \AAafLyrics
     }
     \new Staff \with { \consists "Volta_engraver" } <<
       \override Staff.BarLine #'allow-span-bar = ##f
       #(set-accidental-style 'forget)
       \figuremode {
-        \AAabFiguresUn
-        \AAabFiguresDeux
+        \AAafFigures
       }
-      \AAabBass
+      \AAafBass
     >>
   >>
   \header {
-    piece = "J'ay passe deux jours sans vous voir"
+    piece = "La Bergere Annette"
   }
 }
 
-AAabLyricsSup = \markup \fontsize #-1 {
+AAafLyricsSup = \markup \fontsize #-1 {
   \column {
     \vspace #0
     \fill-line {
@@ -206,6 +119,16 @@ AAabLyricsSup = \markup \fontsize #-1 {
         "Je n'en aime point d'autre;"
         "Objet de mes tendres amours,"
         "Vous pouvez me voir tous les jours."
+      }
+      \hspace #0.1 
+      \column {
+        \italic "Quatrième Couplet"
+        "Je passois autrefois chez vous"
+        "Tous les jours de ma vie:"
+        "Privé d'un commerce si doux"
+        "Je languis, je m'ennuye;"
+        "Helas! Brunete mes amours,"
+        "Quand vous verray-je tous les jours?"
       }
       \hspace #0.1 
       \column {
@@ -352,40 +275,6 @@ AAabLyricsSup = \markup \fontsize #-1 {
         "Je méprise vos charmes;"
         "Brunette, je sçay de vos tours,"
         "Vous ne ferez plus mes amours."
-      }
-      \hspace #0.1
-    }
-    \vspace #1
-    \fill-line {
-      \hspace #0.1
-      \column {
-        \italic "Troisième Couplet"
-        "Je vous vois aimer mes Rivaux,"
-        "Sans m'en mettre en colere:"
-        "J'ay choisi des plaisirs nouveaux,"
-        "Un autre a sçu me plaire;"
-        "Non, non, Brunete, de vos jours"
-        "Vous ne ferez plus mes amours."
-      }
-      \hspace #0.1 
-      \column {
-        \italic "Quatrième Couplet"
-        "Quoy! ne vous verray-je jamais"
-        "La même impatience?"
-        "Aimons du moins à communs frais,"
-        "Avancez, quand j'avance."
-        "Helas! ce commerce si doux"
-        "Iris, que ne l'éprouvez-vous?"
-      }
-      \hspace #0.1 
-      \column {
-        \italic "Cinquième Couplet"
-        "Helas! que ne m'est-il permis"
-        "Après un coup si rude,"
-        "De quitter ces lieux ennemis,"
-        "Pour une solitude?"
-        "Où je pourrois en liberté,"
-        "Regretter a félicité."
       }
       \hspace #0.1
     }

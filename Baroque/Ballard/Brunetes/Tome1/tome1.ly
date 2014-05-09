@@ -16,3 +16,4 @@
 \include "GreSolBemol/jesuischarmedunebrune.ly"
 \include "GreSolBemol/monchertroupeau.ly"
 \include "GreSolBemol/cestdansceslieux.ly"
+\include "GreSolBemol/labergereannette.ly"

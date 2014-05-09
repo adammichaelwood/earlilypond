@@ -361,4 +361,9 @@
     \fill-line {" "}
   }
   \pageBreak
+  
+  \tocItem \markup "La Bergere Annette"  
+  \score {\AAafScore}
+  \markup {\AAafLyricsSup}
+  \pageBreak
 }
