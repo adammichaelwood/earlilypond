@@ -347,7 +347,7 @@
   \tocItem \markup "Mon cher troupeau (Trio)"  
   \score {\AAadScore}
   \markup {\AAadLyricsSup}
-    \markup \column {
+  \markup \column {
     \vspace #10
     \fill-line {" "}
   }
@@ -356,14 +356,23 @@
   \tocItem \markup "C'est dans ces lieux où regne l'innocence"  
   \score {\AAaeScore}
   \markup {\AAaeLyricsSup}
-  \markup \column {
-    \vspace #4
-    \fill-line {" "}
-  }
-  \pageBreak
   
   \tocItem \markup "La Bergere Annette"  
   \score {\AAafScore}
   \markup {\AAafLyricsSup}
+  \pageBreak
+  
+  \tocItem \markup "Un de nos Bergers"  
+  \score {\AAagScore}
+  \markup {\AAagLyricsSup}
+  \markup \column {
+    \vspace #8
+    \fill-line {" "}
+  }
+  \pageBreak
+  
+  \tocItem \markup "Vous partez, belle Climene (Trio)"  
+  \score {\AAahScore}
+  \markup {\AAahLyricsSup}
   \pageBreak
 }

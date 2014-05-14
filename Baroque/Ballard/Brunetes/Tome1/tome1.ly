@@ -17,3 +17,5 @@
 \include "GreSolBemol/monchertroupeau.ly"
 \include "GreSolBemol/cestdansceslieux.ly"
 \include "GreSolBemol/labergereannette.ly"
+\include "GreSolBemol/undenosbergers.ly"
+\include "GreSolBemol/vouspartezbelleclimene.ly"

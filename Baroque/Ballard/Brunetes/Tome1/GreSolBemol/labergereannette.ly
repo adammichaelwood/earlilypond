@@ -31,7 +31,17 @@ AAafVoice = \relative c'' {
   a2.
   \repeat volta 2 {
     g4 d'2
-    
+    \vscoul c d4
+    g, \vpmordant a2
+    bes4. c8 d4
+    g, \vpmordant a2
+    bes c4
+    d4. ees8 d4
+    c4 \vpmordant c2
+    bes2.
+    c4. d8 a4
+    bes \vpmordant a2
+    g2.
   }
 }
 
@@ -40,6 +50,10 @@ AAafLyrics = \lyricmode {
   Sur les bords d'un ruis- seau,
   Fi- loit sa que- noüil- let- te,
   En gar- dant son Trou- peau:
+  Le Ber- ger Tir- cis qui l'ai- me
+  Plus que luy- mê- me,
+  Luy ra- con- toit ain- si
+  son a- mou- reux sou- cy.
 }
 
 AAafFigures = \figuremode {
@@ -53,6 +67,17 @@ AAafFigures = \figuremode {
   s
   s
   <5/>
+  s
+  s
+  s
+  s
+  s
+  s
+  s
+  s
+  s
+  s
+  s
   s
   s
 }
@@ -79,6 +104,18 @@ AAafBass = \relative c' {
   g
   d'4. e8 fis4
   \repeat volta 2 {
+    g2 f4
+    ees2 d4
+    ees c2
+    g' f4
+    ees c2
+    g2.
+    g'4. a8 bes4
+    ees, f2
+    bes,4. a8 g4
+    fis2.
+    g4 d2
+    g2.
   }
 }
 
@@ -108,105 +145,54 @@ AAafScore = \score {
 
 AAafLyricsSup = \markup \fontsize #-1 {
   \column {
-    \vspace #0
     \fill-line {
       \hspace #0.1
-      \column {
-        \italic "Troisième Couplet"
-        "Tircis, soyez mieux informé"
-        "De mon fort & du vôtre,"
-        "Ingrat, vous estes seul aimé,"
-        "Je n'en aime point d'autre;"
-        "Objet de mes tendres amours,"
-        "Vous pouvez me voir tous les jours."
-      }
-      \hspace #0.1 
-      \column {
-        \italic "Quatrième Couplet"
-        "Je passois autrefois chez vous"
-        "Tous les jours de ma vie:"
-        "Privé d'un commerce si doux"
-        "Je languis, je m'ennuye;"
-        "Helas! Brunete mes amours,"
-        "Quand vous verray-je tous les jours?"
-      }
-      \hspace #0.1 
-      \column {
-        \italic "Quatrième Couplet"
-        "Je passois autrefois chez vous"
-        "Tous les jours de ma vie:"
-        "Privé d'un commerce si doux"
-        "Je languis, je m'ennuye;"
-        "Helas! Brunete mes amours,"
-        "Quand vous verray-je tous les jours?"
-      }
-      \hspace #0.1
-    }
-    \vspace #1
-    \fill-line {
-      \hspace #0.1
-      \column {
-        \italic "Autres Couplets"
-        "J'ay voulu, pour me rendre heureux,"
-        "Vous voir & vous entendre:"
-        "Que l'un & l'autre est dangereux,"
-        "Quand on a le coeur tendre?"
-        "Je vois où je vais m'engager;"
-        "Mais je ne crains point le danger."
-      }
-      \hspace #0.1 
       \column {
         \italic "Second Couplet"
-        "S'il est vray qu'à l'Amour constant"
-        "Il n'est rien d'impossible,"
-        "Le mien trouvera quelque instant"
-        "Où vous serez sensible;"
-        "Brunete, que ne voulez-vous"
-        "Avancer des moments si doux?"
+        "Jeune Pastourelle,"
+        "Ton oeil est plein d'appas:"
+        "Mais ton humeur cruelle,"
+        "Ne luy ressemble pas."
+        "Faut-il que ton coeur ignore,"
+        "Que je t'adore?"
+        "Pourquoi s'il le scait bien,"
+        "N'en découvre-t'il rien?"
       }
       \hspace #0.1 
       \column {
         \italic "Troisième Couplet"
-        "Non, jamais vos divins appas"
-        "N'ont faut tant de conquêtes:"
-        "A quatorze ans vous n'estiez pas"
-        "Si belle que vous estes;"
-        "Objet de mes tendres amours,"
-        "Vous embelissez tous les jours."
+        "Lorsque dans la Lande,"
+        "Où nous êtions tous deux,"
+        "Je mis une Guirlande"
+        "Dessus tes blonds cheveux,"
+        "Tu me traitas en colere,"
+        "De Temeraire;"
+        "Et de ta blanche main,"
+        "Tu la rompis soudain"
       }
-      \hspace #0.1
-    }
-    \vspace #1
-    \fill-line {
-      \hspace #0.1
+      \hspace #0.1 
       \column {
         \italic "Quatrième Couplet"
-        "Vos yeux sont devenus plus doux"
-        "Et vos couleurs plus vives:"
-        "Tous les Bergers souffrent pour vous,"
-        "Sur ces aimables rives,"
-        "Helas! Brunete mes amours,"
-        "Vous embelissez tous les jours."
+        "Un jour dans la danse,"
+        "Un Berger inconnu,"
+        "Eût assez d'assûrance,"
+        "Pour baiser ton sein nud."
+        "Tu ne fis point la farouche;"
+        "Et quand je touche"
+        "Seulement ton habit,"
+        "Tu rougis de dépit."
       }
-      \hspace #0.1 
+      \hspace #0.1
       \column {
         \italic "Cinquième Couplet"
-        "De tous les Bergers de ces bois"
-        "Je suis le plus fidele:"
-        "De cent Bergeres que je vois"
-        "Vous estes la plus Belle;"
-        "Objet de mes tendres amours,"
-        "Vous embellissez tous les jours."
-      }
-      \hspace #0.1 
-      \column {
-        \italic "Sixième Couplet"
-        "Des Bergers qu'Amour a soûmis"
-        "A vôtre loy sévere,"
-        "A qui donnerez-vous le prix,"
-        "Mon aimable Bergere?"
-        "Helas! que je serois heureux,"
-        "Si c'estoit au plus amoureux!"
+        "L'éclat de tes charmes,"
+        "Enflamme mes desirs,"
+        "Il m'en coûte des larmes,"
+        "Des chagrins, des soûpirs."
+        "Tu le vois belle Inhumaine,"
+        "Sans être en peine,"
+        "Si je pourray souffrir"
+        "Tes rigueurs, sans mourir."
       }
       \hspace #0.1
     }
@@ -214,33 +200,51 @@ AAafLyricsSup = \markup \fontsize #-1 {
     \fill-line {
       \hspace #0.1
       \column {
+        \italic "Sixième Couplet"
+        "Et qu'il te souvienne,"
+        "Que gravant d'un coûteau,"
+        "Ta devïse & la mienne,"
+        "Sur le tronc d'un ormeau,"
+        "Pour toy ce fut une offense."
+        "Par un absence"
+        "Qui dura plus d'un mois,"
+        "Tu me mis aux abois."
+      }
+      \hspace #0.1 
+      \column {
         \italic "Septième Couplet"
-        "On m'a vû souffrir mille maux"
-        "Avec tant de confiance,"
-        "Que je devrois sur mes Rivaux"
-        "Avoir la preference;"
-        "Mais, helas! le plus amoureux,"
-        "N'est pas toûjours le plus heureux."
+        "Mes bleds dans la plaine,"
+        "Mes vins sur les côteaux;"
+        "Milles Bêtes à laine,"
+        "Des Chèvres, des Taureaux;"
+        "Mon adresse & mon courage,"
+        "Mon parentage,"
+        "Ma tendresse, ma foy,"
+        "Ne peuvent rien sur toy."
       }
       \hspace #0.1 
       \column {
         \italic "Huitième Couplet"
-        "Ne croyez pas que vos mépris"
-        "Epuisent ma confiance:"
-        "Quand vos rigueurs seroient le prix"
-        "De ma perseverance,"
-        "J'aymerois mieux perdre le jour,"
-        "Que de vois finir mon amour."
+        "Outre la Musette,"
+        "Dont je t'ay fait un don,"
+        "Je grave une Houlette,"
+        "Des chiffres de ton nom;"
+        "Dans peu de jours je l'acheve,"
+        "Et je t'éleve"
+        "Les petits d'un Faisant,"
+        "Pour te faire un present."
       }
-      \hspace #0.1 
+      \hspace #0.1
       \column {
-        \italic "Autre Couplet"
-        "Plus je vois la charmante Iris,"
-        "Plus je sens que je l'aime:"
-        "Ainsi que les cruels mépris"
-        "Ma confiance est extrême;"
-        "Helas! sa haine & mon amour,"
-        "Augmenteront-ils chaque jour?"
+        \italic "Neuvième Couplet"
+        "Dans nôtre Prairie,"
+        "Un Loup battit nos Chiens,"
+        "Menaçant en furie"
+        "Tes Troupeaux & les miens;"
+        "Tu vis avec quelle adresse,"
+        "Quelle vitesse,"
+        "La houlette à la main,"
+        "J'attaquay l'Inhumain."
       }
       \hspace #0.1
     }
@@ -248,33 +252,91 @@ AAafLyricsSup = \markup \fontsize #-1 {
     \fill-line {
       \hspace #0.1
       \column {
-        \italic "Autre Couplet"
-        "Le doux Printemps est de retour"
-        "Et la plaine est fleurie,"
-        "Zephire & Flore font l'amour,"
-        "Il n'est que toy, Silvie,"
-        "Qui n'as jamais voulu songer"
-        "A trouver l'heure du Berger."
+        \italic "Dixième Couplet"
+        "Dans nôtre Village"
+        "Un Soldat effronté,"
+        "Voulut faire un outrage"
+        "A ta jeune Beauté;"
+        "Si quelqu'un de l'assistance,"
+        "Prit ta deffense"
+        "Plus hardiment que moy;"
+        "Je m'en rapporte à toy."
       }
       \hspace #0.1 
       \column {
-        \italic "Autres Couplets"
-        "Vous ne comptez point comme moy"
-        "Les moments de l'absence,"
-        "Et c'est-là mon unique employ"
-        "Hors de vôtre presence;"
-        "Je commence à m'en rebuter,"
-        "Vous m'en donnez trop à compter"
+        \italic "Onzième Couplet"
+        "Quand de nos Montagnes"
+        "Un grand Ours descendu,"
+        "Rendit de ces Campagnes"
+        "Tout le Peuple éperdu;"
+        "Nos Bergers qui s'étonnerent,"
+        "T'abandonnerent:"
+        "Tu vis, sans me vanter,"
+        "S'il pût m'épouvanter."
       }
       \hspace #0.1 
       \column {
-        \italic "Second Couplet"
-        "Autrefois fidele, & constant"
-        "Je répandois des larmes,"
-        "A present je vis plus content"
-        "Je méprise vos charmes;"
-        "Brunette, je sçay de vos tours,"
-        "Vous ne ferez plus mes amours."
+        \italic "Douzième Couplet"
+        "Je t'offris sa patte,"
+        "Car j'en fus le vainqueur,"
+        "Ce fut là, Belle Ingrate,"
+        "Que je connus ton coeur."
+        "Helas! de m'être obligée,"
+        "Presque enragée,"
+        "Daignas-tu seulement,"
+        "Me parler un moment ?"
+      }
+      \hspace #0.1
+      \column {
+        \italic "Treizième Couplet"
+        "Satisfay ta haine;"
+        "Si mon trépas te plaît,"
+        "Aimable Inhumaine,"
+        "Prononce m'en l'Arrest:"
+        "Pour peu que mon sort te touche,"
+        "Et qu'à ta bouche"
+        "Il en coûte un soûpir,"
+        "Trop heureux de mourir!"
+      }
+      \hspace #0.1
+    }
+    \vspace #1
+    \fill-line {
+      \hspace #0.1
+      \column {
+        \italic "Quatorzième Couplet"
+        "La jeune Bergere"
+        "Pendant tout ces discours,"
+        "D'une main ménagere,"
+        "Alloit filant toûjours;"
+        "Mais son ame fut atteinte"
+        "De cette plainte,"
+        "Son fuseau par trois fois"
+        "Luy tomba de ses doigts."
+      }
+      \hspace #0.1 
+      \column {
+        \italic "Quinzième Couplet"
+        "La Rose vermeille,"
+        "Quand le Soleil la peint,"
+        "N'est point encor pareille"
+        "A l'éclat de son teint;"
+        "C'est une discrette honte"
+        "Qui la surmonte,"
+        "Que ce jeune vainqueur"
+        "Soit Maître de son coeur."
+      }
+      \hspace #0.1 
+      \column {
+        \italic "Autre cheute de la même Chanson"
+        "Il finit sa plainte,"
+        "La Bergere s'en rit;"
+        "Il en eût l'ame atteinte"
+        "De rage & de dépit:"
+        "Puis sans pleurer davantage"
+        "D'un tel outrage,"
+        "La voyant rire ainsi,"
+        "Se mit à rire aussi."
       }
       \hspace #0.1
     }

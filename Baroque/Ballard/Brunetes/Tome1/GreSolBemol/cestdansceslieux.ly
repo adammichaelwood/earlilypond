@@ -82,7 +82,7 @@ AAaeScore = \score {
   }
 }
 
-AAaeLyricsSup = \markup {
+AAaeLyricsSup = \markup \fontsize #-1 {
   \column {
     \vspace #0
     \fill-line {
