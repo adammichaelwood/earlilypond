@@ -29,7 +29,7 @@
 }
 
 % Layout commons
-layoutCommons = \layout {
+layoutCommonsWithEmptyStaves = \layout {
   #(layout-set-staff-size 17)
   \context {
     \Score
@@ -40,10 +40,6 @@ layoutCommons = \layout {
     \Voice
     \override TupletNumber #'stencil = ##f 
     \override TupletBracket #'bracket-visibility = ##f 
-  }
-  \context {
-    \RemoveEmptyStaffContext
-    \override VerticalAxisGroup #'remove-first = ##t 
   }
   \context { 
     \Staff
@@ -56,3 +52,10 @@ layoutCommons = \layout {
   } 
 }
 
+layoutCommons = \layout {
+  \layoutCommonsWithEmptyStaves
+  \context {
+    \RemoveEmptyStaffContext
+    \override VerticalAxisGroup #'remove-first = ##t 
+  }
+}

@@ -189,6 +189,14 @@ scoreSimpleTitleMarkup = \markup \abs-fontsize #6 \column {
   \fill-line  { \fontsize #5 \italic \fromproperty #'header:part }
   \vspace #1
 }
+
+scoreNumberedTitleMarkup = \markup \abs-fontsize #6 \column {
+  \vspace #1
+  \fill-line { \fontsize #10 \box \fromproperty #'header:number } 
+  \vspace #0.5
+  \left-align { \fontsize #6 \caps \fromproperty #'header:piece }
+  \vspace #1
+}
   
 bookNotePageMarkup = \markup \abs-fontsize #6 \column {
   \vspace #1
