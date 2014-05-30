@@ -196,5 +196,49 @@ blankStaves = \score {
   \score{\blankStaves}
   \pageBreak
   
+  \tocItem \markup { "Canzon" \hspace #3 \italic "Gabrieli"}
+  \score{\AOScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+  
+  \tocItem \markup { "Margaretha" \hspace #3 \italic "Widman" }
+  \score{\APScore}
+  \tocItem \markup { "Johanna" \hspace #3 \italic "Widman"}
+  \score{\AQScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+  
+  \tocItem \markup { "Magdalena" \hspace #3 \italic "Widman" }
+  \score{\ARScore}
+  \tocItem \markup { "Anna" \hspace #3 \italic "Widman"}
+  \score{\ASScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+  
+  \tocItem \markup { "Christina" \hspace #3 \italic "Widman" }
+  \score{\ATScore}
+  \tocItem \markup { "Sibylla" \hspace #3 \italic "Widman"}
+  \score{\AUScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+  
+  \tocItem \markup { "Maria" \hspace #3 \italic "Widman" }
+  \score{\AVScore}
+  \tocItem \markup { "Dorothea" \hspace #3 \italic "Widman"}
+  \score{\AWScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+  
+  \tocItem \markup { "Sophia" \hspace #3 \italic "Widman"}
+  \score{\AXScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+  
   \markup\null
 }
