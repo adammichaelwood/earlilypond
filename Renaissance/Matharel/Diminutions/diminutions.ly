@@ -240,5 +240,11 @@ blankStaves = \score {
   \score{\blankStaves}
   \pageBreak
   
+  \tocItem \markup { "Padouana 6" \hspace #3 \italic "Schein"}
+  \score{\AYScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+  
   \markup\null
 }
