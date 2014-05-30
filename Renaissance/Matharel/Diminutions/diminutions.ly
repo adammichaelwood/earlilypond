@@ -107,6 +107,11 @@ blankStaves = \score {
       \remove "Bar_number_engraver"
     }
   }
+  \header {
+    piece = ""
+    number = ""
+    subopus = ""
+  }
 }
 
 % Pieces
@@ -125,4 +130,71 @@ blankStaves = \score {
   \score{\blankStaves}
   \pageBreak
   
+  \tocItem \markup { "Pavane, livre 4, Fo. II" \hspace #3 \italic "Attaingnant"}
+  \score{\ABScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+  
+  \tocItem \markup { "Pavane, livre 4, Fo. VII" \hspace #3 \italic "Attaingnant" }
+  \score{\ACScore}
+  \tocItem \markup { "Gaillarde, livre 4, Fo. VII" \hspace #3 \italic "Attaingnant"}
+  \score{\ADScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+  
+  \tocItem \markup { "Pavane, livre 4, Fo. IX" \hspace #3 \italic "Attaingnant" }
+  \score{\AEScore}
+  \tocItem \markup { "Gaillarde, livre 4, Fo. IX" \hspace #3 \italic "Attaingnant"}
+  \score{\AFScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+  
+  \tocItem \markup { "Pavane 6 \"1000 ducas\"" \hspace #3 \italic "Susato" }
+  \score{\AGScore}
+  \tocItem \markup { "Pavane 7" \hspace #3 \italic "Susato"}
+  \score{\AHScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+  
+  \tocItem \markup { "Tirsi, prima parte" \hspace #3 \italic "Marenzio"}
+  \score{\AIScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+  
+  \tocItem \markup { "Tirsi, seconda parte" \hspace #3 \italic "Marenzio"}
+  \score{\AJScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+  
+  \tocItem \markup { "Tirsi, terza parte" \hspace #3 \italic "Marenzio"}
+  \score{\AKScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+  
+  \tocItem \markup { "Mia Benigna" \hspace #3 \italic "Bossinensis"}
+  \score{\ALScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+  
+  \tocItem \markup { "Ahe debosar" \hspace #3 \italic "Bossinensis"}
+  \score{\AMScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+  
+  \tocItem \markup { "Len Chamor" \hspace #3 \italic "Bossinensis"}
+  \score{\ANScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+  
+  \markup\null
 }

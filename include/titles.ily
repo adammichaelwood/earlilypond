@@ -194,7 +194,10 @@ scoreNumberedTitleMarkup = \markup \abs-fontsize #6 \column {
   \vspace #1
   \fill-line { \fontsize #10 \box \fromproperty #'header:number } 
   \vspace #0.5
-  \left-align { \fontsize #6 \caps \fromproperty #'header:piece }
+  \fill-line {
+    \left-align { \fontsize #6 \caps \fromproperty #'header:piece }
+    \right-align { \fontsize #6 \fromproperty #'header:subopus }
+  }
   \vspace #1
 }
   

@@ -12,3 +12,16 @@
 
 
 \include "allemande5.ly"
+\include "pavane4FoII.ly"
+\include "pavane4FoVII.ly"
+\include "gaillarde4FoVII.ly"
+\include "pavane4FoIX.ly"
+\include "gaillarde4FoIX.ly"
+\include "pavane6.ly"
+\include "pavane7.ly"
+\include "tirsi1.ly"
+\include "tirsi2.ly"
+\include "tirsi3.ly"
+\include "miabenigna.ly"
+\include "ahedebosar.ly"
+\include "lenchamor.ly"
