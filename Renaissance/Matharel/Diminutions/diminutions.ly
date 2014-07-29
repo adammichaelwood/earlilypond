@@ -246,5 +246,73 @@ blankStaves = \score {
   \score{\blankStaves}
   \pageBreak
   
+  \tocItem \markup { "Fortune My Foe" \hspace #3 \italic "Dowland" }
+  \score{\AZScore}
+  \tocItem \markup { "When Daphne" \hspace #3 \italic "Anon."}
+  \score{\BAScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+  
+  \tocItem \markup { "Courente" \hspace #3 \italic "Schein"}
+  \score{\BBScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+  
+  \tocItem \markup { "IV. Pavane, à 5" \hspace #3 \italic "Schein"}
+  \score{\BCScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+  
+  \tocItem \markup { "Gagliarde, à 5" \hspace #3 \italic "Schein"}
+  \score{\BDScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+  
+  \tocItem \markup { "Courante, à 5" \hspace #3 \italic "Schein"}
+  \score{\BEScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+  
+  \tocItem \markup { "Allemande, à 4" \hspace #3 \italic "Schein"}
+  \score{\BFScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+  
+  \tocItem \markup { "Triste Espana sin ventura" \hspace #3 \italic "del Encina"}
+  \score{\BGScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+  
+  \tocItem \markup { "Una sanosa" \hspace #3 \italic "del Encina"}
+  \score{\BHScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+  
+  \tocItem \markup { "A tal perdida tna triste, en Ré" \hspace #3 \italic "del Encina"}
+  \score{\BIScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+  
+  \tocItem \markup { "A tal perdida tan triste, en Sol" \hspace #3 \italic "del Encina"}
+  \score{\BJScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+  
+  \tocItem \markup { "16. Pavane de Spaigne (Pavaniglia)" \hspace #3 \italic "Caroubel"}
+  \score{\BKScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+  
   \markup\null
 }

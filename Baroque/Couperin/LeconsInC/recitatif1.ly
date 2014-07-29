@@ -63,11 +63,11 @@ recunsopdeux = {
   \vxmordant fis2 fis4. fis8 				| % 6
   \grace e8 (d4.) e16 [d] (\vxmordant d4.) cis8	| % 7
   \vxmordant b2 e8 e e b				| % 8
-  ces4. b16 ces\grace b8 (a2)				| % 9
-  \vxmordant gis4 r8 b d4 (\vxmordant ces8) b		| % 10
-  \grace b8 (ces2) cis8 cis d e			| % 11
-  fes4. fis8 b,4. (ces16 [a])				| % 12
-  ces2 (\vxmordant b)					| % 13
+  c4. b16 c\grace b8 (a2)				| % 9
+  \vxmordant gis4 r8 b d4 (\vxmordant c8) b		| % 10
+  \grace b8 (c2) cis8 cis d e			| % 11
+  f4. fis8 b,4. (c16 [a])				| % 12
+  c2 (\vxmordant b)					| % 13
   a2 cis  						| % 14
   cis4 a8 a g4 g8. a16  				| % 15
   \vxmordant fis4 fis d'4. d8  			| % 16
@@ -154,9 +154,9 @@ recunbass = {
   d4 (e d cis)		| % 6
   b (a) gis a		| % 7
   e' (fis) gis (e)	| % 8
-  a (g) fes2		| % 9
+  a (g) f2		| % 9
   e gis,		| % 10
-  a4 a'8 [g] fes4. e8	| % 11
+  a4 a'8 [g] f4. e8	| % 11
   d2 dis		| % 12
   e e,			| % 13
   a1 ~ 			| % 14
