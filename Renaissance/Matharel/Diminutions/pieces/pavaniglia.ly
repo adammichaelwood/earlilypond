@@ -74,7 +74,7 @@ BKScore = \score {
     >>
   >>
   \header {
-    piece = "16. Pavane de Spaigne (Pavniglia)"
+    piece = "Pavane de Spaigne (Pavaniglia)"
     number = "35"
     subopus = ""
   }

@@ -74,7 +74,7 @@ BFScore = \score {
     >>
   >>
   \header {
-    piece = "Allemande, a 4"
+    piece = "4. Allemande, a 4"
     number = "30"
     subopus = ""
   }

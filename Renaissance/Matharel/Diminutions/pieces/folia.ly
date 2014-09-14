@@ -1,4 +1,4 @@
-%%  lavioletta.ly
+%%  folia.ly
 %%  This file is part of the Earlilypond project
 %%  
 %%  Copyright (c) 2014 Benjamin Coudrin <benjamin.coudrin@gmail.com>
@@ -10,7 +10,7 @@
 %%  To Public License, Version 2, as published by Sam Hocevar. See
 %%  http://sam.zoy.org/wtfpl/COPYING for more details.
 
-BQsoprano = \relative c'' {
+CKsoprano = \relative c'' {
     \clef treble
     \key f \major
     \time 3/4
@@ -21,7 +21,7 @@ BQsoprano = \relative c'' {
     }
 }
 
-BQalto = \relative c' {
+CKalto = \relative c' {
     \clef "G_8"
     \key f \major
     \time 3/4
@@ -32,7 +32,7 @@ BQalto = \relative c' {
     }
 }
 
-BQtenor = \relative c' {
+CKtenor = \relative c' {
     \clef "G_8"
     \key f \major
     \time 3/4
@@ -43,7 +43,7 @@ BQtenor = \relative c' {
     }
 }
 
-BQbass = \relative c' {
+CKbass = \relative c' {
     \clef bass
     \key f \major
     \time 3/4
@@ -54,28 +54,28 @@ BQbass = \relative c' {
     }
 }
 
-BQScore = \score {
+CKScore = \score {
   \new StaffGroup  <<
     \new Voice = "Soprano" <<
       \override Staff.BarLine #'allow-span-bar = ##f
-      \BQsoprano
+      \CKsoprano
     >>
     \new Voice = "Alto" <<
       \override Staff.BarLine #'allow-span-bar = ##f
-      \BQalto
+      \CKalto
     >>
     \new Voice = "Tenor" <<
       \override Staff.BarLine #'allow-span-bar = ##f
-      \BQtenor
+      \CKtenor
     >>
     \new Voice = "Basse" <<
       \override Staff.BarLine #'allow-span-bar = ##f
-      \BQbass
+      \CKbass
     >>
   >>
   \header {
-    piece = "La violetta"
-    number = "41"
+    piece = "Folia"
+    number = ""
     subopus = ""
   }
 }

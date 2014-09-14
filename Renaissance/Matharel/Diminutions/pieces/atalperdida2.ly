@@ -76,6 +76,6 @@ BJScore = \score {
   \header {
     piece = "A tal perdida tan triste"
     number = "34"
-    subopus = ""
+    subopus = "Cancionero de Palacio S.XV"
   }
 }

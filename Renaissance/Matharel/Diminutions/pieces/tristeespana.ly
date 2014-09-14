@@ -74,7 +74,7 @@ BGScore = \score {
     >>
   >>
   \header {
-    piece = "Triste Espana sin ventura"
+    piece = "Triste España sin ventura"
     number = "31"
     subopus = ""
   }

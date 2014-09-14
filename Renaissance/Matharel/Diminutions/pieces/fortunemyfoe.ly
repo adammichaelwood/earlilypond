@@ -74,8 +74,8 @@ AZScore = \score {
     >>
   >>
   \header {
-    piece = "Fortune my foe"
-    number = "25"
+    piece = "Fortune My Foe"
+    number = ""
     subopus = ""
   }
 }

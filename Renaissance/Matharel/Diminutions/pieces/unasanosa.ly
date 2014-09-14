@@ -74,7 +74,7 @@ BHScore = \score {
     >>
   >>
   \header {
-    piece = "3 exercices en respectant les rythmes ecrits"
+    piece = "Una sañosa"
     number = "32"
     subopus = ""
   }

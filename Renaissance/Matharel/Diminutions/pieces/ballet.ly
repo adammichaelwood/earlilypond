@@ -1,4 +1,4 @@
-%%  gaillarde4FoVII.ly
+%%  ballet.ly
 %%  This file is part of the Earlilypond project
 %%  
 %%  Copyright (c) 2014 Benjamin Coudrin <benjamin.coudrin@gmail.com>
@@ -10,7 +10,7 @@
 %%  To Public License, Version 2, as published by Sam Hocevar. See
 %%  http://sam.zoy.org/wtfpl/COPYING for more details.
 
-ADsoprano = \relative c'' {
+BUsoprano = \relative c'' {
     \clef treble
     \key f \major
     \time 3/4
@@ -21,7 +21,7 @@ ADsoprano = \relative c'' {
     }
 }
 
-ADalto = \relative c' {
+BUalto = \relative c' {
     \clef "G_8"
     \key f \major
     \time 3/4
@@ -32,7 +32,7 @@ ADalto = \relative c' {
     }
 }
 
-ADtenor = \relative c' {
+BUtenor = \relative c' {
     \clef "G_8"
     \key f \major
     \time 3/4
@@ -43,7 +43,7 @@ ADtenor = \relative c' {
     }
 }
 
-ADbass = \relative c' {
+BUbass = \relative c' {
     \clef bass
     \key f \major
     \time 3/4
@@ -54,28 +54,28 @@ ADbass = \relative c' {
     }
 }
 
-ADScore = \score {
+BUScore = \score {
   \new StaffGroup  <<
     \new Voice = "Soprano" <<
       \override Staff.BarLine #'allow-span-bar = ##f
-      \ADsoprano
+      \BUsoprano
     >>
     \new Voice = "Alto" <<
       \override Staff.BarLine #'allow-span-bar = ##f
-      \ADalto
+      \BUalto
     >>
     \new Voice = "Tenor" <<
       \override Staff.BarLine #'allow-span-bar = ##f
-      \ADtenor
+      \BUtenor
     >>
     \new Voice = "Basse" <<
       \override Staff.BarLine #'allow-span-bar = ##f
-      \ADbass
+      \BUbass
     >>
   >>
   \header {
-    piece = "Gaillarde"
-    number = "4"
+    piece = "Ballet"
+    number = "45"
     subopus = ""
   }
 }

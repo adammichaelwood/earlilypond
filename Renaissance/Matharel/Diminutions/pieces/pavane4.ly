@@ -74,8 +74,8 @@ BCScore = \score {
     >>
   >>
   \header {
-    piece = "IV. Pavane, a 5"
+    piece = "1. Pavane, a 5"
     number = "27"
-    subopus = ""
+    subopus = "IV"
   }
 }

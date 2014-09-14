@@ -64,28 +64,30 @@ petittePause = {
       #(set-accidental-style 'forget)
       \set Staff.instrumentName = #""
       \set Staff.shortInstrumentName = #""
-      \relative c'' {
-        \key d \major
-        \override Staff.TimeSignature #'style = #'single-digit
-        \time 2/2
-        \clef treble
-        \jodsopun
-        \petittePause
-        \override Staff.TimeSignature #'style = #'default
-        \time 2/2
-        \recunsopun
-        s1
-        \recdeuxsopun
-        \petittePause
-        \allowPageTurn
-        \ovossopun
-        \petittePause
-        \memsopun
-        \bar "||"
-        \rectroissopun
-        \petittePause
-        \jerusopun
-        \bar "|."
+      \transpose d c {
+        \relative c'' {
+          \key d \major
+          \override Staff.TimeSignature #'style = #'single-digit
+          \time 2/2
+          \clef treble
+          \jodsopun
+          \petittePause
+          \override Staff.TimeSignature #'style = #'default
+          \time 2/2
+          \recunsopun
+          s1
+          \recdeuxsopun
+          \petittePause
+          \allowPageTurn
+          \ovossopun
+          \petittePause
+          \memsopun
+          \bar "||"
+          \rectroissopun
+          \petittePause
+          \jerusopun
+          \bar "|."
+        }
       }
     >>
     
@@ -103,24 +105,26 @@ petittePause = {
       #(set-accidental-style 'forget)
       \set Staff.instrumentName = #""
       \set Staff.shortInstrumentName = #""
-      \relative c'' {
-        \key d \major
-        \override Staff.TimeSignature #'style = #'single-digit
-        \time 2/2
-        \clef treble
-        \jodsopdeux
-        s1
-        \override Staff.TimeSignature #'style = #'default
-        \recunsopdeux
-        \petittePause
-        \recdeuxsopdeux
-        s1
-        \ovossopdeux
-        s1
-        \memsopdeux
-        \rectroissopdeux
-        s1
-        \jerusopdeux
+      \transpose d c {
+        \relative c'' {
+          \key d \major
+          \override Staff.TimeSignature #'style = #'single-digit
+          \time 2/2
+          \clef treble
+          \jodsopdeux
+          s1
+          \override Staff.TimeSignature #'style = #'default
+          \recunsopdeux
+          \petittePause
+          \recdeuxsopdeux
+          s1
+          \ovossopdeux
+          s1
+          \memsopdeux
+          \rectroissopdeux
+          s1
+          \jerusopdeux
+        }
       }
     >>
     
@@ -154,24 +158,26 @@ petittePause = {
         \jerufig
       }
       
-      \relative c' {
-        \clef bass
-        \key d \major 
-        \override Staff.TimeSignature #'style = #'single-digit
-        \time 2/2
-        \jodbass
-        s1
-        \override Staff.TimeSignature #'style = #'default
-        \recunbass
-        s1
-        \recdeuxbass
-        s1
-        \ovosbass
-        s1
-        \membass
-        \rectroisbass
-        s1
-        \jerubass
+      \transpose d c {
+        \relative c' {
+          \clef bass
+          \key d \major 
+          \override Staff.TimeSignature #'style = #'single-digit
+          \time 2/2
+          \jodbass
+          s1
+          \override Staff.TimeSignature #'style = #'default
+          \recunbass
+          s1
+          \recdeuxbass
+          s1
+          \ovosbass
+          s1
+          \membass
+          \rectroisbass
+          s1
+          \jerubass
+        }
       }
     >>
  >>

@@ -74,7 +74,7 @@ BDScore = \score {
     >>
   >>
   \header {
-    piece = "Gagliarde, a 5"
+    piece = "2. Gagliarde, a 5"
     number = "28"
     subopus = ""
   }

@@ -254,62 +254,241 @@ blankStaves = \score {
   \score{\blankStaves}
   \pageBreak
   
+
   \tocItem \markup { "Courente" \hspace #3 \italic "Schein"}
   \score{\BBScore}
   \pageBreak
   \score{\blankStaves}
   \pageBreak
   
-  \tocItem \markup { "IV. Pavane, à 5" \hspace #3 \italic "Schein"}
+  \tocItem \markup { "Pavane, IV" \hspace #3 \italic "Schein"}
   \score{\BCScore}
   \pageBreak
   \score{\blankStaves}
   \pageBreak
   
-  \tocItem \markup { "Gagliarde, à 5" \hspace #3 \italic "Schein"}
+  \tocItem \markup { "Gagliarde, IV" \hspace #3 \italic "Schein"}
   \score{\BDScore}
   \pageBreak
   \score{\blankStaves}
   \pageBreak
   
-  \tocItem \markup { "Courante, à 5" \hspace #3 \italic "Schein"}
+  \tocItem \markup { "Courante, IV" \hspace #3 \italic "Schein"}
   \score{\BEScore}
   \pageBreak
   \score{\blankStaves}
   \pageBreak
   
-  \tocItem \markup { "Allemande, à 4" \hspace #3 \italic "Schein"}
+  \tocItem \markup { "Allemande, IV" \hspace #3 \italic "Schein"}
   \score{\BFScore}
   \pageBreak
   \score{\blankStaves}
   \pageBreak
   
-  \tocItem \markup { "Triste Espana sin ventura" \hspace #3 \italic "del Encina"}
+  \tocItem \markup { "Triste España" \hspace #3 \italic "del Encina"}
   \score{\BGScore}
   \pageBreak
   \score{\blankStaves}
   \pageBreak
-  
-  \tocItem \markup { "Una sanosa" \hspace #3 \italic "del Encina"}
+
+  \tocItem \markup { "Una sañosa" \hspace #3 \italic "del Encina"}
+  \markup {"3 exercices en respectant les rythmes écrits"}
   \score{\BHScore}
   \pageBreak
-  \score{\blankStaves}
-  \pageBreak
   
-  \tocItem \markup { "A tal perdida tna triste, en Ré" \hspace #3 \italic "del Encina"}
+  \tocItem \markup { "A tal perdida tan triste" \hspace #3 \italic "del Encina"}
   \score{\BIScore}
+  \markup \column {"4 couplets" "  1x simple" "  2x dessus orné" "  1x 2e voix ornée"}
   \pageBreak
   \score{\blankStaves}
   \pageBreak
-  
-  \tocItem \markup { "A tal perdida tan triste, en Sol" \hspace #3 \italic "del Encina"}
+
+  \tocItem \markup { "A tal perdida tan triste" \hspace #3 \italic "del Encina"}
   \score{\BJScore}
   \pageBreak
   \score{\blankStaves}
   \pageBreak
-  
-  \tocItem \markup { "16. Pavane de Spaigne (Pavaniglia)" \hspace #3 \italic "Caroubel"}
+
+  \tocItem \markup { "Pavane de Spaigne (Pavaniglia)" \hspace #3 \italic "Caroubel"}
   \score{\BKScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+
+  \tocItem \markup { "I bei legami" \hspace #3 \italic "Monteverdi"}
+  \score{\BLScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+
+  \tocItem \markup { "Amarilli onde m'assale" \hspace #3 \italic "Monteverdi"}
+  \score{\BMScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+
+  \tocItem \markup { "Lacrimae antiquae" \hspace #3 \italic "Dowland"}
+  \score{\BNScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+
+  \tocItem \markup { "Amorosa pupilletta" \hspace #3 \italic "Monteverdi"}
+  \score{\BOScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+  
+  \tocItem \markup { "Vaghi rai di cigli ardenti" \hspace #3 \italic "Monteverdi"}
+  \score{\BPScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+  
+  \tocItem \markup { "La violetta" \hspace #3 \italic "Monteverdi"}
+  \score{\BQScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+  
+  \tocItem \markup { "Giovinetta ritrosetta" \hspace #3 \italic "Monteverdi"}
+  \score{\BRScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+  
+  \tocItem \markup { "Sinfonia I, L'incoronazione di Poppea" \hspace #3 \italic "Monteverdi"}
+  \score{\BSScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+  
+  \tocItem \markup { "Lo Spagnoletto" \hspace #3 \italic "Negri"}
+  \score{\BTScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+  
+  \tocItem \markup { "Ballet" \hspace #3 \italic "Praetorius"}
+  \score{\BUScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+  
+  \tocItem \markup { "Già mi dols'io" \hspace #3 \italic "Radesca"}
+  \score{\BVScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+  
+  \tocItem \markup { "L'Orfeo, Ritornello 1" \hspace #3 \italic "Monteverdi"}
+  \score{\BWScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+
+  \tocItem \markup { "L'Orfeo, Ritornello 2" \hspace #3 \italic "Monteverdi"}
+  \score{\BXScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+  
+  \tocItem \markup { "L'Orfeo, Ritornello 3" \hspace #3 \italic "Monteverdi"}
+  \score{\BYScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+  
+  \tocItem \markup { "L'Orfeo, Sinfonia 1" \hspace #3 \italic "Monteverdi"}
+  \score{\BZScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+  
+  \tocItem \markup { "L'Orfeo, Sinfonia 2" \hspace #3 \italic "Monteverdi"}
+  \score{\CAScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+  
+  \tocItem \markup { "L'Orfeo, Sinfonia a 7" \hspace #3 \italic "Monteverdi"}
+  \score{\CBScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+  
+  \tocItem \markup { "L'Orfeo, Sinfonia 3" \hspace #3 \italic "Monteverdi"}
+  \score{\CCScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+  
+  \tocItem \markup { "Ave Maris Stella, Ritornello" \hspace #3 \italic "Monteverdi"}
+  \score{\CDScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+  
+  \tocItem \markup { "Nigra Sum" \hspace #3 \italic "Monteverdi"}
+  \score{\CEScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+  
+  \tocItem \markup { "Sonata sopra Sancra Maria" \hspace #3 \italic "Monteverdi"}
+  \score{\CFScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+  
+  \tocItem \markup { "Belle qui tient ma vie" \hspace #3 \italic ""}
+  \score{\CGScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+  
+  \tocItem \markup { "La Mantovana" \hspace #3 \italic "Zanetti"}
+  \score{\CHScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+  
+  \tocItem \markup { "Tant que vivrai" \hspace #3 \italic "Sermisy"}
+  \score{\CIScore}
+  \pageBreak
+  \score{\blankStaves}
+  \pageBreak
+  
+  \tocItem \markup { "Bergamasca (Dump)" \hspace #3 \italic ""}
+  \score{\CJScore}
+  \pageBreak
+  
+  \tocItem \markup { "Spagnoletta" \hspace #3 \italic ""}
+  \score{\CLScore}
+  \pageBreak
+  
+  \tocItem \markup { "Folia" \hspace #3 \italic ""}
+  \score{\CKScore}
+  \pageBreak
+  
+  \tocItem \markup { "La Monica" \hspace #3 \italic ""}
+  \score{\CNScore}
+  \pageBreak
+  
+  \tocItem \markup { "Ruggiero" \hspace #3 \italic ""}
+  \score{\COScore}
+  \pageBreak
+  
+  \tocItem \markup { "7 notes" \hspace #3 \italic "Cazzatti, Merula, Monteverdi, ..."}
+  \score{\CPScore}
+  \pageBreak
+  
+  \tocItem \markup { "Passacaille (Lamento)" \hspace #3 \italic ""}
+  \score{\CQScore}
+  \pageBreak
+  
+  \tocItem \markup { "Spagnoletta" \hspace #3 \italic ""}
+  \score{\CRScore}
   \pageBreak
   \score{\blankStaves}
   \pageBreak

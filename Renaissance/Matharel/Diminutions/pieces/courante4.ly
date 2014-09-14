@@ -74,7 +74,7 @@ BEScore = \score {
     >>
   >>
   \header {
-    piece = "Courante, a 5"
+    piece = "3. Courante, a 5"
     number = "29"
     subopus = ""
   }

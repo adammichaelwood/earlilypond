@@ -123,6 +123,7 @@
 % - p18 (PDF p37) 5e système dernière mesure
 %   sous "traits" il y a une ligne non identifiée. Statuer.
 % - p18 (PDF p37) dernier système 1e mesure
+
 %   la 2e double semble pointée, vérifier (pour le moment, le point est ajouté)
 % - Les paragraphes de couplets supplémentaires sont en général mal alignés
 %   Trouver une technique pour aligner les blocs de couplets sur une grille

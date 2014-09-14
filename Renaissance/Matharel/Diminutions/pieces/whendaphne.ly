@@ -75,7 +75,7 @@ BAScore = \score {
   >>
   \header {
     piece = "When Daphne"
-    number = ""
+    number = "25"
     subopus = ""
   }
 }

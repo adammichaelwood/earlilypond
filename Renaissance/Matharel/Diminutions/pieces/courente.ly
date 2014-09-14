@@ -1,4 +1,4 @@
-%%  courente.ly
+%%  gaillarde4FoVII.ly
 %%  This file is part of the Earlilypond project
 %%  
 %%  Copyright (c) 2014 Benjamin Coudrin <benjamin.coudrin@gmail.com>

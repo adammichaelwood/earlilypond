@@ -76,6 +76,6 @@ BIScore = \score {
   \header {
     piece = "A tal perdida tan triste"
     number = "33"
-    subopus = ""
+    subopus = "Cancionero de Palacio"
   }
 }
